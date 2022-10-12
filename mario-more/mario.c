@@ -3,6 +3,11 @@
 
 int main(void)
 {
-    int getHeight = get_int("Height?");
-    printf(getHeight);
+    int getHeight = get_int("Height: ");
+    printf("test %i\n",getHeight);
+}
+
+string block(int 3)
+{
+    printf("test string");
 }
