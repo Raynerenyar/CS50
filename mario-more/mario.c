@@ -12,7 +12,10 @@ int main(void)
 void block(int height)
 {
     printf("test %i\n", height);
-    printf("n");
-    printf(" ");
-    printf("n\n");
+    for (int i = 0; i < h; i++)
+    {
+        printf("#");
+    }
+    for (int h)
+    printf("\n");
 }
