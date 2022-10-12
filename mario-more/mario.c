@@ -4,10 +4,10 @@
 int main(void)
 {
     int getHeight = get_int("Height: ");
-    printf("test %i\n",getHeight);
+    printf("test %i\n", getHeight);
 }
 
-string block(int 3)
+string block(int height)
 {
-    printf("test string");
+    printf("test %i\n", height);
 }
