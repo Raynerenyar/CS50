@@ -1,29 +1,43 @@
 #include <cs50.h>
 #include <stdio.h>
 
-// void block(int height);
+void printHex(int row);
 
 int main(void)
 {
     int getHeight = get_int("Height: ");
-    printf("%i\n", getHeight);
     // For row by row
     int i = 0;
     for (i = 1; i <= getHeight; i++)
     {
-        // printf("for row by row: %i\n",i);
-        // for each whitespace in row
+        // for each whitespace in row on left hand side
         int numOfWhitespace = getHeight - i;
         for (int j = numOfWhitespace; j > 0; j--)
         {
             printf(" ");
         }
-        // for each # in row
-        for (int k = i; k < getHeight; k++)
+        // for each # in row on left hand side
+        for (int k = i; k > 0; k--)
         {
             printf("#");
         }
+        printf(" ");
+        printf(" ");
+        // for each # in row on right hand side
+        // for (int l = i; l > 0; l--)
+        // {
+        //     printf("#");
+        // }
+        printHex()
         printf("\n");
+    }
+}
+
+void printHex(int row)
+{
+    for (int row = i; row > 0; row--)
+    {
+        printf("#");
     }
 }
 
