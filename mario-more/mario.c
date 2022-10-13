@@ -8,7 +8,8 @@ int main(void)
     int getHeight = get_int("Height: ");
     // printf("%i\n", getHeight);
     // For row by row
-    for (int i = 1; (i = getHeight); i++)
+    int i = 0;
+    for (i = 1; (i = getHeight); i++)
     {
         printf("%i", i);
         // // for each whitespace in row
