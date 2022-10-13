@@ -1,11 +1,21 @@
 #include <cs50.h>
 #include <stdio.h>
 
-void inputHex(int row);
+void printingHex(int row);
 
 int main(void)
 {
-    int pyraHeight = get_int("Height: ");
+    bool state = true;
+    int pyraHeight = 0;
+    // checks user input to be 1-8
+    while (state)
+    {
+    pyraHeight = get_int("Height: ");
+    if ((pyraHeight >= 1) && (pyraHeight <= 8))
+    {
+        state = false;
+    }
+    }
     // For each row
     for (int rowNum = 1; rowNum <= pyraHeight; rowNum++)
     {
@@ -16,13 +26,13 @@ int main(void)
             printf(" ");
         }
         // for each hex in row on left hand side
-        inputHex(rowNum);
+        printingHex(rowNum);
 
         printf(" ");
         printf(" ");
 
         // for each hex in row on left hand side
-        inputHex(rowNum);
+        printingHex(rowNum);
 
         // next line
         printf("\n");
@@ -30,7 +40,7 @@ int main(void)
 }
 
 // print # based on row number
-void inputHex(int rowNum)
+void printingHex(int rowNum)
 {
     for (int k = rowNum; k > 0; k--)
     {
