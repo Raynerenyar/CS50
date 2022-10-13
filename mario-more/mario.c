@@ -10,7 +10,7 @@ int main(void)
     // For row by row
     int i = 0;
     printf("%i", i);
-    for (i = 1; (i = getHeight); i++)
+    for (i = 1; i == getHeight; i++)
     {
         printf("%i", i);
         // // for each whitespace in row
