@@ -28,14 +28,14 @@ int main(void)
         // {
         //     printf("#");
         // }
-        printHex()
+        printHex(i);
         printf("\n");
     }
 }
 
 void printHex(int row)
 {
-    for (int row = i; row > 0; row--)
+    for (int m = row; m > 0; m--)
     {
         printf("#");
     }
