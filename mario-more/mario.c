@@ -22,18 +22,6 @@ int main(void)
     {
         // for each whitespace in row on left hand side
         int numOfWhitespace = pyraHeight - rowNum;
-        for (int i = numOfWhitespace; i > 0; i--)
-        {
-            printf(" ");
-        }
-        // for each hex in row on left hand side
-        printingHex(rowNum);
-
-        printf(" ");
-        printf(" ");
-
-        // for each hex in row on left hand side
-        printingHex(rowNum);
 
         // next line
         printf("\n");
@@ -41,7 +29,7 @@ int main(void)
 }
 
 // print # based on row number
-void printingHex(int rowNum)
+void printingHex(int rowNum, int pyraHeight)
 {
     for (int k = rowNum; k > 0; k--)
     {
