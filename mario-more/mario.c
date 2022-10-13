@@ -9,13 +9,11 @@ int main(void)
     printf("%i\n", getHeight);
     // For row by row
     int i = 0;
-    printf("%i\n", i);
     for (i = 1; i <= getHeight; i++)
     {
         // printf("for row by row: %i\n",i);
         // for each whitespace in row
         int numOfWhitespace = getHeight - i;
-        printf("%i\n",numOfWhitespace);
         for (int j = numOfWhitespace; j > 0; j--)
         {
             printf(" ");
@@ -25,7 +23,7 @@ int main(void)
         {
             printf("#");
         }
-        // printf("\n");
+        printf("\n");
     }
 }
 
