@@ -7,26 +7,33 @@ int main(void)
 {
     int getHeight = get_int("Height: ");
     // For row by row
-    int row = 0;
-    for (row = 1; row <= getHeight; row++)
+    int rowNum = 0;
+    for (rowNum = 1; rowNum <= getHeight; rowNum++)
     {
-        // for each whitespace in row on left hand side
-        int numOfWhitespace = getHeight - row;
+        // for each whitespace in rowNum on left hand side
+        int numOfWhitespace = getHeight - rowNum;
         for (int i = numOfWhitespace; i > 0; i--)
         {
             printf(" ");
         }
-        printHex(row);
+        // for each hex in rowNum on left hand side
+        printHex(rowNum);
+
         printf(" ");
         printf(" ");
-        printHex(row);
+
+        // for each hex in rowNum on left hand side
+        printHex(rowNum);
+
+        // next line
         printf("\n");
     }
 }
 
-void printHex(int row)
+// print # based on rowNum number
+void printHex(int rowNum)
 {
-    for (int k = row; k > 0; k--)
+    for (int k = rowNum; k > 0; k--)
     {
         printf("#");
     }
