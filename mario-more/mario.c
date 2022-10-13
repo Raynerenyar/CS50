@@ -12,14 +12,16 @@ int main(void)
     printf("%i\n", i);
     for (i = 1; i <= getHeight; i++)
     {
+        // printf("for row by row: %i\n",i);
         // for each whitespace in row
         int numOfWhitespace = getHeight - i;
+        printf("%i",numOfWhitespace);
         for (int j = numOfWhitespace; j > 0; j--)
         {
             printf(" ");
         }
         // for each # in row
-        for (int k = i; k == getHeight; k++)
+        for (int k = i; k < getHeight; k++)
         {
             printf("#");
         }
