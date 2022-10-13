@@ -26,8 +26,6 @@ int main(void)
 // print # based on row number
 void printingHex(int rowNum, int pyraHeight)
 {
-    for (int k = rowNum; k > 0; k--)
-    {
-        printf("#");
-    }
+    int whitespace = pyraHeight - rowNum;
+    printf("%*i", whitespace);
 }
