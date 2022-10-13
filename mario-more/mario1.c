@@ -16,7 +16,7 @@ int main(void)
         state = false;
     }
     }
-    printf("%*i\n", 3, pyraHeight);
+    // printf("%*i\n", 3, pyraHeight);
     // For each row
     for (int rowNum = 1; rowNum <= pyraHeight; rowNum++)
     {
