@@ -15,7 +15,7 @@ int main(void)
         // printf("for row by row: %i\n",i);
         // for each whitespace in row
         int numOfWhitespace = getHeight - i;
-        printf("%i",numOfWhitespace);
+        printf("%i\n",numOfWhitespace);
         for (int j = numOfWhitespace; j > 0; j--)
         {
             printf(" ");
