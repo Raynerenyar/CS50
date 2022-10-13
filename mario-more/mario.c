@@ -6,7 +6,16 @@ void block(int height);
 int main(void)
 {
     int getHeight = get_int("Height: ");
-    block(getHeight);
+    // For row by row
+    for (int i = 0; i = getHeight; i++)
+    {
+        // for each unit in row
+        int numOfWhitespace = getHeight -i;
+        for (int j = numOfWhitespace; j > 0; j--)
+        {
+            printf("\s");
+        }
+    }
 }
 
 void block(int height)
@@ -20,10 +29,10 @@ void block(int height)
     printf("\n");
 }
 
-void printWhitespace(int height)
+void printWhitespace(int row)
 {
-    for (int i = height; i > 0; i--)
+    for (int i = row; i > 0; i--)
     {
-        
+
     }
 }
