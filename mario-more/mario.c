@@ -6,11 +6,11 @@
 int main(void)
 {
     int getHeight = get_int("Height: ");
-    // printf("%i\n", getHeight);
+    printf("%i\n", getHeight);
     // For row by row
     int i = 0;
-    printf("%i", i);
-    for (i = 1; i == getHeight; i++)
+    printf("%i\n", i);
+    for (i = 1; i <= getHeight; i++)
     {
         printf("%i", i);
         // // for each whitespace in row
