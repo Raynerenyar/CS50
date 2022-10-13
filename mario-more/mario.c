@@ -16,18 +16,9 @@ int main(void)
         {
             printf(" ");
         }
-        // for each # in row on left hand side
-        for (int j = row; j > 0; j--)
-        {
-            printf("#");
-        }
+        printHex(row);
         printf(" ");
         printf(" ");
-        // for each # in row on right hand side
-        // for (int l = i; l > 0; l--)
-        // {
-        //     printf("#");
-        // }
         printHex(row);
         printf("\n");
     }
@@ -35,7 +26,7 @@ int main(void)
 
 void printHex(int row)
 {
-    for (int m = row; m > 0; m--)
+    for (int k = row; k > 0; k--)
     {
         printf("#");
     }
