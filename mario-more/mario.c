@@ -33,7 +33,7 @@ void printingRow(int rowNum, int pyraHeight)
     printf("%*c", whitespace, hex);
     // print rest of # on left hand side
     printingHex(rowNum);
-    // print whitespace and first # on left hand side
+    // print 2 whitespaces and first # on left hand side
     printf("%*c", 2, hex);
     // print rest of # on right hand side
     printingHex(rowNum);
