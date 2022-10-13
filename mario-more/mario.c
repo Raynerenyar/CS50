@@ -1,19 +1,18 @@
 #include <cs50.h>
 #include <stdio.h>
 
-void printingHex(int row);
+void printingHex(int row, int pyraHeight);
 
 int main(void)
 {
-    bool state = true;
     int pyraHeight = 0;
     // checks user input to be 1-8
-    while (state)
+    while (true)
     {
     pyraHeight = get_int("Height: ");
     if ((pyraHeight >= 1) && (pyraHeight <= 8))
     {
-        state = false;
+        break;
     }
     }
     printf("%*i\n", 3, pyraHeight);
