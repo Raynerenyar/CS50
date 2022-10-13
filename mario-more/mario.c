@@ -9,6 +9,7 @@ int main(void)
     // printf("%i\n", getHeight);
     // For row by row
     int i = 0;
+    printf("%i", i);
     for (i = 1; (i = getHeight); i++)
     {
         printf("%i", i);
