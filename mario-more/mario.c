@@ -1,7 +1,8 @@
 #include <cs50.h>
 #include <stdio.h>
 
-void printingHex(int row);
+void printingRow(int row, int pyraHeight);
+void printingHex(int rowNum);
 
 int main(void)
 {
@@ -19,31 +20,33 @@ int main(void)
     // For each row
     for (int rowNum = 1; rowNum <= pyraHeight; rowNum++)
     {
-        // for each whitespace in row on left hand side
-        int numOfWhitespace = pyraHeight - rowNum;
-        for (int i = numOfWhitespace; i > 0; i--)
-        {
-            printf(" ");
-        }
-        // for each hex in row on left hand side
-        printingHex(rowNum);
-
-        printf(" ");
-        printf(" ");
-
-        // for each hex in row on right hand side
-        printingHex(rowNum);
-
-        // next line
-        printf("\n");
+        printingRow(rowNum, pyraHeight);
     }
 }
 
 // print # based on row number
+void printingRow(int rowNum, int pyraHeight)
+{
+    int whitespace = pyraHeight - rowNum + 1;
+    char hex = '#';
+    // print whitespace and first # on left hand side
+    printf("%*c", whitespace, hex);
+    // print rest of # on left hand side
+    printingHex(rowNum);
+    // print whitespace and first # on left hand side
+    printf("%*c", 2, hex);
+    // print rest of # on right hand side
+    printingHex(rowNum);
+    printf("\n");
+}
+
 void printingHex(int rowNum)
 {
-    for (int k = rowNum; k > 0; k--)
+    if (rowNum > 1)
     {
-        printf("#");
+        for (int i = 1; i < rowNum; i++)
+        {
+            printf("#");
+        }
     }
 }
