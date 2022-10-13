@@ -29,5 +29,9 @@ void printingHex(int rowNum, int pyraHeight)
     int whitespace = pyraHeight - rowNum;
     char hex = '#';
     printf("%*c", whitespace, hex);
+    for (int i = rowNum; i )
+    {
+
+    }
     printf("%*c\n", 2, hex);
 }
