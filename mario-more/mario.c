@@ -1,7 +1,7 @@
 #include <cs50.h>
 #include <stdio.h>
 
-void printHex(int row);
+void inputHex(int row);
 
 int main(void)
 {
@@ -16,13 +16,13 @@ int main(void)
             printf(" ");
         }
         // for each hex in row on left hand side
-        printHex(rowNum);
+        inputHex(rowNum);
 
         printf(" ");
         printf(" ");
 
         // for each hex in row on left hand side
-        printHex(rowNum);
+        inputHex(rowNum);
 
         // next line
         printf("\n");
@@ -30,7 +30,7 @@ int main(void)
 }
 
 // print # based on row number
-void printHex(int rowNum)
+void inputHex(int rowNum)
 {
     for (int k = rowNum; k > 0; k--)
     {
