@@ -19,7 +19,7 @@ int main(void)
     // For each row
     for (int rowNum = 1; rowNum <= pyraHeight; rowNum++)
     {
-
+        printingHex(rowNum, pyraHeight);
     }
 }
 
@@ -27,5 +27,7 @@ int main(void)
 void printingHex(int rowNum, int pyraHeight)
 {
     int whitespace = pyraHeight - rowNum;
-    printf("%*i", whitespace);
+    char hex = '#';
+    printf("%*c", whitespace, hex);
+    printf("%*c\n", 2, hex);
 }
