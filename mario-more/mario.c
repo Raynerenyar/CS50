@@ -19,3 +19,8 @@ void block(int height)
     for (int h)
     printf("\n");
 }
+
+void printWhitespace(int height)
+{
+    for (int i = height; i)
+}
