@@ -30,7 +30,7 @@ void printingHex(int rowNum, int pyraHeight)
     char hex = '#';
     printf("rowNum is %i\n", rowNum);
     printf("whitespace is %i\n", whitespace);
-    printf("%*c", whitespace, hex);
+    printf("%*c", 2, hex);
     if (rowNum > 1)
     {
         for (int i = 0; i < rowNum; i++ )
