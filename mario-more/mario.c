@@ -22,5 +22,8 @@ void block(int height)
 
 void printWhitespace(int height)
 {
-    for (int i = height; i)
+    for (int i = height; i > 0; i--)
+    {
+        
+    }
 }
