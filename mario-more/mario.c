@@ -6,6 +6,7 @@
 int main(void)
 {
     int getHeight = get_int("Height: ");
+    printf("%i",getHeight);
     // For row by row
     for (int i = 1; i == getHeight; i++)
     {
@@ -13,10 +14,10 @@ int main(void)
         int numOfWhitespace = getHeight - i;
         for (int j = numOfWhitespace; j > 0; j--)
         {
-            printf("\s");
+            printf(" ");
         }
         // for each # in row
-        for (int k == i; k == getHeight; k++)
+        for (int k = i; k == getHeight; k++)
         {
             printf("#");
         }
