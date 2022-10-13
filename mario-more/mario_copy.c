@@ -31,9 +31,9 @@ void printingHex(int rowNum, int pyraHeight)
     printf("%*c", whitespace, hex);
     if (rowNum > 1)
     {
-        for (int i = rowNum; i )
+        for (int i = 0; i < rowNum; i++ )
         {
-            
+            printf("#");
         }
     }
     printf("%*c\n", 2, hex);
