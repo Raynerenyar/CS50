@@ -28,6 +28,7 @@ void printingHex(int rowNum, int pyraHeight)
 {
     int whitespace = pyraHeight - rowNum;
     char hex = '#';
+    printf("rowNum is %i\n", rowNum);
     printf("whitespace is %i\n", whitespace);
     printf("%*c", whitespace, hex);
     if (rowNum > 1)
