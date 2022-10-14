@@ -52,7 +52,11 @@ int main(void)
     int finalSum = 0;
     for (int b = 0; b < secArrLen; b++)
     {
-        finalSum += secondArray[b];
+        if (secondArray[b] >= 10)
+        {
+            sum += (1 + (secondArray[b]%10));
+        }
+        else finalSum += secondArray[b];
     }
     printf("%i\n",(sum+finalSum));
 
@@ -79,3 +83,5 @@ int countDigits(long i)
     while (i/=10) ret++;
     return ret;
 }
+
+int sumOfDigits()
