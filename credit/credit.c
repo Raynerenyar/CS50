@@ -21,7 +21,7 @@ int main(void)
             whichArray = 2;
             // printf("%li   %i",num, firstArray[i]);
             // printf("%i",firstArray[i]);
-            printf("\n");
+            // printf("\n");
         }
         if (whichArray == 2)
         {
@@ -30,7 +30,7 @@ int main(void)
             whichArray = 1;
             // printf("%li   %i",num, secondArray[i]);
             // printf("%i",secondArray[i]);
-            printf("\n");
+            // printf("\n");
         }
         i -= 1;
         printf("    %i",i);
