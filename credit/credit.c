@@ -61,6 +61,7 @@ int main(void)
     // printf("%i\n",(sum+finalSum));
 
     // checks if number is from AMEX, MASTER, or VISA
+    printf("%i\n",firstArray[firstArrLen-1]);
     if (count == 16 && secondArray[secondArrLen-1] == 5)
     {
         int digitCheck = firstArray[firstArrLen-1];
@@ -69,11 +70,10 @@ int main(void)
             printf("MASTERCARD\n");
         }
     }
-    printf("%i\n",firstArray[firstArrLen-1]);
     else if (firstArray[firstArrLen] == 3)
     {
         int digitCheck = secondArray[secondArrLen-1];
-        if (digitCheck == 3 || digitCheck == 4)
+        if (digitCheck == 7 || digitCheck == 4)
         {
             printf("AMEX\n");
         }
