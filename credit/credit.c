@@ -83,7 +83,7 @@ int countDigits(long i)
     return ret;
 }
 
-int sumOfDigits(array,int arrLen)
+int sumOfDigits(arrLen)
 {
     int sum = 0;
     for (int a = 0; a < arrLen; a++)
