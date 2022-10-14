@@ -59,6 +59,7 @@ int main(void)
     printf("%i\n",(sum+finalSum));
 
     // checks if number is from AE, Mast, or Visa
+    if ()
 
     // check nums in first array
     // printf("first array\n");
