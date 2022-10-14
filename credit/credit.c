@@ -39,11 +39,11 @@ int main(void)
     }
     // printf("%i\n", firstArray[8]);
     // check nums in first array
-    for (int j = 0; j < count; j++)
-    {
-        printf("%i",firstArray[j]);
-    }
-    printf("\n");
+    // for (int j = 0; j < count; j++)
+    // {
+    //     printf("%i",firstArray[j]);
+    // }
+    // printf("\n");
     // check nums in second array
     for (int k = 0; k < count; k++)
     {
