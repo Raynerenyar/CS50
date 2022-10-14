@@ -12,10 +12,9 @@ int main(void)
     {
         numArray[i] = num%10;
         num /= 10;
-        
+        printf("%i",numArray[i]);
     }
-
-
+    printf("\n");
 }
 
 int countDigits(long i)
