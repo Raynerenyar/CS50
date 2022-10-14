@@ -7,7 +7,7 @@ int main(void)
 {
     long num = get_long("Number: ");
     int count = countDigits(num);
-    int firstArrLen = (count/2);
+    int firstAa= (count/2);
     int secArrLen = (count - (count/2));
     int firstArray[firstArrLen];
     int secondArray[secArrLen];
@@ -84,4 +84,17 @@ int countDigits(long i)
     return ret;
 }
 
-int sumOfDigits()
+int sumOfDigits(int array, int arrLen)
+{
+    int sum =
+    for (int a = 0; a < arrLen; a++)
+    {
+        array[a] *= 2;
+        if (array[a] >= 10)
+        {
+            sum += (1 + (array[a]%10));
+        }
+        else sum += array[a];
+
+    }
+}
