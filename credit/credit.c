@@ -108,8 +108,3 @@ int countDigits(long i)
     while (i/=10) ret++;
     return ret;
 }
-
-// bool isCreditCard(int arrDigit, int arrLen)
-// {
-
-// }
