@@ -22,8 +22,9 @@ int main(void)
             // printf("%li   %i",num, firstArray[i]);
             // printf("%i",firstArray[i]);
             // printf("\n");
+            printf(" %i",i);
         }
-        if (whichArray == 2)
+        else
         {
             secondArray[i] = num%10;
             num /= 10;
@@ -31,9 +32,10 @@ int main(void)
             // printf("%li   %i",num, secondArray[i]);
             // printf("%i",secondArray[i]);
             // printf("\n");
+            printf(" %i",i);
         }
         i -= 1;
-        printf("    %i",i);
+        // printf(" %i",i);
     }
     printf("\n");
     // check nums in first array
