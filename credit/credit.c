@@ -37,7 +37,10 @@ int main(void)
         i -= 1;
         printf("\n");
     }
-    // printf("%i\n", firstArray[8]);
+
+
+
+
     // check nums in first array
     printf("first array\n");
     for (int m = 0; m < firstArrLen; m++)
