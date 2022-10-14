@@ -23,7 +23,7 @@ int main(void)
             firstArray[k] = num%10;
             num /= 10;
             whichArray = 2;
-            printf("%i   %i",i, firstArray[k]);
+            // printf("%i   %i",i, firstArray[k]);
             k++;
         }
         else
@@ -31,11 +31,11 @@ int main(void)
             secondArray[l] = num%10;
             num /= 10;
             whichArray = 1;
-            printf("%i   %i",i, secondArray[l]);
+            // printf("%i   %i",i, secondArray[l]);
             l++;
         }
         i -= 1;
-        printf("\n");
+        // printf("\n");
     }
     int sum = 0;
     for (int a = 0; a < secondArrLen; a++)
@@ -61,10 +61,10 @@ int main(void)
     printf("%i\n",(sum+finalSum));
 
     // checks if number is from AMEX, MASTER, or VISA
-    printf("%i\n",secondArray[secondArrLen]);
-    if (count == 16 && secondArray[secondArrLen] == 5)
+    printf("%i\n",secondArray[secondArrLen-1]);
+    if (count == 16 && secondArray[secondArrLen-1] == 5)
     {
-        int digitCheck = firstArray[firstArrLen];
+        int digitCheck = firstArray[firstArrLen-1];
         if (digitCheck == 1 || digitCheck == 2 || digitCheck == 3 || digitCheck == 4 || digitCheck == 5)
         {
             printf("MASTERCARD\n");
@@ -72,13 +72,13 @@ int main(void)
     }
     else if (firstArray[firstArrLen] == 3)
     {
-        int digitCheck = secondArray[secondArrLen];
+        int digitCheck = secondArray[secondArrLen-1];
         if (digitCheck == 3 || digitCheck == 4)
         {
             printf("AMEX\n");
         }
     }
-    else if (firstArray[firstArrLen] == 4) printf("VISA\n");
+    else if (firstArray[firstArrLen-1] == 4) printf("VISA\n");
     // check nums in first array
     // printf("first array\n");
     // for (int m = 0; m < secondArrLen; m++)
