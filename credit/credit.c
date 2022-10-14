@@ -60,42 +60,33 @@ int main(void)
     }
     // printf("%i",finalSum);
     bool valid = true;
-    while (valid)
+    if (finalSum%10 != 0)
     {
-        if (finalSum%10 != 0)
-        {
-            printf("INVALID\n");
-            break;
-        }
-        // checks if number is from AMEX, MASTER, or VISA
-        if (count == 16 && secondArray[secondArrLen-1] == 5 && valid)
-        {
-            int digitCheck = firstArray[firstArrLen-1];
-            if (digitCheck == 1 || digitCheck == 2 || digitCheck == 3 || digitCheck == 4 || digitCheck == 5)
-            {
-                printf("MASTERCARD\n");
-            }
-            else printf("INVALID\n");
-            break;
-        }
-        else if (count == 15 && firstArray[firstArrLen-1] == 3 && valid)
-        {
-            int digitCheck = secondArray[secondArrLen-1];
-            if (digitCheck == 7 || digitCheck == 4)
-            {
-                printf("AMEX\n");
-            }
-            else printf("INVALID\n");
-            break;
-        }
-        else if (count == 16 && secondArray[secondArrLen-1] == 4 && valid) printf("VISA\n");
-        else if (count == 13 && firstArray[firstArrLen-1] == 4 && valid) printf("VISA\n");
-        else
-        {
-            printf("INVALID\n");
-            break;
-        }
+        printf("INVALID\n");
+        valid = false;
     }
+    // checks if number is from AMEX, MASTER, or VISA
+    if (count == 16 && secondArray[secondArrLen-1] == 5 && valid)
+    {
+        int digitCheck = firstArray[firstArrLen-1];
+        if (digitCheck == 1 || digitCheck == 2 || digitCheck == 3 || digitCheck == 4 || digitCheck == 5)
+        {
+            printf("MASTERCARD\n");
+        }
+        else printf("INVALID\n");
+    }
+    else if (count == 15 && firstArray[firstArrLen-1] == 3 && valid)
+    {
+        int digitCheck = secondArray[secondArrLen-1];
+        if (digitCheck == 7 || digitCheck == 4)
+        {
+            printf("AMEX\n");
+        }
+        else printf("INVALID\n");
+    }
+    else if (count == 16 && secondArray[secondArrLen-1] == 4 && valid) printf("VISA\n");
+    else if (count == 13 && firstArray[firstArrLen-1] == 4 && valid) printf("VISA\n");
+    else printf("INVALID\n");
     // check nums in first array
     // printf("first array\n");
     // for (int m = 0; m < secondArrLen; m++)
