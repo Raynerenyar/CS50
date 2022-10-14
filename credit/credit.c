@@ -11,11 +11,13 @@ int main(void)
     int secondArray[(20)];
     // int i = count;
     int whichArray = 2;
+    int firstArrInt = 1;
+    int secArrInt = 1;
     for (int i = count; i > 0; i--)
     {
         if (whichArray ==  1)
         {
-            firstArray[i] = num%10;
+            firstArray[firstArrInt] = num%10;
             num /= 10;
             whichArray = 2;
             printf("%i   %i",i, firstArray[i]);
