@@ -11,16 +11,17 @@ int main(void)
     int secArrLen = count - count/2;
     int firstArray[firstArrLen];
     int secondArray[secArrLen];
-    // int i = count;
+    int i = count;
     int whichArray = 2;
-    for (int i = count; i > 0; i--)
+    // int i = count; i > 0; i--
+    while (i > 0)
     {
         if (whichArray ==  1)
         {
             firstArray[firstArrLen] = num%10;
             num /= 10;
             whichArray = 2;
-            printf("%i   %i",i, firstArray[firstArrLen]);
+            // printf("%i   %i",i, firstArray[firstArrLen]);
             firstArrLen -= 1;
             // printf("%i",firstArray[i]);
             // printf("\n");
@@ -37,6 +38,7 @@ int main(void)
             // printf("\n");
             // printf(" %li\n",num);
         }
+        i -= 1;
         printf("\n");
     }
     // printf("%i\n", firstArray[8]);
