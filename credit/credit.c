@@ -10,7 +10,7 @@ int main(void)
     int firstArray[(count%2)];
     int secondArray[(count-count%2)];
     int i = count;
-    int whichArray = 1;
+    int whichArray = 2;
     while (i--)
     {
         if (whichArray ==  1)
@@ -26,7 +26,7 @@ int main(void)
             whichArray = 1;
         }
     }
-    printf("%i\n",firstArray[0]);
+    // printf("%i\n",firstArray[0]);
     // check nums in first array
     // for (int j = 0; j < count; j++)
     // {
