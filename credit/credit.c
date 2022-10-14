@@ -47,7 +47,7 @@ int main(void)
     // check nums in second array
     for (int k = 0; k < count; k++)
     {
-        printf("%d",secondArray[k]);
+        printf("%d ",secondArray[k]);
     }
 }
 
