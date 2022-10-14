@@ -84,17 +84,17 @@ int countDigits(long i)
     return ret;
 }
 
-int sumOfDigits(int array, int arrLen)
-{
-    int sum = 0;
-    for (int a = 0; a < arrLen; a++)
-    {
-        array[a] *= 2;
-        if (array[a] >= 10)
-        {
-            sum += (1 + (array[a]%10));
-        }
-        else sum += array[a];
+// int sumOfDigits(array,int arrLen)
+// {
+//     int sum = 0;
+//     for (int a = 0; a < arrLen; a++)
+//     {
+//         array[a] *= 2;
+//         if (array[a] >= 10)
+//         {
+//             sum += (1 + (array[a]%10));
+//         }
+//         else sum += array[a];
 
-    }
-}
+//     }
+// }
