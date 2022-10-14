@@ -66,7 +66,7 @@ int main(void)
         {
             printf("MASTERCARD\n");
         }
-        else printf("INVALID");
+        else printf("INVALID\n");
     }
     else if (count == 15 && firstArray[firstArrLen-1] == 3)
     {
@@ -75,7 +75,7 @@ int main(void)
         {
             printf("AMEX\n");
         }
-        else printf("INVALID");
+        else printf("INVALID\n");
     }
     else if (count == 16 && secondArray[secondArrLen-1] == 4) printf("VISA\n");
     else if (count == 13 && firstArray[firstArrLen-1] == 4) printf("VISA\n");
