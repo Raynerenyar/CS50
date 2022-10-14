@@ -10,10 +10,21 @@ int main(void)
     int firstArray[(count%2)];
     int secondArray[(count-count%2)];
     int i = count;
+    string whichArray = "first";
     while (i--)
     {
-        firstArray[i] = num%10;
-        num /= 10;
+        if (whichArray ==  "first")
+        {
+            firstArray[i] = num%10;
+            num /= 10;
+            whichArray = "second"
+        }
+        if (whichArray == "second")
+        {
+            firstArray[i] = num%10;
+            num /= 10;
+            whichArray = "first"
+        }
         printf("%i",firstArray[i]);
     }
     printf("\n");
