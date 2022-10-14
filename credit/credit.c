@@ -15,6 +15,7 @@ int main(void)
     int k = 0;
     int l = 0;
     int whichArray = 1;
+    // distribute digits to first and second array
     while (i > 0)
     {
         // last digit always goes into first array (2nd-to-last)
@@ -34,6 +35,7 @@ int main(void)
         }
         i -= 1;
     }
+    // checksum evaluation
     int sum = 0;
     for (int a = 0; a < secondArrLen; a++)
     {
