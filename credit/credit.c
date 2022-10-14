@@ -48,13 +48,12 @@ int main(void)
         else sum += firstArray[a];
         printf("%i\n",sum);
     }
-    printf("%i\n",sum);
     int finalSum = 0;
     for (int b = 0; b < secArrLen; b++)
     {
         if (secondArray[b] >= 10)
         {
-            sum += (1 + (secondArray[b]%10));
+            finalSum += (1 + (secondArray[b]%10));
         }
         else finalSum += secondArray[b];
     }
