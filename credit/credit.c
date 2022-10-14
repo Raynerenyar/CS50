@@ -47,7 +47,7 @@ int main(void)
             sum += (1 + (multiplyTwo%10));
         }
         else sum += multiplyTwo;
-        // printf("%i\n",sum);
+        printf("%i\n",sum);
     }
     int finalSum = 0;
     for (int b = 0; b < firstArrLen; b++)
