@@ -109,4 +109,4 @@ int countDigits(long i)
     return ret;
 }
 
-bool isCreditCard(int array,)
+bool isCreditCard()
