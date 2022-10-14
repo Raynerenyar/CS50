@@ -9,15 +9,15 @@ int main(void)
     int count = countDigits(num);
     int SecondArrLen= (count/2);
     int firstArrLen = (count - (count/2));
-    int SecondArray[SecondArrLen];
+    int secondArray[SecondArrLen];
     int firstArray[firstArrLen];
     int i = count;
     int k = 0;
     int l = 0;
-    // second-to-last
     int whichArray = 1;
     while (i > 0)
     {
+        // last digit always goes into first array (2nd-to-last)
         if (whichArray ==  1)
         {
             firstArray[k] = num%10;
@@ -40,12 +40,12 @@ int main(void)
     int sum = 0;
     for (int a = 0; a < SecondArrLen; a++)
     {
-        SecondArray[a] *= 2;
-        if (SecondArray[a] >= 10)
+        secondArray[a] *= 2;
+        if (secondArray[a] >= 10)
         {
-            sum += (1 + (SecondArray[a]%10));
+            sum += (1 + (secondArray[a]%10));
         }
-        else sum += SecondArray[a];
+        else sum += secondArray[a];
         printf("%i\n",sum);
     }
     int finalSum = 0;
@@ -60,12 +60,27 @@ int main(void)
     printf("%i\n",(sum+finalSum));
 
     // checks if number is from AE, Mast, or Visa
-
+    if (firstArray[0] == 5)
+    {
+        int digitCheck = secondArray[0];
+        if (digitCheck == 1 || digitCheck == 2 || digitCheck == 3 || digitCheck == 4 || digitCheck == 5)
+        {
+            printf("MASTERCARD");
+        }
+    }
+    else if (firstArray[0] == 3)
+    {
+        int digitCheck = secondArray[0];
+        if (digitCheck == 3 || digitCheck == 4)
+        {
+            printf()
+        }
+    }
     // check nums in first array
     // printf("first array\n");
     // for (int m = 0; m < SecondArrLen; m++)
     // {
-    //     printf("%i %i\n", m,SecondArray[m]);
+    //     printf("%i %i\n", m,secondArray[m]);
     // }
     // printf("\n");
     // // check nums in second array
