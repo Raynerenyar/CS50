@@ -47,9 +47,9 @@ int main(void)
             sum += (1 + (multiplyTwo%10));
         }
         else sum += multiplyTwo;
-        printf("%i\n",sum);
+        // printf("%i\n",sum);
     }
-    int finalSum = 0;
+    int finalSum = sum;
     for (int b = 0; b < firstArrLen; b++)
     {
         if (firstArray[b] >= 10)
@@ -58,7 +58,7 @@ int main(void)
         }
         else finalSum += firstArray[b];
     }
-    printf("%i",finalSum);
+    // printf("%i",finalSum);
     if (finalSum%10 != 0) printf("INVALID");
     // checks if number is from AMEX, MASTER, or VISA
     if (count == 16 && secondArray[secondArrLen-1] == 5)
