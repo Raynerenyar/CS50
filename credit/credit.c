@@ -38,16 +38,16 @@ int main(void)
         printf("\n");
     }
     int sum = 0;
-    for (int a = 0; a < secArrLen; a++)
+    for (int a = 0; a < firstArrLen; a++)
     {
-        secondArray[a] *= 2;
-        sum += secondArray[a];
+        firstArray[a] *= 2;
+        sum += firstArray[a];
     }
     printf("%i\n",sum);
     int finalSum = 0;
-    for (int b = 0; b < firstArrLen; b++)
+    for (int b = 0; b < secArrLen; b++)
     {
-        finalSum += firstArray[b];
+        finalSum += secondArray[b];
     }
     printf("%i\n",(sum+finalSum));
 
