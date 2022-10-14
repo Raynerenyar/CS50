@@ -60,7 +60,11 @@ int main(void)
     }
     // printf("%i",finalSum);
     bool valid = true;
-    if (finalSum%10 != 0) printf("INVALID\n");
+    if (finalSum%10 != 0)
+    {
+        printf("INVALID\n");
+        valid = false;
+    }
     // checks if number is from AMEX, MASTER, or VISA
     if (count == 16 && secondArray[secondArrLen-1] == 5 && valid)
     {
