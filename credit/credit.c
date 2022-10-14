@@ -37,18 +37,18 @@ int main(void)
         i -= 1;
         // printf(" %i",i);
     }
-    printf("\n");
+    // printf("%i\n", firstArray[8]);
     // check nums in first array
-    // for (int j = 0; j < count; j++)
-    // {
-    //     printf("%i",firstArray[j]);
-    // }
-    // printf("\n");
-    // // check nums in second array
-    // for (int k = 0; k < count; k++)
-    // {
-    //     printf("%i",secondArray[k]);
-    // }
+    for (int j = 0; j < count; j++)
+    {
+        printf("%i",firstArray[j]);
+    }
+    printf("\n");
+    // check nums in second array
+    for (int k = 0; k < count; k++)
+    {
+        printf("%i",secondArray[k]);
+    }
 }
 
 int countDigits(long i)
