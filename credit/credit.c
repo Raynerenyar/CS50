@@ -40,12 +40,13 @@ int main(void)
     int sum = 0;
     for (int a = 0; a < secondArrLen; a++)
     {
-        secondArray[a] *= 2;
-        if (secondArray[a] >= 10)
+        int multiplyTwo = secondArray[a] * 2;
+        // secondArray[a] *= 2;
+        if (multiplyTwo >= 10)
         {
-            sum += (1 + (secondArray[a]%10));
+            sum += (1 + (multiplyTwo%10));
         }
-        else sum += secondArray[a];
+        else sum += multiplyTwo;
         printf("%i\n",sum);
     }
     int finalSum = 0;
