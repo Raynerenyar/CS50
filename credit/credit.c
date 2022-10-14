@@ -76,7 +76,7 @@ int main(void)
             printf("AMEX\n");
         }
     }
-    else if (firstArray[0] == 4) printf("VISA\n");
+    else if (firstArray[firstArrLen] == 4) printf("VISA\n");
     // check nums in first array
     // printf("first array\n");
     // for (int m = 0; m < secondArrLen; m++)
