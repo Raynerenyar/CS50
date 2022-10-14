@@ -37,23 +37,26 @@ int main(void)
         i -= 1;
         printf("\n");
     }
-
+        for (int n = 0; n < secArrLen; n++)
+    {
+        secondArray[n] *= 2;
+    }
 
 
 
     // check nums in first array
-    printf("first array\n");
-    for (int m = 0; m < firstArrLen; m++)
-    {
-        printf("%i %i\n", m,firstArray[m]);
-    }
-    printf("\n");
-    // check nums in second array
-    printf("second array\n");
-    for (int n = 0; n < secArrLen; n++)
-    {
-        printf("%i %i\n", n, secondArray[n]);
-    }
+    // printf("first array\n");
+    // for (int m = 0; m < firstArrLen; m++)
+    // {
+    //     printf("%i %i\n", m,firstArray[m]);
+    // }
+    // printf("\n");
+    // // check nums in second array
+    // printf("second array\n");
+    // for (int n = 0; n < secArrLen; n++)
+    // {
+    //     printf("%i %i\n", n, secondArray[n]);
+    // }
 }
 
 int countDigits(long i)
