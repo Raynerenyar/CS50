@@ -59,13 +59,13 @@ int main(void)
     }
     printf("%i\n",(sum+finalSum));
 
-    // checks if number is from AE, Mast, or Visa
+    // checks if number is from AMEX, MASTER, or VISA
     if (firstArray[0] == 5)
     {
         int digitCheck = secondArray[0];
         if (digitCheck == 1 || digitCheck == 2 || digitCheck == 3 || digitCheck == 4 || digitCheck == 5)
         {
-            printf("MASTERCARD");
+            printf("MASTERCARD\n");
         }
     }
     else if (firstArray[0] == 3)
@@ -73,9 +73,10 @@ int main(void)
         int digitCheck = secondArray[0];
         if (digitCheck == 3 || digitCheck == 4)
         {
-            printf()
+            printf("AMEX\n");
         }
     }
+    else if (firstArray[0] == 4) printf("VISA\n");
     // check nums in first array
     // printf("first array\n");
     // for (int m = 0; m < SecondArrLen; m++)
