@@ -8,10 +8,13 @@ int main(void)
     long num = get_long("Number: ");
     int count = countDigits(num);
     int numArray[count];
-    for (int i = 0; i < count; i++)
+    for (int i = count; i > 0; i--)
     {
+        numArray[i] = num%10;
+        num /= 10;
         
     }
+
 
 }
 
