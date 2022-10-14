@@ -39,13 +39,13 @@ int main(void)
     // check nums in first array
     for (int j = 0; j < count; j++)
     {
-        printf("1st %i\n",firstArray[j]);
+        printf("%i %i\n", j,firstArray[j]);
     }
     printf("\n");
     // check nums in second array
     for (int k = 0; k < count; k++)
     {
-        printf("2nd %i\n",secondArray[k]);
+        printf("%i %i\n", k, secondArray[k]);
     }
 }
 
