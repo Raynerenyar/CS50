@@ -1,21 +1,21 @@
 #include <cs50.h>
 #include <stdio.h>
 
-int count(long i);
+int countDigits(long i);
 
 int main(void)
 {
     long num = get_long("Number: ");
-    printf("%i\n",count(num));
-    int numArray[num];
-    for (int i = 0; i < num; i++)
+    int count = countDigits(num);
+    int numArray[count];
+    for (int i = 0; i < count; i++)
     {
         
     }
 
 }
 
-int count(long i)
+int countDigits(long i)
 {
     int ret=1;
     while (i/=10) ret++;
