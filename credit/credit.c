@@ -22,7 +22,7 @@ int main(void)
             // printf("%li   %i",num, firstArray[i]);
             // printf("%i",firstArray[i]);
             // printf("\n");
-            printf(" %i",i);
+            printf(" %li\n",num);
         }
         else
         {
@@ -32,7 +32,7 @@ int main(void)
             // printf("%li   %i",num, secondArray[i]);
             // printf("%i",secondArray[i]);
             // printf("\n");
-            printf(" %i",i);
+            printf(" %li\n",num);
         }
         i -= 1;
         // printf(" %i",i);
