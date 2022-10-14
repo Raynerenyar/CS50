@@ -7,13 +7,14 @@ int main(void)
 {
     long num = get_long("Number: ");
     int count = countDigits(num);
-    int numArray[count];
+    int firstArray[count];
     printf("%i\n",count);
-    for (int i = count; i > 0; i--)
+    int i = count;
+    while (i--)
     {
-        numArray[i] = num%10;
+        firstArray[i] = num%10;
         num /= 10;
-        printf("%i",numArray[i]);
+        printf("%i",firstArray[i]);
     }
     printf("\n");
 }
