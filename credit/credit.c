@@ -12,9 +12,10 @@ int main(void)
     int SecondArray[SecondArrLen];
     int firstArray[firstArrLen];
     int i = count;
-    int whichArray = 2;
     int k = 0;
     int l = 0;
+    // second-to-last
+    int whichArray = 2;
     while (i > 0)
     {
         if (whichArray ==  1)
