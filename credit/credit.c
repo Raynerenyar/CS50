@@ -19,7 +19,7 @@ int main(void)
             firstArray[i] = num%10;
             num /= 10;
             whichArray = 2;
-            printf("%li   %i",num, firstArray[i]);
+            // printf("%li   %i",num, firstArray[i]);
             // printf("%i",firstArray[i]);
             printf("\n");
         }
@@ -28,12 +28,12 @@ int main(void)
             secondArray[i] = num%10;
             num /= 10;
             whichArray = 1;
-            printf("%li   %i",num, secondArray[i]);
+            // printf("%li   %i",num, secondArray[i]);
             // printf("%i",secondArray[i]);
             printf("\n");
         }
         i -= 1;
-        printf("    %i\n",i);
+        printf("    %i",i);
     }
     printf("\n");
     // check nums in first array
