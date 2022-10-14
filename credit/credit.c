@@ -9,10 +9,9 @@ int main(void)
     int count = countDigits(num);
     int firstArray[(count%2)];
     int secondArray[(count-count%2)];
-    int i = count;
+    // int i = count;
     int whichArray = 2;
-    printf("%i\n",i);
-    while (i>0)
+    for (int i = count; i > 0; i--)
     {
         if (whichArray ==  1)
         {
@@ -22,7 +21,7 @@ int main(void)
             // printf("%li   %i",num, firstArray[i]);
             // printf("%i",firstArray[i]);
             // printf("\n");
-            printf(" %li\n",num);
+            // printf(" %li\n",num);
         }
         else
         {
@@ -32,9 +31,8 @@ int main(void)
             // printf("%li   %i",num, secondArray[i]);
             // printf("%i",secondArray[i]);
             // printf("\n");
-            printf(" %li\n",num);
+            // printf(" %li\n",num);
         }
-        i -= 1;
         // printf(" %i",i);
     }
     // printf("%i\n", firstArray[8]);
@@ -45,18 +43,6 @@ int main(void)
     // }
     // printf("\n");
     // check nums in second array
-    printf("%d ",secondArray[0]);
-    printf("%d ",secondArray[1]);
-    printf("%d ",secondArray[2]);
-    printf("%d ",secondArray[3]);
-    printf("%d ",secondArray[4]);
-    printf("%d ",secondArray[5]);
-    printf("%d ",secondArray[6]);
-    printf("%d ",secondArray[7]);
-    printf("%d ",secondArray[8]);
-    printf("%d ",secondArray[9]);
-    printf("%d ",secondArray[10]);
-    printf("%d ",secondArray[11]);
     // for (int k = 0; k < count; k++)
     // {
     //     printf("%d ",secondArray[k]);
