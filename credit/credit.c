@@ -9,44 +9,46 @@ int main(void)
     int count = countDigits(num);
     int firstArrLen = (count/2);
     int secArrLen = (count - (count/2));
-    int firstArray[20];
-    int secondArray[20];
+    int firstArray[firstArrLen];
+    int secondArray[secArrLen];
     int i = count;
     int whichArray = 2;
+    int k = 0;
+    int l = 0;
     // int i = count; i > 0; i--
     while (i > 0)
     {
         if (whichArray ==  1)
         {
-            firstArray[firstArrLen] = num%10;
+            firstArray[k] = num%10;
             num /= 10;
             whichArray = 2;
-            printf("%i   %i",i, firstArray[firstArrLen]);
-            firstArrLen -= 1;
+            printf("%i   %i",i, firstArray[k]);
+            k++;
         }
         else
         {
-            secondArray[secArrLen] = num%10;
+            secondArray[l] = num%10;
             num /= 10;
             whichArray = 1;
-            printf("%i   %i",i, secondArray[secArrLen]);
-            secArrLen -= 1;
+            printf("%i   %i",i, secondArray[l]);
+            l++;
         }
         i -= 1;
         printf("\n");
     }
     // printf("%i\n", firstArray[8]);
-    // // check nums in first array
-    // for (int j = 0; j < count; j++)
-    // {
-    //     printf("%i %i\n", j,firstArray[j]);
-    // }
-    // printf("\n");
-    // // check nums in second array
-    // for (int k = 0; k < count; k++)
-    // {
-    //     printf("%i %i\n", k, secondArray[k]);
-    // }
+    // check nums in first array
+    for (int m = 0; m < count; m++)
+    {
+        printf("%i %i\n", m,firstArray[m]);
+    }
+    printf("\n");
+    // check nums in second array
+    for (int n = 0; n < count; n++)
+    {
+        printf("%i %i\n", n, secondArray[n]);
+    }
 }
 
 int countDigits(long i)
