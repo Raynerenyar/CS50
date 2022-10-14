@@ -7,7 +7,8 @@ int main(void)
 {
     long num = get_long("Number: ");
     int count = countDigits(num);
-    int firstArray[count];
+    int firstArray[(count%2)];
+    int secondArray[(count-count%2)]
     printf("%i\n",count);
     int i = count;
     while (i--)
