@@ -2,7 +2,6 @@
 #include <stdio.h>
 
 int countDigits(long i);
-int sumOfDigits(int arr, int arrLen);
 
 int main(void)
 {
@@ -16,7 +15,6 @@ int main(void)
     int whichArray = 2;
     int k = 0;
     int l = 0;
-    // int i = count; i > 0; i--
     while (i > 0)
     {
         if (whichArray ==  1)
@@ -60,8 +58,6 @@ int main(void)
     }
     printf("%i\n",(sum+finalSum));
 
-
-
     // check nums in first array
     // printf("first array\n");
     // for (int m = 0; m < firstArrLen; m++)
@@ -82,20 +78,4 @@ int countDigits(long i)
     int ret=1;
     while (i/=10) ret++;
     return ret;
-}
-
-int sumOfDigits(int arr, int arrLen)
-{
-    int sum = 0;
-    sum = arr[1];
-    // for (int a = 0; a < arrLen; a++)
-    // {
-    //     arr[a] *= 2;
-    //     if (arr[a] >= 10)
-    //     {
-    //         sum += (1 + (arr[a]%10));
-    //     }
-    //     else sum += arr[a];
-    // }
-    // return 1;
 }
