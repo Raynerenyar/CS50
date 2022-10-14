@@ -9,7 +9,6 @@ int main(void)
     int count = countDigits(num);
     int firstArray[(count%2)];
     int secondArray[(count-count%2)]
-    printf("%i\n",count);
     int i = count;
     while (i--)
     {
