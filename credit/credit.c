@@ -23,7 +23,6 @@ int main(void)
             firstArray[k] = num%10;
             num /= 10;
             whichArray = 2;
-            // printf("%i   %i",i, firstArray[k]);
             k++;
         }
         else
@@ -31,23 +30,19 @@ int main(void)
             secondArray[l] = num%10;
             num /= 10;
             whichArray = 1;
-            // printf("%i   %i",i, secondArray[l]);
             l++;
         }
         i -= 1;
-        // printf("\n");
     }
     int sum = 0;
     for (int a = 0; a < secondArrLen; a++)
     {
         int multiplyTwo = secondArray[a] * 2;
-        // secondArray[a] *= 2;
         if (multiplyTwo >= 10)
         {
             sum += (1 + (multiplyTwo%10));
         }
         else sum += multiplyTwo;
-        // printf("%i\n",sum);
     }
     int finalSum = sum;
     for (int b = 0; b < firstArrLen; b++)
@@ -58,7 +53,7 @@ int main(void)
         }
         else finalSum += firstArray[b];
     }
-    // printf("%i",finalSum);
+    // checks checksum last digit
     bool valid = true;
     if (finalSum%10 != 0)
     {
@@ -90,19 +85,6 @@ int main(void)
         else if (count == 13 && firstArray[firstArrLen-1] == 4) printf("VISA\n");
         else printf("INVALID\n");
     }
-    // check nums in first array
-    // printf("first array\n");
-    // for (int m = 0; m < secondArrLen; m++)
-    // {
-    //     printf("%i %i\n", m,secondArray[m]);
-    // }
-    // printf("\n");
-    // // check nums in second array
-    // printf("second array\n");
-    // for (int n = 0; n < firstArrLen; n++)
-    // {
-    //     printf("%i %i\n", n, firstArray[n]);
-    // }
 }
 
 int countDigits(long i)
