@@ -7,10 +7,10 @@ int main(void)
 {
     long num = get_long("Number: ");
     int count = countDigits(num);
-    int firstArrLen = count/2;
-    int secArrLen = count - count/2;
-    int firstArray[firstArrLen];
-    int secondArray[secArrLen];
+    int firstArrLen = (count/2);
+    int secArrLen = (count - (count/2));
+    int firstArray[20];
+    int secondArray[20];
     int i = count;
     int whichArray = 2;
     // int i = count; i > 0; i--
@@ -21,11 +21,8 @@ int main(void)
             firstArray[firstArrLen] = num%10;
             num /= 10;
             whichArray = 2;
-            // printf("%i   %i",i, firstArray[firstArrLen]);
+            printf("%i   %i",i, firstArray[firstArrLen]);
             firstArrLen -= 1;
-            // printf("%i",firstArray[i]);
-            // printf("\n");
-            // printf(" %li\n",num);
         }
         else
         {
@@ -34,9 +31,6 @@ int main(void)
             whichArray = 1;
             printf("%i   %i",i, secondArray[secArrLen]);
             secArrLen -= 1;
-            // printf("%i",secondArray[i]);
-            // printf("\n");
-            // printf(" %li\n",num);
         }
         i -= 1;
         printf("\n");
