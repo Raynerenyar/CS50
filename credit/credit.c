@@ -59,14 +59,14 @@ int main(void)
         else finalSum += firstArray[b];
     }
     // printf("%i",finalSum);
-    bool valid = true;
+    // bool valid = true;
     if (finalSum%10 != 0)
     {
         printf("INVALID\n");
-        valid = false;
+        // valid = false;
     }
     // checks if number is from AMEX, MASTER, or VISA
-    if (count == 16 && secondArray[secondArrLen-1] == 5 && valid)
+    if (count == 16 && secondArray[secondArrLen-1] == 5)
     {
         int digitCheck = firstArray[firstArrLen-1];
         if (digitCheck == 1 || digitCheck == 2 || digitCheck == 3 || digitCheck == 4 || digitCheck == 5)
@@ -75,7 +75,7 @@ int main(void)
         }
         else printf("INVALID\n");
     }
-    else if (count == 15 && firstArray[firstArrLen-1] == 3 && valid)
+    else if (count == 15 && firstArray[firstArrLen-1] == 3)
     {
         int digitCheck = secondArray[secondArrLen-1];
         if (digitCheck == 7 || digitCheck == 4)
@@ -84,8 +84,8 @@ int main(void)
         }
         else printf("INVALID\n");
     }
-    else if (count == 16 && secondArray[secondArrLen-1] == 4 && valid) printf("VISA\n");
-    else if (count == 13 && firstArray[firstArrLen-1] == 4 && valid) printf("VISA\n");
+    else if (count == 16 && secondArray[secondArrLen-1] == 4) printf("VISA\n");
+    else if (count == 13 && firstArray[firstArrLen-1] == 4) printf("VISA\n");
     else printf("INVALID\n");
     // check nums in first array
     // printf("first array\n");
