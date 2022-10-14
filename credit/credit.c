@@ -19,9 +19,9 @@ int main(void)
             num /= 10;
             whichArray = 2;
             // printf("%li   %i",num, firstArray[i]);
-            // printf("%i",firstArray[i]);
+            printf("%i",firstArray[i]);
             // printf("\n");
-            printf(" %li\n",num);
+            // printf(" %li\n",num);
         }
         else
         {
@@ -29,24 +29,24 @@ int main(void)
             num /= 10;
             whichArray = 1;
             // printf("%li   %i",num, secondArray[i]);
-            // printf("%i",secondArray[i]);
+            printf("%i",secondArray[i]);
             // printf("\n");
-            printf(" %li\n",num);
+            // printf(" %li\n",num);
         }
-        // printf(" %i",i);
+        printf("\n");
     }
     // printf("%i\n", firstArray[8]);
-    // check nums in first array
-    for (int j = 0; j < count; j++)
-    {
-        printf("%i %i\n", j,firstArray[j]);
-    }
-    printf("\n");
-    // check nums in second array
-    for (int k = 0; k < count; k++)
-    {
-        printf("%i %i\n", k, secondArray[k]);
-    }
+    // // check nums in first array
+    // for (int j = 0; j < count; j++)
+    // {
+    //     printf("%i %i\n", j,firstArray[j]);
+    // }
+    // printf("\n");
+    // // check nums in second array
+    // for (int k = 0; k < count; k++)
+    // {
+    //     printf("%i %i\n", k, secondArray[k]);
+    // }
 }
 
 int countDigits(long i)
