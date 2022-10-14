@@ -19,7 +19,7 @@ int main(void)
             firstArray[i] = num%10;
             num /= 10;
             whichArray = 2;
-            printf("%i",)
+            printf("%l",num)
             printf("%i",firstArray[i]);
         }
         if (whichArray == 2)
