@@ -29,6 +29,7 @@ int main(void)
             printf("%i",secondArray[i]);
         }
         i -= 1;
+        printf("    %i\n",i);
     }
     printf("\n");
     // check nums in first array
