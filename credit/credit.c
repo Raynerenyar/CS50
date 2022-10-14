@@ -18,18 +18,18 @@ int main(void)
             firstArray[i] = num%10;
             num /= 10;
             whichArray = 2;
+            printf("%i",firstArray[i]);
         }
         if (whichArray == 2)
         {
             secondArray[i] = num%10;
             num /= 10;
             whichArray = 1;
+            printf("%i",secondArray[i]);
         }
         i -= 1;
     }
-    printf("%i\n",firstArray[0]);
-    printf("%i\n",firstArray[1]);
-    printf("%i\n",firstArray[2]);
+    printf("\n");
     // check nums in first array
     // for (int j = 0; j < count; j++)
     // {
