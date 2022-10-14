@@ -43,7 +43,7 @@ int main(void)
         firstArray[a] *= 2;
         if (firstArray[a] >= 10)
         {
-            sum += (1 + (firstArray[a]%2));
+            sum += (1 + (firstArray[a]%10));
         }
         else sum += firstArray[a];
         printf("%i\n",sum);
