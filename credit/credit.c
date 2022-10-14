@@ -11,7 +11,7 @@ int main(void)
     int secondArray[(count-count%2)];
     int i = count;
     int whichArray = 2;
-    while (i--)
+    while (i>0)
     {
         if (whichArray ==  1)
         {
@@ -21,12 +21,13 @@ int main(void)
         }
         if (whichArray == 2)
         {
-            firstArray[i] = num%10;
+            secondArray[i] = num%10;
             num /= 10;
             whichArray = 1;
         }
+        i -= 1;
     }
-    // printf("%i\n",firstArray[0]);
+    printf("%i\n",firstArray[0]);
     // check nums in first array
     // for (int j = 0; j < count; j++)
     // {
