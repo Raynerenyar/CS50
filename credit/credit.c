@@ -28,6 +28,8 @@ int main(void)
         i -= 1;
     }
     printf("%i\n",firstArray[0]);
+    printf("%i\n",firstArray[1]);
+    printf("%i\n",firstArray[2]);
     // check nums in first array
     // for (int j = 0; j < count; j++)
     // {
