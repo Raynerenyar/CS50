@@ -1,16 +1,16 @@
 #include <cs50.h>
 #include <stdio.h>
 
-int count(int i);
+int count(long i);
 
 int main(void)
 {
     long num = get_long("Number: ");
-    printf("%i\n",count());
+    printf("%i\n",count(num));
 
 }
 
-long count(long i)
+int count(long i)
 {
     int ret=1;
     while (i/=10) ret++;
