@@ -18,8 +18,8 @@ int main(void)
             firstArray[i] = num%10;
             num /= 10;
             whichArray = 2;
-            // printf("%li   %i",num, firstArray[i]);
-            printf("%i",firstArray[i]);
+            printf("%i   %i",i, firstArray[i]);
+            // printf("%i",firstArray[i]);
             // printf("\n");
             // printf(" %li\n",num);
         }
@@ -28,8 +28,8 @@ int main(void)
             secondArray[i] = num%10;
             num /= 10;
             whichArray = 1;
-            // printf("%li   %i",num, secondArray[i]);
-            printf("%i",secondArray[i]);
+            printf("%i   %i",i, secondArray[i]);
+            // printf("%i",secondArray[i]);
             // printf("\n");
             // printf(" %li\n",num);
         }
