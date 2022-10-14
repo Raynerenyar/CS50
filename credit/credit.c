@@ -27,6 +27,7 @@ int main(void)
             secondArray[i] = num%10;
             num /= 10;
             whichArray = 1;
+            printf("%li",num);
             printf("%i",secondArray[i]);
         }
         i -= 1;
