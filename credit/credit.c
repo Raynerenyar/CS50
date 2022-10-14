@@ -70,7 +70,7 @@ int main(void)
             printf("MASTERCARD\n");
         }
     }
-    else if (firstArray[firstArrLen] == 3)
+    else if (count == 15 && firstArray[firstArrLen] == 3)
     {
         int digitCheck = secondArray[secondArrLen-1];
         if (digitCheck == 7 || digitCheck == 4)
@@ -78,7 +78,8 @@ int main(void)
             printf("AMEX\n");
         }
     }
-    else if (firstArray[firstArrLen-1] == 4) printf("VISA\n");
+    else if (count == 16 && secondArray[secondArrLen-1] == 4) printf("VISA\n");
+    else if (count == 13 && firstArray[firstArrLen-1] == 4) printf("VISA\n");
     // check nums in first array
     // printf("first array\n");
     // for (int m = 0; m < secondArrLen; m++)
