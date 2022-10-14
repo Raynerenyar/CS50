@@ -39,12 +39,14 @@ int main(void)
     }
     // printf("%i\n", firstArray[8]);
     // check nums in first array
+    printf("first array\n");
     for (int m = 0; m < count; m++)
     {
         printf("%i %i\n", m,firstArray[m]);
     }
     printf("\n");
     // check nums in second array
+    printf("second array\n");
     for (int n = 0; n < count; n++)
     {
         printf("%i %i\n", n, secondArray[n]);
