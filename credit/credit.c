@@ -45,10 +45,22 @@ int main(void)
     // }
     // printf("\n");
     // check nums in second array
-    for (int k = 0; k < count; k++)
-    {
-        printf("%d ",secondArray[k]);
-    }
+    printf("%d ",secondArray[0]);
+    printf("%d ",secondArray[1]);
+    printf("%d ",secondArray[2]);
+    printf("%d ",secondArray[3]);
+    printf("%d ",secondArray[4]);
+    printf("%d ",secondArray[5]);
+    printf("%d ",secondArray[6]);
+    printf("%d ",secondArray[7]);
+    printf("%d ",secondArray[8]);
+    printf("%d ",secondArray[9]);
+    printf("%d ",secondArray[10]);
+    printf("%d ",secondArray[11]);
+    // for (int k = 0; k < count; k++)
+    // {
+    //     printf("%d ",secondArray[k]);
+    // }
 }
 
 int countDigits(long i)
