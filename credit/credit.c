@@ -35,12 +35,20 @@ int main(void)
             l++;
         }
         i -= 1;
-        printf("\n");
+        // printf("\n");
     }
-        for (int n = 0; n < secArrLen; n++)
+    int sum = 0;
+    for (int a = 0; a < secArrLen; a++)
     {
-        secondArray[n] *= 2;
+        secondArray[a] *= 2;
+        sum += secondArray[a];
     }
+    int finalSum = 0;
+    for (int b = 0; b < firstArrLen; b++)
+    {
+        finalSum += firstArray[b];
+    }
+    printf("%i",(sum+finalSum));
 
 
 
