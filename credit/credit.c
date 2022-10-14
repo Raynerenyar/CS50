@@ -123,6 +123,6 @@ int countDigits(long i)
     while (i /= 10)
     {
         ret++;
-        return ret;
     }
+    return ret;
 }
