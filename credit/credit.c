@@ -7,8 +7,8 @@ int main(void)
 {
     long num = get_long("Number: ");
     int count = countDigits(num);
-    int firstArray[(count%2)];
-    int secondArray[(count-count%2)];
+    int firstArray[(20)];
+    int secondArray[(20)];
     // int i = count;
     int whichArray = 2;
     for (int i = count; i > 0; i--)
@@ -21,7 +21,7 @@ int main(void)
             // printf("%li   %i",num, firstArray[i]);
             // printf("%i",firstArray[i]);
             // printf("\n");
-            // printf(" %li\n",num);
+            printf(" %li\n",num);
         }
         else
         {
@@ -31,22 +31,22 @@ int main(void)
             // printf("%li   %i",num, secondArray[i]);
             // printf("%i",secondArray[i]);
             // printf("\n");
-            // printf(" %li\n",num);
+            printf(" %li\n",num);
         }
         // printf(" %i",i);
     }
     // printf("%i\n", firstArray[8]);
     // check nums in first array
-    // for (int j = 0; j < count; j++)
-    // {
-    //     printf("%i",firstArray[j]);
-    // }
-    // printf("\n");
+    for (int j = 0; j < count; j++)
+    {
+        printf("1st %i\n",firstArray[j]);
+    }
+    printf("\n");
     // check nums in second array
-    // for (int k = 0; k < count; k++)
-    // {
-    //     printf("%d ",secondArray[k]);
-    // }
+    for (int k = 0; k < count; k++)
+    {
+        printf("2nd %i\n",secondArray[k]);
+    }
 }
 
 int countDigits(long i)
