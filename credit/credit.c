@@ -11,6 +11,7 @@ int main(void)
     int secondArray[(count-count%2)];
     int i = count;
     int whichArray = 2;
+    printf("%i\n",i);
     while (i>0)
     {
         if (whichArray ==  1)
