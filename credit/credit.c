@@ -25,9 +25,18 @@ int main(void)
             num /= 10;
             whichArray = 1;
         }
-        printf("%i",firstArray[i]);
+    }
+    // check nums in first array
+    for (int j = 0; j < count; j++)
+    {
+        printf("%i",firstArray[j]);
     }
     printf("\n");
+    // check nums in second array
+    for (int k = 0; k < count; k++)
+    {
+        printf("%i",secondArray[k]);
+    }
 }
 
 int countDigits(long i)
