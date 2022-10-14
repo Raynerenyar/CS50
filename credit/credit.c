@@ -15,23 +15,23 @@ int main(void)
     int k = 0;
     int l = 0;
     // second-to-last
-    int whichArray = 2;
+    int whichArray = 1;
     while (i > 0)
     {
         if (whichArray ==  1)
         {
-            SecondArray[k] = num%10;
+            firstArray[k] = num%10;
             num /= 10;
             whichArray = 2;
-            printf("%i   %i",i, SecondArray[k]);
+            printf("%i   %i",i, firstArray[k]);
             k++;
         }
         else
         {
-            firstArray[l] = num%10;
+            secondArray[l] = num%10;
             num /= 10;
             whichArray = 1;
-            printf("%i   %i",i, firstArray[l]);
+            printf("%i   %i",i, secondArray[l]);
             l++;
         }
         i -= 1;
