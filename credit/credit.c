@@ -88,7 +88,11 @@ int main(void)
         }
         else if (count == 16 && secondArray[secondArrLen-1] == 4) printf("VISA\n");
         else if (count == 13 && firstArray[firstArrLen-1] == 4) printf("VISA\n");
-        else printf("INVALID\n");
+        else
+        {
+            printf("INVALID\n");
+            break;
+        }
     }
     // check nums in first array
     // printf("first array\n");
