@@ -35,7 +35,8 @@ int countSentences(string text, int len)
     int sentenceCount = 0;
     for (int i = 0; i < len; i++)
     {
-        if (text[i] == 33 || text[i] == 46 || text[i] == 63)
+        char character = text[i];
+        if (character == 33 || character == 46 || character == 63)
         {
             sentenceCount++;
         }
