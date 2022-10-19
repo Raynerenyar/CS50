@@ -14,11 +14,11 @@ int main(void)
     int wordCount = countWords(text, len);
     int letterCount = count_letters(text, len);
     int sentenceCount = countSentences(text, len);
-    // printf("WordCount: %i, letterCount: %i, sentenceCount: %i\n", wordCount, letterCount, sentenceCount);
+    printf("WordCount: %i, letterCount: %i, sentenceCount: %i\n", wordCount, letterCount, sentenceCount);
     double L = ((double) letterCount / wordCount * 100);
     double S = ((double) sentenceCount / wordCount * 100);
     double index = (0.0588 * L) - (0.296 * S) - 15.8;
-    // printf("%f\n", index);
+    printf("%f\n", index);
     if (index > 16)
     {
         printf("Grade 16+\n");
