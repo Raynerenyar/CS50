@@ -48,8 +48,8 @@ int countWords(string text, int len)
     int wordCount = 0;
     for (int i = 0; i < len; i++)
     {
-        char character = text[i];
-        if (character == " ")
+        // char character = text[i];
+        if (strcmp((char) text[i], " "))
         {
             wordCount++;
         }
