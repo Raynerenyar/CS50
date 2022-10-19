@@ -2,7 +2,7 @@
 #include <stdio.h>
 #include <string.h>
 
-string organiseToArrays(string text);
+string organiseToArrays(string text, int wordCount);
 int countWords(string text);
 
 int main(void)
@@ -23,12 +23,13 @@ string organiseToArrays(string text, int wordCount)
         {
             for (int j = startIndex; j < i; j++)
             {
-                text[j]
+                text[j];
             }
         }
         int word[];
         word[i]  = text[i];
     }
+    return "string";
 }
 
 int countWords(string text)
