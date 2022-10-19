@@ -18,8 +18,8 @@ int main(void)
     return 1;
 
     // Score both words
-    int score1 = compute_score(word1);
-    int score2 = compute_score(word2);
+    // int score1 = compute_score(word1);
+    // int score2 = compute_score(word2);
 
     // TODO: Print the winner
 }
