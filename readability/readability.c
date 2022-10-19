@@ -17,8 +17,8 @@ int main(void)
     int sentenceCount = countSentences(text, len);
     // organiseToArrays(text, wordCount);
     printf("WordCount: %i, letterCount: %i, sentenceCount: %i\n", wordCount, letterCount, sentenceCount);
-    int index = 0.0588 * (letterCount / wordCount * 100) - 0.296 * (sentenceCount / wordCount * 100) - 15.8;
-    printf("%i\n", index);
+    double index = 0.0588 * (letterCount / wordCount * 100) - 0.296 * (sentenceCount / wordCount * 100) - 15.8;
+    printf("%f\n", index);
     if (index > 16)
     {
         printf("Grade 16+");
@@ -27,7 +27,7 @@ int main(void)
     {
         printf("Before Grade 1");
     }
-    else printf("Grade %i\n", index);
+    else printf("Grade %i\n", (int) index);
 }
 
 // string organiseToArrays(string text, int wordCount)
