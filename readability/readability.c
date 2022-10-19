@@ -13,8 +13,16 @@ int main(void)
 string organiseToArrays(string text)
 {
     int len = strlen(text);
+    int startIndex = 0;
     for (int i = 0; i < len; i++)
     {
+        if (text[i] == 32)
+        {
+            for (int j = startIndex; j < i; j++)
+            {
+                text[j]
+            }
+        }
         int word[];
         word[i]  = text[i];
     }
