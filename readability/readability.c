@@ -3,19 +3,20 @@
 #include <string.h>
 
 // string organiseToArrays(string text, int wordCount);
-int countWords(string text. int len);
+int countWords(string text, int len);
 int count_letters(string text, int len);
-int countSentences(string text, int len)
+int countSentences(string text, int len);
 
 int main(void)
 {
     string text = get_string("Text: ");
     int len = strlen(text);
     int wordCount = countWords(text, len);
-    int letterCount = letter_count(text, len);
-    int senTenceCount = countSentences(text, len)
+    int letterCount = count_letters(text, len);
+    int sentenceCount = countSentences(text, len);
     // organiseToArrays(text, wordCount);
-    double index = 0.0588 * 
+    double index = 0.0588 * (letterCount / wordCount * 100) - 0.296 * (sentenceCount / wordCount * 100) - 15.8;
+    printf("%d", index);
 }
 
 // string organiseToArrays(string text, int wordCount)
