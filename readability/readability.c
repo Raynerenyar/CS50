@@ -15,9 +15,9 @@ int main(void)
     int letterCount = count_letters(text, len);
     int sentenceCount = countSentences(text, len);
     printf("WordCount: %i, letterCount: %i, sentenceCount: %i\n", wordCount, letterCount, sentenceCount);
-    double L = ((double) letterCount / wordCount * 100);
-    double S = ((double) sentenceCount / wordCount * 100);
-    double index = (0.0588 * L) - (0.296 * S) - 15.8;
+    float L = ((float) letterCount / wordCount * 100);
+    float S = ((float) sentenceCount / wordCount * 100);
+    float index = (0.0588 * L) - (0.296 * S) - 15.8;
     printf("%f\n", index);
     if (index > 16)
     {
