@@ -24,6 +24,7 @@ int main(void)
 int compute_score(string word)
 {
     // TODO: Compute and return score for string
+
 }
 
 string toLowercase(string word)
@@ -31,6 +32,10 @@ string toLowercase(string word)
     int len = strlen(word);
     for (int i = 0; i < len; i++)
     {
-        
+        if ((word[i] > 65 && word[i] < 90))
+        {
+            int toLower(word[i]);
+        }
     }
+    return word;
 }
