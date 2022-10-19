@@ -46,3 +46,17 @@ int countWords(string text)
     }
     return wordCount + 1;
 }
+
+int count_letters(string text)
+{
+    int len = strlen(text);
+    int letter_count = 0;
+    for (int i = 0; i < len; i++)
+    {
+        if (text[i] != 32)
+        {
+            letter_count++;
+        }
+    }
+    return letter_count;
+}
