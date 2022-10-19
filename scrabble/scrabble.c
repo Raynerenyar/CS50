@@ -22,10 +22,14 @@ int main(void)
     {
         printf("Player 1 wins\n");
     }
-    else if (score1 < score2){
+    else if (score1 < score2)
+    {
         printf("Player 2 wins\n");
     }
-    else printf("Tie\n");
+    else
+    {
+        printf("Tie\n");
+    }
 }
 
 int compute_score(string word)
@@ -38,7 +42,9 @@ int compute_score(string word)
     {
         if (isalpha(word[i]))
         {
-        score += POINTS[(int) word[i] - 97];
+            // from ASCI a = 97 and word has been converted to lowercase letters
+            // minus 97 to get index
+            score += POINTS[word[i] - 97];
         }
     }
     return score;
