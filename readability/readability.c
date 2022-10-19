@@ -29,7 +29,7 @@ int main(void)
     {
         printf("Before Grade 1\n");
     }
-    else printf("Grade %i\n", (int) index);
+    else printf("Grade %i\n", (int) round(index));
 }
 
 // string organiseToArrays(string text, int wordCount)
