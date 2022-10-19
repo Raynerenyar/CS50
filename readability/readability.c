@@ -19,7 +19,8 @@ string organiseToArrays(string text, int wordCount)
     int startIndex = 0;
     for (int i = 0; i < len; i++)
     {
-        if (text[i] == 32)
+        // checks for ',', '!', '>'
+        if (text[i] == 33 || text[i] == 46 || text[i] == 63)
         {
             for (int j = startIndex; j < i; j++)
             {
