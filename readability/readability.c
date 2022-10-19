@@ -26,7 +26,10 @@ int main(void)
     {
         printf("Before Grade 1\n");
     }
-    else printf("Grade %i\n", (int) round(index));
+    else
+    {
+        printf("Grade %i\n", (int) round(index));
+    }
 }
 
 int countSentences(string text, int len)
