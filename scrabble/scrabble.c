@@ -42,7 +42,7 @@ int compute_score(string word)
 string toLowercase(string word)
 {
     int len = strlen(word);
-    string fullWord;
+    string fullWord = "a";
     for (int i = 0; i < len; i++)
     {
         if (isupper(word[i]))
