@@ -25,3 +25,12 @@ int compute_score(string word)
 {
     // TODO: Compute and return score for string
 }
+
+string toLowercase(string word)
+{
+    int len = strlen(word);
+    for (int i = 0; i < len; i++)
+    {
+        
+    }
+}
