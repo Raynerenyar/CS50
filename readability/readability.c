@@ -66,7 +66,8 @@ int count_letters(string text, int len)
     for (int i = 0; i < len; i++)
     {
         char character = text[i];
-        if (character != ' ' && character != '!' && character != '.' && character != '?' && character != ',' && character != "'" && character != '"' )
+        // if (character != ' ' && character != '!' && character != '.' && character != '?' && character != ',' && character != "'" && character != '"' )
+        if (isalpha(character))
         {
             letter_count++;
         }
