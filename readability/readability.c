@@ -3,16 +3,19 @@
 #include <string.h>
 
 string organiseToArrays(string text);
+int countWords(string text);
 
 int main(void)
 {
     string text = get_string("Text: ");
-    organiseToArrays(text);
+    int wordCount = countWords(text);
+    organiseToArrays(text, wordCount);
 }
 
-string organiseToArrays(string text)
+string organiseToArrays(string text, int wordCount)
 {
     int len = strlen(text);
+    string words[wordCount];
     int startIndex = 0;
     for (int i = 0; i < len; i++)
     {
@@ -26,4 +29,18 @@ string organiseToArrays(string text)
         int word[];
         word[i]  = text[i];
     }
+}
+
+int countWords(string text)
+{
+    int len = strlen(text);
+    int wordCount = 0;
+    for (int i = 0; i < len; i++)
+    {
+        if (text[i] == 32)
+        {
+            wordCount++;
+        }
+    }
+    return wordCount + 1;
 }
