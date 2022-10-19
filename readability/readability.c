@@ -48,7 +48,7 @@ int countWords(string text, int len)
     int wordCount = 0;
     for (int i = 0; i < len; i++)
     {
-        if (text[i] == 32)
+        if ( (char) text[i] == " ")
         {
             wordCount++;
         }
