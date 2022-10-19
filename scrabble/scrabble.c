@@ -43,7 +43,7 @@ string toLowercase(string word)
     {
         if ((word[i] > 65 && word[i] < 90))
         {
-            int toLower(word[i]);
+            toLower(word[i]);
         }
     }
     return word;
