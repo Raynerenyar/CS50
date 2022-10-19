@@ -63,7 +63,7 @@ int count_letters(string text, int len)
     for (int i = 0; i < len; i++)
     {
         char character = text[i];
-        if (text[i] != 32 && text[i] != 33 && text[i] != 46 && text[i] != 63)
+        if (character != ' ' && character != '!' && character != '.' && character != '?' && character != ',')
         {
             letter_count++;
         }
