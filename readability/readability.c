@@ -17,7 +17,7 @@ int main(void)
     int sentenceCount = countSentences(text, len);
     // organiseToArrays(text, wordCount);
     printf("WordCount: %i, letterCount: %i, sentenceCount: %i\n", wordCount, letterCount, sentenceCount);
-    double index = 0.0588 * (letterCount / wordCount * 100) - 0.296 * (sentenceCount / wordCount * 100) - 15.8;
+    double index = (0.0588 * (letterCount / wordCount * 100)) - (0.296 * (sentenceCount / wordCount * 100)) - 15.8;
     printf("%f\n", index);
     if (index > 16)
     {
