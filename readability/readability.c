@@ -2,6 +2,7 @@
 #include <stdio.h>
 #include <string.h>
 #include <math.h>
+#include <ctype.h>
 
 int countWords(string text, int len);
 int count_letters(string text, int len);
