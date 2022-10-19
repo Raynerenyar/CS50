@@ -1,6 +1,7 @@
 #include <cs50.h>
 #include <stdio.h>
 #include <string.h>
+#include <math.h>
 
 // string organiseToArrays(string text, int wordCount);
 int countWords(string text, int len);
