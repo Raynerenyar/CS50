@@ -13,9 +13,9 @@ int main(void)
 string organiseToArrays(string text)
 {
     int len = strlen(text);
-    int word[];
     for (int i = 0; i < len; i++)
     {
+        int word[];
         word[i]  = text[i];
     }
 }
