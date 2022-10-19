@@ -44,7 +44,7 @@ string toLowercase(string word)
     int len = strlen(word);
     for (int i = 0; i < len; i++)
     {
-        if (islower(word[i]))
+        if (isupper(word[i]))
         {
             word[i] = tolower(word[i]);
         }
