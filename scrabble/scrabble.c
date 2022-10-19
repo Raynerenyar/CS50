@@ -18,8 +18,8 @@ int main(void)
     // Score both words
     int score1 = compute_score(word1);
     int score2 = compute_score(word2);
-    printf("%i", score1);
-    printf("%i", score2);
+    printf("%i\n", score1);
+    printf("%i\n", score2);
     // TODO: Print the winner
 }
 
@@ -43,7 +43,7 @@ string toLowercase(string word)
     {
         if ((word[i] > 65 && word[i] < 90))
         {
-            toLower(word[i]);
+            word[i] = tolower(word[i]);
         }
     }
     return word;
