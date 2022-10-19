@@ -17,6 +17,15 @@ int main(void)
     // organiseToArrays(text, wordCount);
     printf("WordCount: %i, letterCount: %i, sentenceCount: %i\n", wordCount, letterCount, sentenceCount);
     double index = 0.0588 * (letterCount / wordCount * 100) - 0.296 * (sentenceCount / wordCount * 100) - 15.8;
+    if (index > 16)
+    {
+        printf("Grade 16+");
+    }
+    else if (index < 1)
+    {
+        printf("Before Grade 1");
+    }
+    else printf("Grade %i", index);
     printf("%f\n", index);
 }
 
