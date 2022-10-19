@@ -18,7 +18,8 @@ int main(void)
     // Score both words
     int score1 = compute_score(word1);
     int score2 = compute_score(word2);
-
+    printf("%i", score1);
+    printf("%i", score2);
     // TODO: Print the winner
 }
 
@@ -30,9 +31,9 @@ int compute_score(string word)
     int score = 0;
     for (int i = 0; i < len; i++)
     {
-        score += (int) word[i];
+        score += POINTS[(int) word[i] - 97];
     }
-
+    return score;
 }
 
 string toLowercase(string word)
