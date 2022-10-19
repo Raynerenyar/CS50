@@ -49,7 +49,7 @@ int countWords(string text, int len)
     for (int i = 0; i < len; i++)
     {
         char character = text[i];
-        if ( character == " ")
+        if (character == " ")
         {
             wordCount++;
         }
