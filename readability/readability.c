@@ -74,7 +74,7 @@ int count_letters(string text, int len)
     int letter_count = 0;
     for (int i = 0; i < len; i++)
     {
-        if (text[i] != 32 || text[i] != 33 || text[i] != 46 || text[i] != 63)
+        if (text[i] != 32 && text[i] != 33 && text[i] != 46 && text[i] != 63)
         {
             letter_count++;
         }
