@@ -31,7 +31,10 @@ int compute_score(string word)
     int score = 0;
     for (int i = 0; i < len; i++)
     {
+        if (isalpha(word[i]))
+        {
         score += POINTS[(int) word[i] - 97];
+        }
     }
     return score;
 }
