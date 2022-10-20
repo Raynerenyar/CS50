@@ -13,8 +13,10 @@ int main(int argc, string argv[])
     bool correctLength = (len == 3); // demo with 3 first
     bool repeatChar = isSubstring(key);
     // check num of args and length
-    if (argc == 2 && correctLength)
+    if (argc > 2 || !correctLength)
     {
+        printf("./substitution key");
+    }
         for (int i = 0; i < len; i++)
         {
             int onlyAlpha = isalpha(key[i]); // returns>0 if all alphabets
@@ -24,7 +26,6 @@ int main(int argc, string argv[])
                 printf("%c\n", key[i]);
             }
         }
-    }
 }
 
 bool isSubstring(string text)
