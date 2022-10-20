@@ -10,20 +10,26 @@ int main(int argc, string argv[])
 {
     string key = argv[1];
     int len = strlen(key);
-    bool correctLength = (len == 3); // demo with 3 first
+    bool isCorrectLength = (len == 3); // demo with 3 first
     bool repeatChar = isSubstring(key);
+    bool isAlpha = checkAlpha(key);
     // check num of args and length
     if (argc > 2)
     {
-        printf("./substitution key");
+        printf("./substitution key\n");
         return 1;
     }
-    else if (correctLength)
+    else if (!isCorrectLength)
     {
-        printf("Key must contain 26 characters.");
+        printf("Key must contain 26 characters.\n");
         return 1;
     }
-    else
+    else if (!isAlpha)
+    {
+        printf("Key must only contain alphabetic characters\n");
+        return 1;
+    }
+    else if ()
     else
     {
         for (int i = 0; i < len; i++)
@@ -56,5 +62,13 @@ bool isSubstring(string text)
 
 bool checkAlpha(string text)
 {
-    for (int i = 0)
+    int len = strlen(text);
+    for (int i = 0; i<len; i++)
+    {
+        if (!isalpha(text[i]))
+        {
+            return false;
+        }
+    }
+    return true;
 }
