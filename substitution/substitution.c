@@ -19,7 +19,7 @@ int main(int argc, string argv[])
             int onlyAlpha = isalpha(key[i]); // returns>0 if all alphabets
             char letter = key[i];
             key[i] = ' ';
-            if (!isSubstring(key,letter))
+            if (!isSubstring(key,letter) && onlyAlpha)
             {
                 key[i] = letter;
                 printf("%c\n", key[i]);
