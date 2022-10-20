@@ -9,7 +9,7 @@ bool checkAlpha(string text);
 
 int main(int argc, string argv[])
 {
-    if (argc > 2)
+    if (argc > 2 || argc <= 1)
     {
         printf("./substitution key\n");
         return 1;
