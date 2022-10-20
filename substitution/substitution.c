@@ -37,8 +37,9 @@ int main(int argc, string argv[])
     }
     else
     {
-        string plainText = get_string("Plaintext: ");
+        string plainText = get_string("plaintext: ");
         int plainLen = strlen(plainText);
+        printf("ciphertext: ");
         for (int i = 0; i < plainLen; i++)
         {
             if (isupper(plainText[i]))
