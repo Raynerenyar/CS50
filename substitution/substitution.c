@@ -5,12 +5,13 @@
 #include <string.h>
 
 bool isSubstring(string text);
+bool checkAlpha(string text);
 
 int main(int argc, string argv[])
 {
     string key = argv[1];
     int len = strlen(key);
-    bool isCorrectLength = (len == 3); // demo with 3 first
+    bool isCorrectLength = (len == 26); // demo with 3 first
     bool repeatChar = isSubstring(key);
     bool isAlpha = checkAlpha(key);
     // check num of args and length
@@ -36,7 +37,7 @@ int main(int argc, string argv[])
     }
     else
     {
-        
+        printf("Plaintext: ");
         // for (int i = 0; i < len; i++)
         // {
         //     int onlyAlpha = isalpha(key[i]); // returns>0 if all alphabets
