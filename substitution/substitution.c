@@ -49,12 +49,14 @@ int main(int argc, string argv[])
             {
                 printf("%c", plainText[i]);
             }
+            //preserve uppercase of char
             else if (isupper(plainText[i]))
             {
                 // minus 97 to get index to key
                 int index = tolower(plainText[i]) - 97;
                 printf("%c", toupper(key[index]));
             }
+            // preserve lowercase of char
             else if (islower(plainText[i]))
             {
                 // minus 97 to get index to key
