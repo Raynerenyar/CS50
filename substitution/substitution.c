@@ -53,3 +53,8 @@ bool isSubstring(string text)
     }
     return false;
 }
+
+bool checkAlpha(string text)
+{
+    for (int i = 0)
+}
