@@ -29,9 +29,10 @@ int main(int argc, string argv[])
         printf("Key must only contain alphabetic characters\n");
         return 1;
     }
-    else if (repeatChar)
+    else if (!repeatChar)
     {
-        
+        printf("Key must not contain repeated characters\n");
+        return 1;
     }
     else
     {
@@ -47,6 +48,7 @@ int main(int argc, string argv[])
     }
 }
 
+// return true if there's repeat char
 bool isSubstring(string text)
 {
     int len = strlen(text);
@@ -63,6 +65,7 @@ bool isSubstring(string text)
     return false;
 }
 
+// return true text is all alpha
 bool checkAlpha(string text)
 {
     int len = strlen(text);
