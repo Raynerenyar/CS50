@@ -30,19 +30,17 @@ int main(int argc, string argv[])
 bool isSubstring(string text)
 {
     int length = strlen(text);
-    for (int i = 0; i < len; i++)
+    for (int i = 0; i < len-1; i++)
     {
         char letter = text[i];
         key[i] = ' ';
-        
-        if (letter == text[i])
+        for (int j = i+1; j<len)
         {
-            return true;
-        }
-        else
-        {
-            return false;
+            if (letter == text[j])
+            {
+                return true;
+            }
         }
     }
-    return 0;
+    return false;
 }
