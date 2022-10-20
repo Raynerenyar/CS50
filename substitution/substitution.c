@@ -4,7 +4,7 @@
 #include <ctype.h>
 #include <string.h>
 
-bool isSubstring(string text, char letter);
+bool isSubstring(string text);
 
 int main(int argc, string argv[])
 {
@@ -17,9 +17,8 @@ int main(int argc, string argv[])
         for (int i = 0; i < len; i++)
         {
             int onlyAlpha = isalpha(key[i]); // returns>0 if all alphabets
-            char letter = key[i];
-            key[i] = ' ';
-            if (!isSubstring(key,letter) && onlyAlpha)
+
+            if (!isSubstring(key) && onlyAlpha)
             {
                 key[i] = letter;
                 printf("%c\n", key[i]);
@@ -28,11 +27,13 @@ int main(int argc, string argv[])
     }
 }
 
-bool isSubstring(string text, char letter)
+bool isSubstring(string text)
 {
     int len = strlen(text);
     for (int i = 0; i < len; i++)
     {
+        char letter = text[i];
+        key[i] = ' ';
         if (letter == text[i])
         {
             return true;
