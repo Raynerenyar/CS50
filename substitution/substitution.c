@@ -9,18 +9,18 @@ bool checkAlpha(string text);
 
 int main(int argc, string argv[])
 {
+    if (argc > 2)
+    {
+        printf("./substitution key\n");
+        return 1;
+    }
     string key = argv[1];
     int len = strlen(key);
     bool isCorrectLength = (len == 26); // demo with 3 first
     bool repeatChar = isSubstring(key);
     bool isAlpha = checkAlpha(key);
     // check num of args and length
-    if (argc > 2)
-    {
-        printf("./substitution key\n");
-        return 1;
-    }
-    else if (!isCorrectLength)
+    if (!isCorrectLength)
     {
         printf("Key must contain 26 characters.\n");
         return 1;
