@@ -42,7 +42,11 @@ int main(int argc, string argv[])
         printf("ciphertext: ");
         for (int i = 0; i < plainLen; i++)
         {
-            if (isupper(plainText[i]))
+            if (plainText[i] == (char) 32)
+            {
+                int index = (plainText[i] -)
+            }
+            else if (isupper(plainText[i]))
             {
                 // minus 97 to get index to key
                 int index = tolower(plainText[i]) - 97;
