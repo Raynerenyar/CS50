@@ -27,13 +27,14 @@ int main(int argc, string argv[])
     }
 }
 
-bool isSubstring(string text, int length)
+bool isSubstring(string text)
 {
-    isSubstring(text, length -1)
+    int length = strlen(text);
     for (int i = 0; i < len; i++)
     {
         char letter = text[i];
         key[i] = ' ';
+        
         if (letter == text[i])
         {
             return true;
