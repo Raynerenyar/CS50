@@ -20,9 +20,10 @@ int main(int argc, string argv[])
     }
     else if (correctLength)
     {
-        printf("Key must contain 26 characters");
+        printf("Key must contain 26 characters.");
         return 1;
     }
+    else
     else
     {
         for (int i = 0; i < len; i++)
