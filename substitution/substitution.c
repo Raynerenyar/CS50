@@ -42,7 +42,7 @@ int main(int argc, string argv[])
         for (int i = 0; i < plainLen; i++)
         {
             int index = plainText[i];
-            printf("%i\n", index);
+            printf("%i", index);
         }
         // for (int i = 0; i < len; i++)
         // {
