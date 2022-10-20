@@ -38,7 +38,12 @@ int main(int argc, string argv[])
     else
     {
         string plainText = get_string("Plaintext: ");
-        
+        int plainLen = strlen(plainText);
+        for (int i = 0; i < plainLen; i++)
+        {
+            int index = plainText[i];
+            printf("%i\n", index);
+        }
         // for (int i = 0; i < len; i++)
         // {
         //     int onlyAlpha = isalpha(key[i]); // returns>0 if all alphabets
