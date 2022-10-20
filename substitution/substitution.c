@@ -32,11 +32,11 @@ bool isSubstring(string text)
     int length = strlen(text);
     for (int i = 0; i < len-1; i++)
     {
-        char letter = text[i];
-        key[i] = ' ';
-        for (int j = i+1; j<len)
+        // char letter = text[i];
+        // key[i] = ' ';
+        for (int j = i+1; j<len; j++)
         {
-            if (letter == text[j])
+            if (text[i] == text[j])
             {
                 return true;
             }
