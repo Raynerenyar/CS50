@@ -18,7 +18,7 @@ int main(int argc, string argv[])
         {
             int onlyAlpha = isalpha(key[i]); // returns>0 if all alphabets
 
-            if (!isSubstring(key) && onlyAlpha)
+            if (!isSubstring(key, len) && onlyAlpha)
             {
                 key[i] = letter;
                 printf("%c\n", key[i]);
@@ -27,9 +27,9 @@ int main(int argc, string argv[])
     }
 }
 
-bool isSubstring(string text)
+bool isSubstring(string text, int length)
 {
-    int len = strlen(text);
+    isSubstring(text, length -1)
     for (int i = 0; i < len; i++)
     {
         char letter = text[i];
