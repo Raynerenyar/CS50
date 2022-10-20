@@ -14,6 +14,7 @@ int main(int argc, string argv[])
     {
         for (int i = 0; i < len; i++)
         {
+            string currLetter = key[i];
             int onlyAlpha = isalpha(key[i]); // returns>0 if all alphabets
             string letter = (string) key[i];
             key[i] = ' ';
