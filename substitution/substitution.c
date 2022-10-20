@@ -16,7 +16,7 @@ int main(int argc, string argv[])
         {
             string currLetter = key[i];
             int onlyAlpha = isalpha(key[i]); // returns>0 if all alphabets
-            string letter = (string) key[i];
+            string letter = (char) key[i];
             key[i] = ' ';
             char substring = strstr(key, letter);
             if (substring)
