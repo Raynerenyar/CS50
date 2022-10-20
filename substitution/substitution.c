@@ -16,10 +16,12 @@ int main(int argc, string argv[])
     if (argc > 2)
     {
         printf("./substitution key");
+        return 1;
     }
     else if (correctLength)
     {
         printf("Key must contain 26 characters");
+        return 1;
     }
     else
     {
