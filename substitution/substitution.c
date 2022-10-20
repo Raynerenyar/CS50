@@ -30,14 +30,15 @@ int main(int argc, string argv[])
         printf("Key must only contain alphabetic characters\n");
         return 1;
     }
-    else if (!repeatChar)
+    else if (repeatChar)
     {
         printf("Key must not contain repeated characters\n");
         return 1;
     }
     else
     {
-        printf("Plaintext: ");
+        string plainText = get_string("Plaintext: ");
+        
         // for (int i = 0; i < len; i++)
         // {
         //     int onlyAlpha = isalpha(key[i]); // returns>0 if all alphabets
