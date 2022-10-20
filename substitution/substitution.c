@@ -42,9 +42,9 @@ int main(int argc, string argv[])
         printf("ciphertext: ");
         for (int i = 0; i < plainLen; i++)
         {
-            if (plainText[i] == (char) 32)
+            if (!isalpha(plainText[i]))
             {
-                int index = (plainText[i] -)
+                printf("%c", plainText[i]);
             }
             else if (isupper(plainText[i]))
             {
