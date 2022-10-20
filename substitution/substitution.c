@@ -9,6 +9,7 @@ bool checkAlpha(string text);
 
 int main(int argc, string argv[])
 {
+    // check num of params before other syntax uses argument
     if (argc > 2 || argc <= 1)
     {
         printf("./substitution key\n");
@@ -16,10 +17,10 @@ int main(int argc, string argv[])
     }
     string key = argv[1];
     int len = strlen(key);
-    bool isCorrectLength = (len == 26); // demo with 3 first
+    bool isCorrectLength = (len == 26);
     bool repeatChar = isSubstring(key);
     bool isAlpha = checkAlpha(key);
-    // check num of args and length
+    // validates key with various conditions
     if (!isCorrectLength)
     {
         printf("Key must contain 26 characters.\n");
@@ -37,11 +38,13 @@ int main(int argc, string argv[])
     }
     else
     {
+        // request text to convert
         string plainText = get_string("plaintext: ");
         int plainLen = strlen(plainText);
         printf("ciphertext: ");
         for (int i = 0; i < plainLen; i++)
         {
+            // non-alpha char will not be converted
             if (!isalpha(plainText[i]))
             {
                 printf("%c", plainText[i]);
@@ -60,15 +63,6 @@ int main(int argc, string argv[])
             }
         }
         printf("\n");
-        // for (int i = 0; i < len; i++)
-        // {
-        //     int onlyAlpha = isalpha(key[i]); // returns>0 if all alphabets
-
-        //     if (!repeatChar && onlyAlpha)
-        //     {
-        //         printf("%c\n", key[i]);
-        //     }
-        // }
     }
 }
 
@@ -76,9 +70,9 @@ int main(int argc, string argv[])
 bool isSubstring(string text)
 {
     int len = strlen(text);
-    for (int i = 0; i < len-1; i++)
+    for (int i = 0; i < len - 1; i++)
     {
-        for (int j = i+1; j<len; j++)
+        for (int j = i + 1; j < len; j++)
         {
             if (text[i] == text[j])
             {
@@ -89,11 +83,11 @@ bool isSubstring(string text)
     return false;
 }
 
-// return true text is all alpha
+// return true if text is all alpha
 bool checkAlpha(string text)
 {
     int len = strlen(text);
-    for (int i = 0; i<len; i++)
+    for (int i = 0; i < len; i++)
     {
         if (!isalpha(text[i]))
         {
