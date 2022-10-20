@@ -4,6 +4,8 @@
 #include <ctype.h>
 #include <string.h>
 
+bool isSubstring(string text, char letter);
+
 int main(int argc, string argv[])
 {
     string key = argv[1];
@@ -17,11 +19,27 @@ int main(int argc, string argv[])
             int onlyAlpha = isalpha(key[i]); // returns>0 if all alphabets
             char letter = key[i];
             key[i] = ' ';
-            char substring = strstr(key, letter);
-            if (substring)
+            if (!isSubstring(key,letter))
             {
                 printf("%c\n", key[i]);
             }
         }
     }
+}
+
+bool isSubstring(string text, char letter)
+{
+    int len = strlen(text);
+    for (int i = 0; i < len; i++)
+    {
+        if (letter == text[i])
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
+    }
+    return 0;
 }
