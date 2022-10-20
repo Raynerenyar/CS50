@@ -41,9 +41,20 @@ int main(int argc, string argv[])
         int plainLen = strlen(plainText);
         for (int i = 0; i < plainLen; i++)
         {
-            int index = plainText[i];
-            printf("%i", index);
+            if (isupper(plainText[i]))
+            {
+                // minus 97 to get index to key
+                int index = tolower(plainText[i]) - 97;
+                printf("%c", toupper(key[index]));
+            }
+            else if (islower(plainText[i]))
+            {
+                // minus 97 to get index to key
+                int index = tolower(plainText[i]) - 97;
+                printf("%c", tolower((key[index])));
+            }
         }
+        printf("\n");
         // for (int i = 0; i < len; i++)
         // {
         //     int onlyAlpha = isalpha(key[i]); // returns>0 if all alphabets
