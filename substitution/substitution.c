@@ -29,7 +29,10 @@ int main(int argc, string argv[])
         printf("Key must only contain alphabetic characters\n");
         return 1;
     }
-    else if ()
+    else if (repeatChar)
+    {
+        
+    }
     else
     {
         for (int i = 0; i < len; i++)
