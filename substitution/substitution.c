@@ -36,15 +36,16 @@ int main(int argc, string argv[])
     }
     else
     {
-        for (int i = 0; i < len; i++)
-        {
-            int onlyAlpha = isalpha(key[i]); // returns>0 if all alphabets
+        
+        // for (int i = 0; i < len; i++)
+        // {
+        //     int onlyAlpha = isalpha(key[i]); // returns>0 if all alphabets
 
-            if (!repeatChar && onlyAlpha)
-            {
-                printf("%c\n", key[i]);
-            }
-        }
+        //     if (!repeatChar && onlyAlpha)
+        //     {
+        //         printf("%c\n", key[i]);
+        //     }
+        // }
     }
 }
 
