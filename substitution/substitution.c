@@ -21,6 +21,7 @@ int main(int argc, string argv[])
             key[i] = ' ';
             if (!isSubstring(key,letter))
             {
+                key[i] = letter;
                 printf("%c\n", key[i]);
             }
         }
