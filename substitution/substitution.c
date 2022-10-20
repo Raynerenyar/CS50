@@ -11,6 +11,7 @@ int main(int argc, string argv[])
     string key = argv[1];
     int len = strlen(key);
     bool correctLength = (len == 3); // demo with 3 first
+    bool repeatChar = isSubstring(key);
     // check num of args and length
     if (argc == 2 && correctLength)
     {
@@ -18,9 +19,8 @@ int main(int argc, string argv[])
         {
             int onlyAlpha = isalpha(key[i]); // returns>0 if all alphabets
 
-            if (!isSubstring(key, len) && onlyAlpha)
+            if (!isSubstring(key) && onlyAlpha)
             {
-                key[i] = letter;
                 printf("%c\n", key[i]);
             }
         }
@@ -32,8 +32,6 @@ bool isSubstring(string text)
     int length = strlen(text);
     for (int i = 0; i < len-1; i++)
     {
-        // char letter = text[i];
-        // key[i] = ' ';
         for (int j = i+1; j<len; j++)
         {
             if (text[i] == text[j])
