@@ -166,7 +166,9 @@ void sort_pairs(void)
         }
     }
     // swap max to lowest index
-    
+    int tempPair1[2] = {pairs[index].winner,pairs[index].loser}
+    int tempPair2[2] = {pairs[currIndex].winner,pairs[CurrIndex].loser}
+    pairs[index].winner
     // TODO
     return;
 }
