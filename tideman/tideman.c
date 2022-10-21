@@ -154,9 +154,12 @@ void add_pairs(void)
         for (int j= 0; j < candidate_count; j++)
             if (preferences[i][j] == max)
             {
-                for (int k = 0)
+                for (int k = 0; k < pair_count++; k++)
+                {
                 pair_count++;
-                pairs.winner
+                pairs.winner[k] = i;
+                pairs.loser[k] = j;
+                }
             }
     }
     // TODO
