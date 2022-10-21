@@ -165,7 +165,8 @@ void sort_pairs(void)
             index = i;
         }
     }
-    // swap max to
+    // swap max to lowest index
+    
     // TODO
     return;
 }
