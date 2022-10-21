@@ -8,4 +8,4 @@ How do you know?: similar upper bound and lower bound time complexities.
 
 sort3 uses: selection
 
-How do you know?: 
+How do you know?: lower bound time is slowest due to n^2/
