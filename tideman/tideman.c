@@ -157,8 +157,8 @@ void add_pairs(void)
                 for (int k = 0; k < pair_count++; k++)
                 {
                 pair_count++;
-                pairs.winner[k] = i;
-                pairs.loser[k] = j;
+                pairs[k].winner = i;
+                pairs[k].loser = j;
                 }
             }
     }
