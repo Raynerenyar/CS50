@@ -104,8 +104,11 @@ bool vote(int rank, string name, int ranks[])
     {
         if (name == candidates[i])
         {
-            ranks[i];
-            return true;
+            for (int j = 0; j < candidate_count; j++)
+            {
+                ranks[j] = i;
+                return true;
+            }
         }
     }
     // if no candidate is found
@@ -130,7 +133,7 @@ void add_pairs(void)
 {
     for (int i = 0; i < candidate_count; i++)
     {
-        
+
     }
     // TODO
     return;
