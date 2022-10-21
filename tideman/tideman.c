@@ -130,7 +130,7 @@ void record_preferences(int ranks[])
             }
             else if (ranks[i] == )
             {
-                preferences[i][j] = ;// num of voters who prefer i > j
+                preferences[i][j]++; // num of voters who prefer i > j
             }
         }
     }
