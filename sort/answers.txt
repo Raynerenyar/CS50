@@ -1,11 +1,11 @@
-sort1 uses: TODO
+sort1 uses: bubble
 
-How do you know?: TODO
+How do you know?: Upper bound time complexity is slow while lower bound time complexity is fast.
 
-sort2 uses: TODO
+sort2 uses: merge
 
-How do you know?: TODO
+How do you know?: similar upper bound and lower bound time complexities.
 
-sort3 uses: TODO
+sort3 uses: selection
 
-How do you know?: TODO
+How do you know?: 
