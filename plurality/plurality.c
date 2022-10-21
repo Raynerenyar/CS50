@@ -66,7 +66,7 @@ int main(int argc, string argv[])
 // Update vote totals given a new vote
 bool vote(string name)
 {
-    candidates
+    candidates.name
 
     // return false if invalid
     return false;
