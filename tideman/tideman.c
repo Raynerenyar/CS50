@@ -105,12 +105,8 @@ bool vote(int rank, string name, int ranks[])
         // check if name is in list of candidates
         if (name == candidates[i])
         {
-            // ranking starting from 0
-            for (int j = 0; j < candidate_count; j++)
-            {
-                ranks[j] = i;
-                return true;
-            }
+            ranks[rank] = i;
+            return true;
         }
     }
     // if no candidate is found
@@ -171,7 +167,7 @@ void sort_pairs(void)
 {
     for (int i = 0; i < pair_count; i++)
     {
-            
+
     }
     // TODO
     return;
