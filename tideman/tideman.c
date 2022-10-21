@@ -99,11 +99,13 @@ int main(int argc, string argv[])
 // Update ranks given a new vote
 bool vote(int rank, string name, int ranks[])
 {
-    // check if name is in list of candidates
+    // for each candidate in candidates array
     for (int i = 0; i < candidate_count; i++)
     {
+        // check if name is in list of candidates
         if (name == candidates[i])
         {
+            // ranking starting from 0
             for (int j = 0; j < candidate_count; j++)
             {
                 ranks[j] = i;
