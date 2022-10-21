@@ -141,9 +141,9 @@ void add_pairs(void)
         int max = 0;
         for (int j = 0; j < candidate_count; j++)
         {
-            if (preferences[i][j] > max)
+            if (preferences[i][j] > preferences[j][i])
             {
-                max = preferences[i][j];
+                
             }
 
         }
