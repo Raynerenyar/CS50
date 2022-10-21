@@ -103,8 +103,12 @@ bool vote(int rank, string name, int ranks[])
     for (int i = 0; i < candidate_count; i++)
     {
         if (name == candidates[i])
+        {
+            ranks[i];
+            return true;
+        }
     }
-    // TODO
+    // if no candidate is found
     return false;
 }
 
