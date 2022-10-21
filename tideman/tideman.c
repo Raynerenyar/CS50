@@ -142,7 +142,7 @@ void add_pairs(void)
 {
     for (int i = 0; i < candidate_count; i++)
     {
-
+        for (int i = 1; i < candidate_count; i++)
     }
     // TODO
     return;
