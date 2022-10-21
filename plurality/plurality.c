@@ -93,7 +93,7 @@ void print_winner(void)
     // check for tie
     for (int j = 0; j < candidate_count; j++)
     {
-        if (candidate[j] == max)
+        if (candidate[j].vote == max)
         {
             printf()
         }
