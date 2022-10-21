@@ -163,16 +163,14 @@ void sort_pairs(void)
         {
             if (preferences[pairs[j].winner][pairs[j].loser] < max)
             {
-
-                pair tempPair = pairs[maxIndex];
-                pairs[maxIndex] = pairs[j];
-                pairs[j] = tempPair;
+                max = preferences[pairs[j].winner][pairs[j].loser];
+                maxIndex = j;
             }
             else // if preferences[pairs[j].winner][pairs[j].loser] > max
             {
-
-                max = preferences[pairs[j].winner][pairs[j].loser];
-                maxIndex = j;
+                pair tempPair = pairs[maxIndex];
+                pairs[maxIndex] = pairs[j];
+                pairs[j] = tempPair;
             }
         }
     }
