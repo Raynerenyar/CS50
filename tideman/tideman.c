@@ -128,7 +128,7 @@ void record_preferences(int ranks[])
             {
                 preferences[i][j] = 0;
             }
-            else if ()
+            else if (ranks[i] == )
             {
                 preferences[i][j] = ;// num of voters who prefer i > j
             }
