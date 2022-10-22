@@ -205,24 +205,24 @@ void lock_pairs(void)
 // Print the winner of the election
 void print_winner(void)
 {
+    int j;
+    bool isWinner = false;
     // in the locked row and col, winner (from col) is one with no arrows pointing to candidate - whole col is false;
     for (int i = 0; i < candidate_count; i++)
     {
-        bool isWinner = true;
-        int j;
         for (j = 0; j < candidate_count; j++)
         {
             if (locked[i][j] == true)
             {
-                isWinner = false;
                 break;
             }
-        }
-        if (isWinner)
-        {
-            printf("%s", candidates[j]);
-        }
 
+        }
+    isWinner = true;
+    }
+    if (isWinner)
+    {
+        printf("%s", candidates[j]);
     }
     return;
 }
