@@ -224,7 +224,7 @@ void print_winner(void)
             }
             else if (col == candidate_count - 1)
             {
-                printf("%s\n", candidates[row]);
+                printf("%s\n", candidates[col]);
             }
         }
 
