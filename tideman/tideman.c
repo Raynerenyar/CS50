@@ -105,8 +105,8 @@ bool vote(int rank, string name, int ranks[])
     for (int i = 0; i < candidate_count; i++)
     {
         // check if name is in list of candidates
-        int test = strcmp(name, candidates[i]);
-        if (name == candidates[i])
+        int inList = strcmp(name, candidates[i]);
+        if (inList == 0)
         {
             ranks[rank] = i;
             return true;
