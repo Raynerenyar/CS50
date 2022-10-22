@@ -112,7 +112,7 @@ bool vote(int rank, string name, int ranks[])
             return true;
         }
     }
-    // if no candidate is found
+    // if candidate is not found in the candidates array
     return false;
 }
 
