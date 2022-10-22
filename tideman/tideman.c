@@ -214,7 +214,8 @@ void print_winner(void)
             {
                 break;
             }
-            else if (i == candidate_count)
+            // minus 1 due to index starting at 0
+            else if (i == candidate_count - 1)
             {
                 printf("%s", candidates[j]);
             }
