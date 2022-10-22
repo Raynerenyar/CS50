@@ -164,7 +164,7 @@ void sort_pairs(void)
             int nextMin = preferences[pairs[j].winner][pairs[j].loser]
             if (nextMin > min)
             {
-                // min = preferences[pairs[j].winner][pairs[j].loser];
+                min = nextMin;
                 minIndex = j;
             }
             else if (preferences[pairs[j].winner][pairs[j].loser] < min)
