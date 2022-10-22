@@ -170,8 +170,8 @@ void sort_pairs(void)
         }
         // swap
         pair tempPair = pairs[minIndex];
-        pairs[minIndex] = pairs[j];
-        pairs[j] = tempPair;
+        pairs[minIndex] = pairs[i];
+        pairs[i] = tempPair;
     }
     // // swap max to lowest index
     // int tempPair0 = pairs[index];
