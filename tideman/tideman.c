@@ -216,16 +216,16 @@ void print_winner(void)
     // in the locked row and col, winner (from col) is one with no arrows pointing to candidate - whole col is false;
     for (int i = 0; i < candidate_count; i++)
     {
+        int falseCount = 0;
         for (int j = 0; j < candidate_count; j++)
         {
-            if (locked[i][j] == true)
+            if (locked[j][i] == false)
             {
-                break;
-            }
-            // minus 1 due to index starting at 0
-            else if (j == candidate_count - 1)
-            {
-                printf("%s\n", candidates[j]);
+                falseCount++;
+                if (falseCount == candidate_count)
+                {
+                    printf("%s\n", candidates[i]);
+                }
             }
 
         }
