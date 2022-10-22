@@ -149,11 +149,11 @@ void add_pairs(void)
 // Sort pairs in decreasing order by strength of victory
 void sort_pairs(void)
 {
-    for (int i = pair_count; i >= 0; i--)
+    for (int currIndex = pair_count; currIndex >= 0; currIndex--)
     {
-        int min = preferences[pairs[i].winner][pairs[i].loser];
-        int minIndex = i;
-        for (int j = i - 1; j >= 0; j--)
+        int min = preferences[pairs[currIndex].winner][pairs[currIndex].loser];
+        int minIndex = currIndex;
+        for (int j = currIndex - 1; j >= 0; j--)
         {
             int nextMin = preferences[pairs[j].winner][pairs[j].loser];
             if (nextMin < min)
@@ -162,17 +162,11 @@ void sort_pairs(void)
                 minIndex = j;
             }
         }
-        // swap min to last index
+        // swap min to current index after finding min excluding current index
         pair tempPair = pairs[minIndex];
-        pairs[minIndex] = pairs[i];
-        pairs[i] = tempPair;
+        pairs[minIndex] = pairs[currIndex];
+        pairs[currIndex] = tempPair;
     }
-    // // swap max to lowest index
-    // int tempPair0 = pairs[index];
-    // int tempPair1 = pairs[currIndex];
-    // pairs[index] = tempPair1;
-    // pairs[currIndex] = tempPair0;
-    // TODO
     return;
 }
 
@@ -211,6 +205,20 @@ void lock_pairs(void)
 // Print the winner of the election
 void print_winner(void)
 {
-    // TODO
+    // in the locked row and col, winner (from col) is one with no arrows pointing to candidate - whole col is false;
+    for (int i = 0; i < candidate_count; i++)
+    {
+        for (int j = 0; j < candidate_count; j++)
+        {
+            if (locked[i][j] == true)
+            {
+                break;
+            }
+            else
+            {
+                printf("%s", candidates[j]);
+            }
+        }
+    }
     return;
 }
