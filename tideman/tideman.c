@@ -214,11 +214,8 @@ void print_winner(void)
             {
                 break;
             }
-            else
-            {
-                printf("%s", candidates[j]);
-            }
         }
+        printf("%s", candidates[j]);
     }
     return;
 }
