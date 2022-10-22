@@ -161,19 +161,17 @@ void sort_pairs(void)
         int minIndex = i;
         for (int j = i - 1; j >= 0; j--)
         {
-            int nextMin = preferences[pairs[j].winner][pairs[j].loser]
-            if (nextMin > min)
+            int nextMin = preferences[pairs[j].winner][pairs[j].loser];
+            if (nextMin < min)
             {
                 min = nextMin;
                 minIndex = j;
             }
-            else if (preferences[pairs[j].winner][pairs[j].loser] < min)
-            {
-                pair tempPair = pairs[minIndex];
-                pairs[minIndex] = pairs[j];
-                pairs[j] = tempPair;
-            }
         }
+        // swap
+        pair tempPair = pairs[minIndex];
+        pairs[minIndex] = pairs[j];
+        pairs[j] = tempPair;
     }
     // // swap max to lowest index
     // int tempPair0 = pairs[index];
