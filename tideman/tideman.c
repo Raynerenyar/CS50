@@ -214,36 +214,21 @@ void lock_pairs(void)
 void print_winner(void)
 {
     // in the locked row and col, winner (from col) is one with no arrows pointing to candidate - whole col is false;
-    for (int row = 0; row < candidate_count; row++)
+    for (int i = 0; i < candidate_count; i++)
     {
-        for (int col = 0; col < candidate_count; col++)
+        int falseCount = 0;
+        for (int j = 0; j < candidate_count; j++)
         {
-            if(locked[row][col] == true)
+            if (locked[j][i] == false)
             {
-                break;
+                falseCount++;
+                if (falseCount == candidate_count)
+                {
+                    printf("%s\n", candidates[i]);
+                }
             }
-            else if (col == candidate_count - 1)
-            {
-                printf("%s\n", candidates[row]);
-            }
+
         }
-
-    // for (int i = 0; i < candidate_count; i++)
-    // {
-    //     int falseCount = 0;
-    //     for (int j = 0; j < candidate_count; j++)
-    //     {
-    //         if (locked[j][i] == false)
-    //         {
-    //             falseCount++;
-    //             if (falseCount == candidate_count)
-    //             {
-    //                 printf("%s\n", candidates[i]);
-    //             }
-    //         }
-
-    //     }
     }
-
     return;
 }
