@@ -121,14 +121,7 @@ void record_preferences(int ranks[])
     {
         for (int j=0; j < candidate_count; j++)
         {
-            if (ranks[i] == ranks[j])
-            {
-                preferences[ranks[i]][ranks[j]] = 0;
-            }
-            else
-            {
-                preferences[ranks[i]][ranks[j]] += 1; // num of voters who prefer i > j
-            }
+            preferences[ranks[i]][ranks[j]] += 1; // num of voters who prefer i > j
         }
     }
     return;
