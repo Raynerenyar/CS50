@@ -186,7 +186,7 @@ bool hasCycle(int winner, int loser)
     }
     for (int i = 0; i < candidate_count; i++)
     {
-        if(locked[loser][i] == true && hasCycle(winner,i))
+        if (locked[loser][i] == true && hasCycle(winner, i))
         {
             return true;
         }
@@ -202,7 +202,7 @@ void lock_pairs(void)
     {
         int winner = pairs[i].winner;
         int loser = pairs[i].loser;
-        if(!hasCycle(winner, loser))
+        if (!hasCycle(winner, loser))
         {
             locked[winner][loser] = true;
         }
