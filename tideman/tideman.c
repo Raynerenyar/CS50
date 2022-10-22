@@ -157,14 +157,14 @@ void sort_pairs(void)
 {
     for (int i = pair_count; i >= 0; i--)
     {
-        int max = preferences[pairs[i].winner][pairs[i].loser];
-        int maxIndex = i;
+        int min = preferences[pairs[i].winner][pairs[i].loser];
+        int minIndex = i;
         for (int j = i - 1; j >= 0; j--)
         {
-            if (preferences[pairs[j].winner][pairs[j].loser] > max)
+            if (preferences[pairs[j].winner][pairs[j].loser] < min)
             {
-                pair tempPair = pairs[maxIndex];
-                pairs[maxIndex] = pairs[j];
+                pair tempPair = pairs[minIndex];
+                pairs[minIndex] = pairs[j];
                 pairs[j] = tempPair;
             }
             // else // if preferences[pairs[j].winner][pairs[j].loser] < max
