@@ -168,7 +168,7 @@ void sort_pairs(void)
                 minIndex = j;
             }
         }
-        // swap
+        // swap min to last index
         pair tempPair = pairs[minIndex];
         pairs[minIndex] = pairs[i];
         pairs[i] = tempPair;
