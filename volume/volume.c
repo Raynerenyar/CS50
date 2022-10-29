@@ -18,7 +18,7 @@ int main(int argc, char *argv[])
     }
 
     // Open files and determine scaling factor
-    uint8_t *header = malloc(HEADER_SIZE + 1);
+    // uint8_t *header = malloc(HEADER_SIZE + 1);
     FILE *input = fopen(argv[1], "r");
     if (input == NULL)
     {
@@ -43,7 +43,7 @@ int main(int argc, char *argv[])
     float factor = atof(argv[3]);
 
     // TODO: Copy header from input file to output file
-    BYTE bytes[HEADER_SIZE + 1];
+    BYTE bytes = malloc(HEADER_SIZE + 1);
     fread(bytes, sizeof(bytes), 44, input);
     fwrite(bytes, sizeof(bytes), 45, output);
 
