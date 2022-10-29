@@ -49,7 +49,7 @@ int main(int argc, char *argv[])
     }
 
     // TODO: Read samples from input file and write updated data to output file
-    uint8_t sample[2];
+    uint16_t buffer;
     while (fread(sample, sizeof(sample), 1, input))
     {
         fwrite(sample*2, sizeof(sample), 1, output);
