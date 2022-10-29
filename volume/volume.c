@@ -17,11 +17,19 @@ int main(int argc, char *argv[])
     }
 
     // Open files and determine scaling factor
+    uint8_t *header = malloc(HEADER_SIZE + 1);
     FILE *input = fopen(argv[1], "r");
     if (input == NULL)
     {
         printf("Could not open file.\n");
         return 1;
+    }
+    else
+    {
+        for (int i = 0; i < HEADER_SIZE + 1; i++)
+        {
+            header[i] = input[i];
+        }
     }
 
     FILE *output = fopen(argv[2], "w");
@@ -34,11 +42,6 @@ int main(int argc, char *argv[])
     float factor = atof(argv[3]);
 
     // TODO: Copy header from input file to output file
-    uint8_t *header = malloc(HEADER_SIZE + 1);
-    // for (int i = 0; i < HEADER_SIZE + 1; i++)
-    // {
-    //     header[i] = input[i];
-    // }
 
     // TODO: Read samples from input file and write updated data to output file
 
