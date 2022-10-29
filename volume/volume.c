@@ -45,7 +45,10 @@ int main(int argc, char *argv[])
     // TODO: Copy header from input file to output file
     BYTE bytes[HEADER_SIZE + 1];
     fread(bytes, sizeof(bytes), 44, input);
-
+    for (int i = 0; i < HEADER_SIZE + 1; i++)
+    {
+        
+    }
 
 
     // TODO: Read samples from input file and write updated data to output file
