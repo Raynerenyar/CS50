@@ -44,7 +44,7 @@ int main(int argc, char *argv[])
 
     // TODO: Copy header from input file to output file
     BYTE bytes[HEADER_SIZE];
-    fread(input, sizeof(bytes), 44, )
+    fread(bytes, sizeof(bytes), 44, input);
 
 
 
