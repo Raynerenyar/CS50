@@ -3,6 +3,7 @@
     "files.associations": {
         "cs50.h": "c",
         "string": "c",
-        "typeinfo": "c"
+        "typeinfo": "c",
+        "algorithm": "c"
     }
 }
