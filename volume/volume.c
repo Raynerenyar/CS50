@@ -44,12 +44,12 @@ int main(int argc, char *argv[])
 
     // TODO: Copy header from input file to output file
     BYTE header[HEADER_SIZE];
-    fread(&header, sizeof(BYTE), 1, input);
-    fwrite(&header, sizeof(BYTE), 1, output);
+    fread(header, sizeof(BYTE), 1, input);
+    fwrite(header, sizeof(BYTE), 1, output);
 
     // TODO: Read samples from input file and write updated data to output file
     uint16_t buffer;
-    while (fread(&buffer, 2, 1, input))
+    while (fread(&buffer, sizeof(uint), 1, input))
     {
         buffer *= factor;
         fwrite(&buffer, 2, 1, output);
