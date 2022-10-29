@@ -50,9 +50,10 @@ int main(int argc, char *argv[])
 
     // TODO: Read samples from input file and write updated data to output file
     uint16_t buffer;
-    while (fread(sample, sizeof(sample), 1, input))
+    while (fread(buffer, sizeof(buffer), 1, input))
     {
-        fwrite(sample*2, sizeof(sample), 1, output);
+        sample = buffer*2;
+        fwrite(buffer, sizeof(buffer), 1, output);
     }
 
     // Close files
