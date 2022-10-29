@@ -6,6 +6,7 @@
 
 // Number of bytes in .wav header
 const int HEADER_SIZE = 44;
+typedef uint8_t BYTE;
 
 int main(int argc, char *argv[])
 {
@@ -24,13 +25,13 @@ int main(int argc, char *argv[])
         printf("Could not open file.\n");
         return 1;
     }
-    else
-    {
-        for (int i = 0; i < HEADER_SIZE + 1; i++)
-        {
-            header[i] = input[i];
-        }
-    }
+    // else
+    // {
+    //     for (int i = 0; i < HEADER_SIZE + 1; i++)
+    //     {
+    //         header[i] = input[i];
+    //     }
+    // }
 
     FILE *output = fopen(argv[2], "w");
     if (output == NULL)
@@ -42,6 +43,8 @@ int main(int argc, char *argv[])
     float factor = atof(argv[3]);
 
     // TODO: Copy header from input file to output file
+    BYTE input[44];
+    
 
     // TODO: Read samples from input file and write updated data to output file
 
