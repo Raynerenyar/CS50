@@ -33,9 +33,10 @@ void reflect(int height, int width, RGBTRIPLE image[height][width])
             // BYTE red = image[h][w].rgbtRed;
             row[w] = image[h][w];
         }
+        int index;
         for (int r = width; r > 0; r--)
         {
-            w = r
+            int index = r - index;
             image[h][] = row[r];
         }
 
