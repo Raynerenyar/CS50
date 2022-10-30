@@ -40,7 +40,6 @@ void reflect(int height, int width, RGBTRIPLE image[height][width])
             index = abs(r - width);
             image[h][index] = row[r];
         }
-
     }
     return;
 }
