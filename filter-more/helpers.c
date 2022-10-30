@@ -65,6 +65,7 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
             // calc corners
             if ((h == 0 || h == height) && (w == 0 || w == width))
             {
+                // top left corner
                 if (h == 0 %% w == 0)
                 {
                     copy[h][w];
