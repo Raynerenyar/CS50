@@ -126,12 +126,14 @@ void edges(int height, int width, RGBTRIPLE image[height][width])
                     // check if pixel is outside min h or max h
                     if (h + ver < 0 || h + ver >= height)
                     {
-                        pixel += gx[][];
+                        pixelGx += gx[h + ver][w] * image[h + ver][w];
+                        pixelGy += gy[h + ver][w] * image[h + ver][w];
                     }
                     // check if pixel is outside min w or max w
                     if (w + hor < 0 || w + hor >= width)
                     {
-                        continue;
+                        pixelGx += gx[h][w + hor] * image[h][w + hor];
+                        pixelGy += gy[h][w + hor] * image[h][w + hor];
                     }
                 }
             }
