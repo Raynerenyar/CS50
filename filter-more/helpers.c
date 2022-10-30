@@ -110,5 +110,28 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
 // Detect edges
 void edges(int height, int width, RGBTRIPLE image[height][width])
 {
+    for (int h = 0; h < height; h++)
+    {
+        for (int w = 0; w < width; w++)
+        {
+            // loop around pixel to check if it's outside image
+            for (int ver = -1; ver < 2; ver++)
+            {
+                for (int hor = -1; hor < 2; hor++)
+                {
+                    // check if pixel is outside min h or max h
+                    if (h + ver < 0 || h + ver >= height)
+                    {
+                        continue;
+                    }
+                    // check if pixel is outside min w or max w
+                    if (w + hor < 0 || w + hor >= width)
+                    {
+                        continue;
+                    }
+                }
+            }
+        }
+    }
     return;
 }
