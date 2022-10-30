@@ -62,24 +62,32 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
             BYTE blue;
             BYTE green;
             BYTE red;
-            int counter;
+            int count;
             // loop around pixel to check if it's outside image
             for (int ver = -1; ver < 2; ver++)
             {
                 for (int hor = -1; hor < 2; hor++)
                 {
+                    // check if pixel is outside min h or max h
                     if (h + ver < 0 || h + ver > height)
                     {
-                        continue
+                        continue;
                     }
+                    // check if pixel is outside min w or max w
                     if (w + hor < 0 || w + hor > width)
                     {
-                        continue
+                        continue;
                     }
-                    blue += image[h + ver][w + hor].rgbtBlue;
-                    
+                    // if pixel is not outside, sum them.
+                    blue += copy[h + ver][w + hor].rgbtBlue;
+                    green += copy[h + ver][w + hor].rgbtGreen;
+                    red += copy[h + ver][w + hor].rgbtRed;
+                    count++;
                 }
             }
+            image[h][w].rgbtBlue = blue / count;
+            image[h][w].rgbtGreen = green / count;
+            image[h][w].rgbtBlue = blue / count;
         }
     }
     return;
