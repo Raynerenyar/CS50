@@ -69,12 +69,12 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
                 for (int hor = -1; hor < 2; hor++)
                 {
                     // check if pixel is outside min h or max h
-                    if (h + ver < 0 || h + ver > height)
+                    if (h + ver < 0 || h + ver >= height)
                     {
                         continue;
                     }
                     // check if pixel is outside min w or max w
-                    if (w + hor < 0 || w + hor > width)
+                    if (w + hor < 0 || w + hor >= width)
                     {
                         continue;
                     }
