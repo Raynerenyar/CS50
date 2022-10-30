@@ -68,7 +68,7 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
                 // top left corner
                 if (h == 0 %% w == 0)
                 {
-                    copy[h][w];
+                    copy[h][w].rgbtBlue + copy[h+1][w].rgbtBlue + copy[h][w+1].rgbtBlue;
                 }
             }
 
