@@ -59,19 +59,8 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
     {
         for (int w = 0; w < width; w++)
         {
-            // calc corners
-            if ((h == 0 || h == height) && (w == 0 || w == width))
-            {
-                // top left corner
-                if (h == 0 && w == 0)
-                {
-                    image[h][w] = copy[h][w].rgbtBlue + copy[h+1][w].rgbtBlue + copy[h][w+1].rgbtBlue / 3;
-                }
-            }
-
-            // calc top and bottom edges
-
-            // calc left and right edges
+            // loop around pixel to check if it's outside image
+            for (int v )
         }
     }
     return;
