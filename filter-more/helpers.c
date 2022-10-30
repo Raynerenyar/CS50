@@ -119,12 +119,13 @@ void edges(int height, int width, RGBTRIPLE image[height][width])
             copy[h][w] = image[h][w];
         }
     }
+    // sobel arrays
+    int gx[3][3] = { {-1, 0, 1}, {-2, 0, 2}, {-1, 0, 1} };
+    int gy[3][3] = { {-1, -2, -1}, {0, 0, 0}, {1, 2, 1} };
     for (int h = 0; h < height; h++)
     {
         for (int w = 0; w < width; w++)
         {
-            int gx[3][3] = { {-1, 0, 1}, {-2, 0, 2}, {-1, 0, 1} };
-            int gy[3][3] = { {-1, -2, -1}, {0, 0, 0}, {1, 2, 1} };
             float pixelGx;
             float pixelGy;
             // loop around pixel to check if it's outside image
