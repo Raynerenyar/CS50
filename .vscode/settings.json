@@ -4,6 +4,8 @@
         "cs50.h": "c",
         "string": "c",
         "typeinfo": "c",
-        "algorithm": "c"
+        "algorithm": "c",
+        "*.tcc": "c",
+        "string_view": "c"
     }
 }
