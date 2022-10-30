@@ -147,12 +147,12 @@ void edges(int height, int width, RGBTRIPLE image[height][width])
                     {
                         continue;
                     }
-                    Gx_red += copy[h + ver][w + hor].rgbtRed * gx[ver][hor];
-                    Gx_blue += copy[h + ver][w + hor].rgbtBlue * gx[ver][hor];
-                    Gx_green += copy[h + ver][w + hor].rgbtGreen * gx[ver][hor];
-                    Gy_red += copy[h + ver][w + hor].rgbtRed * gx[ver][hor];
-                    Gy_blue += copy[h + ver][w + hor].rgbtBlue * gx[ver][hor];
-                    Gy_green += copy[h + ver][w + hor].rgbtGreen * gx[ver][hor];
+                    Gx_red += copy[h + ver][w + hor].rgbtRed * gx[ver + 1][hor + 1];
+                    Gx_blue += copy[h + ver][w + hor].rgbtBlue * gx[ver + 1][hor + 1];
+                    Gx_green += copy[h + ver][w + hor].rgbtGreen * gx[ver + 1][hor + 1];
+                    Gy_red += copy[h + ver][w + hor].rgbtRed * gy[ver + 1][hor + 1];
+                    Gy_blue += copy[h + ver][w + hor].rgbtBlue * gy[ver + 1][hor + 1];
+                    Gy_green += copy[h + ver][w + hor].rgbtGreen * gy[ver + 1][hor + 1];
                 }
             }
             int red = round(sqrt(Gx_red * Gx_red + Gy_red * Gy_red));
