@@ -26,15 +26,14 @@ void reflect(int height, int width, RGBTRIPLE image[height][width])
 {
     for (int h = 0; h < height; h++)
     {
+        // store image into row array
         RGBTRIPLE row[width];
         for (int w = 0; w < width; w++)
         {
-            // BYTE blue = image[h][w].rgbtBlue;
-            // BYTE green = image[h][w].rgbtGreen;
-            // BYTE red = image[h][w].rgbtRed;
             row[w] = image[h][w];
         }
         int index;
+        // reversing image
         for (int r = width; r > 0; r--)
         {
             index = abs(r - width);
@@ -47,6 +46,13 @@ void reflect(int height, int width, RGBTRIPLE image[height][width])
 // Blur image
 void blur(int height, int width, RGBTRIPLE image[height][width])
 {
+    for (int h = 0; h < height; h++)
+    {
+        for (int w = 0; w < width; w++)
+        {
+
+        }
+    }
     return;
 }
 
