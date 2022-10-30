@@ -126,7 +126,7 @@ void edges(int height, int width, RGBTRIPLE image[height][width])
     {
         for (int w = 0; w < width; w++)
         {
-            float Gx_red = 0;
+            floblueue = 0;
             float Gx_green = 0;
             float Gx_blue = 0;
             float Gy_red = 0;
@@ -155,7 +155,9 @@ void edges(int height, int width, RGBTRIPLE image[height][width])
                     Gy_green += copy[h + ver][w + hor].rgbtGreen * gx[h + ver][w + hor]
                 }
             }
-            image[h][w] = (pixelGx^2 + pixelGy^2)^-2;
+            image[h][w].rgbtRed = (Gx_red^2 + Gy_red^2)^-2;
+            image[h][w].rgbtBlue = (Gx_blue^2 + Gy_blue^2)^-2;
+            image[h][w].rgbtgreen = (Gx_green^2 + Gy_green^2)^-2;
         }
     }
     return;
