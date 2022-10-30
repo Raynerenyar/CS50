@@ -58,17 +58,21 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
         }
         copy[h] = row[width];
     }
-    // for (int h = 0; h < height; h++)
-    // {
-    //     for (int w = 0; w < width; w++)
-    //     {
-    //         // calc corners
+    for (int h = 0; h < height; h++)
+    {
+        for (int w = 0; w < width; w++)
+        {
+            // calc corners
+            if ((h == 0 || h == height) && (w == 0 || w == width))
+            {
+                copy[h][]
+            }
 
-    //         // calc top and bottom edges
+            // calc top and bottom edges
 
-    //         // calc left and right edges
-    //     }
-    // }
+            // calc left and right edges
+        }
+    }
     return;
 }
 
