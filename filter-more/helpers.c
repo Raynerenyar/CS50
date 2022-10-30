@@ -126,7 +126,7 @@ void edges(int height, int width, RGBTRIPLE image[height][width])
     {
         for (int w = 0; w < width; w++)
         {
-            floblueue = 0;
+            float Gx_red = 0;
             float Gx_green = 0;
             float Gx_blue = 0;
             float Gy_red = 0;
@@ -147,17 +147,34 @@ void edges(int height, int width, RGBTRIPLE image[height][width])
                     {
                         continue;
                     }
-                    Gx_red += copy[h + ver][w + hor].rgbtRed * gx[h + ver][w + hor]
-                    Gx_blue += copy[h + ver][w + hor].rgbtBlue * gx[h + ver][w + hor]
-                    Gx_green += copy[h + ver][w + hor].rgbtGreen * gx[h + ver][w + hor]
-                    Gy_red += copy[h + ver][w + hor].rgbtRed * gx[h + ver][w + hor]
-                    Gy_blue += copy[h + ver][w + hor].rgbtBlue * gx[h + ver][w + hor]
-                    Gy_green += copy[h + ver][w + hor].rgbtGreen * gx[h + ver][w + hor]
+                    Gx_red += copy[h + ver][w + hor].rgbtRed * gx[h + ver][w + hor];
+                    Gx_blue += copy[h + ver][w + hor].rgbtBlue * gx[h + ver][w + hor];
+                    Gx_green += copy[h + ver][w + hor].rgbtGreen * gx[h + ver][w + hor];
+                    Gy_red += copy[h + ver][w + hor].rgbtRed * gx[h + ver][w + hor];
+                    Gy_blue += copy[h + ver][w + hor].rgbtBlue * gx[h + ver][w + hor];
+                    Gy_green += copy[h + ver][w + hor].rgbtGreen * gx[h + ver][w + hor];
                 }
             }
-            image[h][w].rgbtRed = (Gx_red^2 + Gy_red^2)^-2;
-            image[h][w].rgbtBlue = (Gx_blue^2 + Gy_blue^2)^-2;
-            image[h][w].rgbtgreen = (Gx_green^2 + Gy_green^2)^-2;
+            int red = round(sqrt(Gx_red^2 + Gy_red^2));
+            int blue = round(sqrt(Gx_blue^2 + Gy_blue^));
+            int green = round(sqrt(Gx_green^2 + Gy_green^2));
+
+            // check for 255 cap
+            if (red > 255)
+            {
+                red = 255;
+            }
+            if (green > 255)
+            {
+                green = 255;
+            }
+            if (blue > 255)
+            {
+                blue = 255;
+            }
+            image[h][w].rgbtRed = red;
+            image[h][w].rgbtBlue = blue;
+            image[h][w].rgbtgreen = green;
         }
     }
     return;
