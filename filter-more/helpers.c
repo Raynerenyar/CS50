@@ -72,7 +72,12 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
                     {
                         continue
                     }
-                    if()
+                    if (w + hor < 0 || w + hor > width)
+                    {
+                        continue
+                    }
+                    blue += image[h + ver][w + hor].rgbtBlue;
+                    
                 }
             }
         }
