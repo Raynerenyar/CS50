@@ -47,10 +47,10 @@ void reflect(int height, int width, RGBTRIPLE image[height][width])
     {
         int index;
         // reversing image
-        for (int r = width - 1; r > 0; r--)
+        for (int w = 0; w < width; w++)
         {
-            index = abs(r - width - 1);
-            image[h][index] = row[h][r];
+            index = abs(w + width - 1);
+            image[h][w] = row[h][index];
         }
     }
     return;
