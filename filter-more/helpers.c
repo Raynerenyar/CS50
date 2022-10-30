@@ -25,9 +25,17 @@ void reflect(int height, int width, RGBTRIPLE image[height][width])
 {
     for (int h = 0; h < height; h++)
     {
+        BYTE row[width];
         for (int w = 0; w < width; w++)
         {
-
+            // BYTE blue = image[h][w].rgbtBlue;
+            // BYTE green = image[h][w].rgbtGreen;
+            // BYTE red = image[h][w].rgbtRed;
+            row[w] = image[h][w];
+        }
+        for (int r = width; r > 0; r--)
+        {
+            row[r];
         }
 
     }
