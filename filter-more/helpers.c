@@ -62,7 +62,7 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
             BYTE blue = 0;
             BYTE green = 0;
             BYTE red = 0;
-            int count;
+            int count = 0;
             // loop around pixel to check if it's outside image
             for (int ver = -1; ver < 2; ver++)
             {
