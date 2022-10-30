@@ -17,15 +17,6 @@ void grayscale(int height, int width, RGBTRIPLE image[height][width])
             image[h][w].rgbtBlue = average;
             image[h][w].rgbtGreen = average;
             image[h][w].rgbtRed = average;
-
-            // // Get RGBTriple values
-            // float blue = image[h][w].rgbtBlue;
-            // float green = image[h][w].rgbtGreen;
-            // float red = image[h][w].rgbtRed;
-            // // Calculate average
-            // int average = round((red + blue + green) / 3);
-            // // Set all values to average
-            // image[h][w].rgbtBlue = image[h][w].rgbtGreen = image[h][w].rgbtRed = average;
         }
     }
     return;
