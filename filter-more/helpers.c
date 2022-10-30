@@ -126,8 +126,12 @@ void edges(int height, int width, RGBTRIPLE image[height][width])
     {
         for (int w = 0; w < width; w++)
         {
-            float pixelGx;
-            float pixelGy;
+            float Gx_red = 0;
+            float Gx_green = 0;
+            float Gx_blue = 0;
+            float Gy_red = 0;
+            float Gy_green = 0;
+            float Gy_blue = 0;
             // loop around pixel to check if it's outside image
             for (int ver = -1; ver < 2; ver++)
             {
