@@ -110,6 +110,15 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
 // Detect edges
 void edges(int height, int width, RGBTRIPLE image[height][width])
 {
+    // store image into copy array
+    RGBTRIPLE copy[height][width];
+    for (int h = 0; h < height; h++)
+    {
+        for (int w = 0; w < width; w++)
+        {
+            copy[h][w] = image[h][w];
+        }
+    }
     for (int h = 0; h < height; h++)
     {
         for (int w = 0; w < width; w++)
@@ -126,17 +135,20 @@ void edges(int height, int width, RGBTRIPLE image[height][width])
                     // check if pixel is outside min h or max h
                     if (h + ver < 0 || h + ver >= height)
                     {
-                        pixelGx += gx[h + ver][w] * image[h + ver][w];
-                        pixelGy += gy[h + ver][w] * image[h + ver][w];
+                        continue;
                     }
                     // check if pixel is outside min w or max w
                     if (w + hor < 0 || w + hor >= width)
                     {
-                        pixelGx += gx[h][w + hor] * image[h][w + hor];
-                        pixelGy += gy[h][w + hor] * image[h][w + hor];
+                        continue;
                     }
+                    pixelGx += gx[h][w + hor] * copy[h][w + hor];
+                    pixelGy += gy[h][w + hor] * copy[h][w + hor];
+                    pixelGx += gx[h + ver][w] * copy[h + ver][w];
+                    pixelGy += gy[h + ver][w] * copy[h + ver][w];
                 }
             }
+            image[h][w] = (pixelGx^2 + pixelGy^2)^-2;
         }
     }
     return;
