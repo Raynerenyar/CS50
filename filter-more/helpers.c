@@ -47,12 +47,25 @@ void reflect(int height, int width, RGBTRIPLE image[height][width])
 void blur(int height, int width, RGBTRIPLE image[height][width])
 {
     // store image into copy array
-    RGBTRIPLE copy[height][width] = image;
+    RGBTRIPLE copy[height];
+    for (int h = 0; h < height; h++)
+    {
+        RGBTRIPLE row[width];
+        for (int w = 0; w < width; w++)
+        {
+            row[w] = image[h][w];
+        }
+        copy[h] = row;
+    }
     // for (int h = 0; h < height; h++)
     // {
     //     for (int w = 0; w < width; w++)
     //     {
+    //         // calc corners
 
+    //         // calc top and bottom edges
+
+    //         // calc left and right edges
     //     }
     // }
     return;
