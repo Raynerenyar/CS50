@@ -155,9 +155,9 @@ void edges(int height, int width, RGBTRIPLE image[height][width])
                     Gy_green += copy[h + ver][w + hor].rgbtGreen * gx[h + ver][w + hor];
                 }
             }
-            int red = round(sqrt(Gx_red^2 + Gy_red^2));
-            int blue = round(sqrt(Gx_blue^2 + Gy_blue^));
-            int green = round(sqrt(Gx_green^2 + Gy_green^2));
+            int red = round(sqrt(Gx_red * Gx_red + Gy_red * Gy_red));
+            int blue = round(sqrt(Gx_blue * Gx_blue + Gy_blue * Gy_blue));
+            int green = round(sqrt(Gx_green * Gx_green + Gy_green * Gy_green));
 
             // check for 255 cap
             if (red > 255)
@@ -174,7 +174,7 @@ void edges(int height, int width, RGBTRIPLE image[height][width])
             }
             image[h][w].rgbtRed = red;
             image[h][w].rgbtBlue = blue;
-            image[h][w].rgbtgreen = green;
+            image[h][w].rgbtGreen = green;
         }
     }
     return;
