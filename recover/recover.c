@@ -18,5 +18,7 @@ int main(int argc, char *argv[])
                 // close file
         // else
             // if already found jpeg
+                // ...
+    // close any remaining files
 
 }
