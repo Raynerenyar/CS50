@@ -8,7 +8,9 @@ int main(int argc, char *argv[])
         printf("Only 1 command-line argument is allowed\n");
         return 1;
     }
+
     // open memory card
+    FILE *raw = fopen()
     // repeat until end of card:
         // read 512 bytes into buffer
         // if start of a new jpeg
