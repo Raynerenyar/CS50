@@ -14,6 +14,11 @@ int main(int argc, char *argv[])
         printf("Only 1 command-line argument is allowed\n");
         return 1;
     }
+    if (argc < 2)
+    {
+        printf("Usage: ./recover card.raw\n");
+        return 1;
+    }
     char *forensicImage = argv[1];
 
     // open memory card
@@ -29,7 +34,7 @@ int main(int argc, char *argv[])
         // read 1 block of buffer
         // read first 4 bytes of buffer for jpeg signature
         reading = fread(signature, 4, 1, raw);
-        if (check_signature(signature) == 1) // 1 if jpeg signature found
+        if (check_signature(signature) == 0) // 0 if jpeg signature found
         {
             // create image
             char filename[8];
@@ -62,10 +67,10 @@ int check_signature(BYTE signature[4])
 {
     if ( signature[0] == 0xff && signature[1] == 0xd8 && signature[2] == 0xff && (signature[3] & 0xf0) == 0xe0 )
     {
-        return 1;
+        return 0;
     }
     else
     {
-        return 0;
+        return 1;
     }
 }
