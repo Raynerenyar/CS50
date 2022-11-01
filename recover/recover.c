@@ -41,10 +41,17 @@ int main(int argc, char *argv[])
             sprintf(filename, "%03i.jpg", counter); // %03 - inputs 3 digits including leading 0s
             FILE *outptr = fopen(filename, "w");
             fwrite(signature, 4, 1, outptr);
-            fread(&jpeg_data, 512 - 4, 1, raw);
-            fwrite(jpeg_data, 4, 1, outptr);
-            fclose(outptr);
-            counter++;
+            int same_image = 1;
+            while (same_image)
+            {
+                if (check_signature(signature) != 0)
+                {
+                fread(&jpeg_data, 512 - 4, 1, raw);
+                fwrite(jpeg_data, 4, 1, outptr);
+                }
+                else fclose(outptr);
+                counter++;
+            }
         }
         else
         {
