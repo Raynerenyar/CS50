@@ -35,9 +35,9 @@ int main(int argc, char *argv[])
             char filename[8];
             sprintf(filename, "%03i.jpg", counter);
             FILE *outptr = fopen(filename, "w");
-            fwrite(signature, 4, 1, outptr);
-            fclose(outptr)
-
+            fread(&jpeg_data, 512 - 4, 1, raw);
+            fwrite(jpeg_data, 4, 1, outptr);
+            fclose(outptr);
         }
         else
         {
