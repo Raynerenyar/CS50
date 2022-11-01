@@ -42,7 +42,7 @@ int main(int argc, char *argv[])
             FILE *outptr = fopen(filename, "w");
             fwrite(signature, 4, 1, outptr);
             fread(&jpeg_data, 512 - 4, 1, raw);
-            fwrite(jpeg_data, 4, 1, outptr);
+            fwrite(jpeg_data, 512 - 4, 1, outptr);
             int same_image = 1;
             while (same_image == 1)
             {
@@ -51,7 +51,7 @@ int main(int argc, char *argv[])
                 {
                 fwrite(signature, 4, 1, outptr);
                 fread(&jpeg_data, 512 - 4, 1, raw);
-                fwrite(jpeg_data, 4, 1, outptr);
+                fwrite(jpeg_data, 512 - 4, 1, outptr);
                 }
                 else
                 {
