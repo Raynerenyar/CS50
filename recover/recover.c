@@ -17,17 +17,37 @@ int main(int argc, char *argv[])
     FILE *raw = fopen(forensicImage, "r");
     int reading = 1;
     // jpeg image header
-    BYTE signature;
+    BYTE signature[4];
     // repeat until end of card:
-    while (reading)
-    {
+    // while (reading)
+    // {
         // read 512 bytes into buffer
         for (int i = 0; i < 4; i ++)
         {
-            fread(&signature, 1, 1, raw);
+            fread(&signature, 4, 1, raw);
+            for (int j = 0; j < 4; j++)
+            {
+                if (signature[i] == 0xff)
+                {
+                    continue;
+                }
+                if (signature[i] == 0xd8)
+                {
+                    continue;
+                }
+                if (signature[i] == 0xff)
+                {
+                    continue;
+                }
+                if ( (signature[i] & 0xf0) == 0xe0 )
+                {
+                    continue;
+                    // create image
+                }
+            }
             break;
         }
-    }
+    // }
         // if start of a new jpeg
             // if first jpeg
                 // write to new file with ###.jpg
