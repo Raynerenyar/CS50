@@ -38,7 +38,7 @@ int main(int argc, char *argv[])
         {
             // create image
             char filename[8];
-            sprintf(filename, "%03i.jpg", counter);
+            sprintf(filename, "%03i.jpg", counter); //
             FILE *outptr = fopen(filename, "w");
             fread(&jpeg_data, 512 - 4, 1, raw);
             fwrite(jpeg_data, 4, 1, outptr);
