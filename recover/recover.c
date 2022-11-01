@@ -8,6 +8,7 @@ int main(int argc, char *argv[])
         printf("Only 1 command-line argument is allowed\n");
         return 1;
     }
+    forensicImage = argc[1];
 
     // open memory card
     FILE *raw = fopen()
