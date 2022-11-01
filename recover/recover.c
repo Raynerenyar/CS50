@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include <stdint.h>
 
-#include <cs50.h>
+// #include <cs50.h>
 
 typedef uint8_t BYTE;
 int check_signature(BYTE signature[4]);
@@ -33,7 +33,7 @@ int main(int argc, char *argv[])
             if (check_signature(signature) == 1) // 1 if jpeg signature found
             {
                 // create image
-                string filename;
+                char filename[7];
                 sprintf(filename, "%03i.jpg", counter);
                 FILE *outptr = fopen(filename, "w");
                 fwrite(signature, 4, 1, )
