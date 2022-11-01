@@ -27,7 +27,7 @@ int main(int argc, char *argv[])
         for (int i = 0; i < 4; i ++)
         {
             fread(signature, 4, 1, raw);
-            if (check_signature(signature) == 1
+            if (check_signature(&signature) == 1
             {
                 // create image
             }
@@ -50,7 +50,7 @@ int main(int argc, char *argv[])
 
 }
 
-int check_signature(BYTE signature)
+int check_signature(BYTE signature[4])
 {
     for (int j = 0; j < 4; j++)
     {
