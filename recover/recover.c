@@ -2,6 +2,8 @@
 #include <stdlib.h>
 #include <stdint.h>
 
+#include <cs50.h>
+
 typedef uint8_t BYTE;
 int check_signature(BYTE signature[4]);
 
@@ -23,6 +25,7 @@ int main(int argc, char *argv[])
     // repeat until end of card:
     // while (reading)
     // {
+        int counter = 0;
         // read 512 bytes into buffer
         for (int i = 0; i < 4; i ++)
         {
@@ -30,8 +33,9 @@ int main(int argc, char *argv[])
             if (check_signature(signature) == 1) // 1 if jpeg signature found
             {
                 // create image
-                char *outfile = sprintf()
-                FILE *outptr = fopen(outfile, "w");
+                string filename;
+                sprintf(filename, "%03i.jpg", counter);
+                FILE *outptr = fopen(filename, "w");
                 fwrite(signature, 4, 1, )
 
             }
