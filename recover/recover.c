@@ -3,6 +3,7 @@
 #include <stdint.h>
 
 typedef uint8_t BYTE;
+int check_signature(BYTE signature);
 
 int main(int argc, char *argv[])
 {
@@ -18,6 +19,7 @@ int main(int argc, char *argv[])
     int reading = 1;
     // jpeg image header
     BYTE signature[4];
+    BYTE jpeg_data[512 - 4];
     // repeat until end of card:
     // while (reading)
     // {
@@ -31,7 +33,8 @@ int main(int argc, char *argv[])
             }
             else
             {
-                fread(&signature)
+                // read rest of block
+                fread(&jpeg_data, 512 - 4, 1 raw);
             }
         }
     // }
