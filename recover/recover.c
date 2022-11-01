@@ -24,11 +24,11 @@ int main(int argc, char *argv[])
     BYTE jpeg_data[512 - 4];
     // repeat until end of card:
     int counter = 0;
-    while (reading)
+    while (reading > 0)
     {
         // read 1 block of buffer
         // read first 4 bytes of buffer for jpeg signature
-        fread(signature, 4, 1, raw);
+        reading = fread(signature, 4, 1, raw);
         if (check_signature(signature) == 1) // 1 if jpeg signature found
         {
             // create image
