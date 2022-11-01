@@ -8,12 +8,17 @@ int main(int argc, char *argv[])
         printf("Only 1 command-line argument is allowed\n");
         return 1;
     }
-    forensicImage = argc[1];
+    char *forensicImage = argc[1];
 
     // open memory card
-    FILE *raw = fopen()
+    FILE *raw = fopen(forensicImage, 'r');
+    bool reading = true;
     // repeat until end of card:
+    while (reading)
+    {
         // read 512 bytes into buffer
+        for ()
+    }
         // if start of a new jpeg
             // if first jpeg
                 // write to new file with ###.jpg
