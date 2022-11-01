@@ -25,27 +25,14 @@ int main(int argc, char *argv[])
         for (int i = 0; i < 4; i ++)
         {
             fread(&signature, 4, 1, raw);
-            for (int j = 0; j < 4; j++)
+            if (check_signature == 1
             {
-                if (signature[i] == 0xff)
-                {
-                    continue;
-                }
-                if (signature[i] == 0xd8)
-                {
-                    continue;
-                }
-                if (signature[i] == 0xff)
-                {
-                    continue;
-                }
-                if ( (signature[i] & 0xf0) == 0xe0 )
-                {
-                    continue;
-                    // create image
-                }
+                // create image
             }
-            break;
+            else
+            {
+                fread(&signature)
+            }
         }
     // }
         // if start of a new jpeg
@@ -58,4 +45,28 @@ int main(int argc, char *argv[])
                 // ...
     // close any remaining files
 
+}
+
+int check_signature(BYTE signature)
+{
+    for (int j = 0; j < 4; j++)
+    {
+        if (signature[i] == 0xff)
+        {
+            continue;
+        }
+        if (signature[i] == 0xd8)
+        {
+            continue;
+        }
+        if (signature[i] == 0xff)
+        {
+            continue;
+        }
+        if ( (signature[i] & 0xf0) == 0xe0 )
+        {
+            return 1;
+        }
+
+    }
 }
