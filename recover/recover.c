@@ -46,7 +46,7 @@ int main(int argc, char *argv[])
             int same_image = 1;
             while (same_image == 1)
             {
-                fread(signature, 4, 1, raw)
+                fread(signature, 4, 1, raw);
                 if (check_signature(signature) != 0)
                 {
                 fwrite(signature, 4, 1, outptr);
