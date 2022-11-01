@@ -3,8 +3,6 @@
 
 typedef uint8_t  BYTE;
 
-
-
 int main(int argc, char *argv[])
 {
     if (argc > 2)
@@ -20,6 +18,7 @@ int main(int argc, char *argv[])
     // repeat until end of card:
     while (reading)
     {
+        fread()
         // read 512 bytes into buffer
         for ()
     }
