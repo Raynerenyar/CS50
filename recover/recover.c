@@ -26,8 +26,8 @@ int main(int argc, char *argv[])
         // read 512 bytes into buffer
         for (int i = 0; i < 4; i ++)
         {
-            fread(&signature, 4, 1, raw);
-            if (check_signature == 1
+            fread(signature, 4, 1, raw);
+            if (check_signature(signature) == 1
             {
                 // create image
             }
