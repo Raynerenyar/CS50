@@ -15,12 +15,14 @@ int main(int argc, char *argv[])
     // open memory card
     FILE *raw = fopen(forensicImage, 'r');
     bool reading = true;
+    // jpeg image header
+    BYTE signature;
     // repeat until end of card:
     while (reading)
     {
-        fread()
+        fread(signature, 1, 4, raw);
         // read 512 bytes into buffer
-        for ()
+        // for ()
     }
         // if start of a new jpeg
             // if first jpeg
