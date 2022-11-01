@@ -30,6 +30,7 @@ int main(int argc, char *argv[])
             if (check_signature(signature) == 1) // 1 if jpeg signature found
             {
                 // create image
+                fwrite(signature, 4, 1, )
             }
             else
             {
