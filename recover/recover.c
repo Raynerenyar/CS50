@@ -33,7 +33,7 @@ int main(int argc, char *argv[])
             if (check_signature(signature) == 1) // 1 if jpeg signature found
             {
                 // create image
-                char filename[7];
+                char filename[8];
                 sprintf(filename, "%03i.jpg", counter);
                 FILE *outptr = fopen(filename, "w");
                 fwrite(signature, 4, 1, outptr);
