@@ -38,8 +38,9 @@ int main(int argc, char *argv[])
         {
             // create image
             char filename[8];
-            sprintf(filename, "%03i.jpg", counter); //
+            sprintf(filename, "%03i.jpg", counter); // %03 - inputs 3 digits including leading 0s
             FILE *outptr = fopen(filename, "w");
+            fwrite(signature, 4, 1, outptr);
             fread(&jpeg_data, 512 - 4, 1, raw);
             fwrite(jpeg_data, 4, 1, outptr);
             fclose(outptr);
@@ -60,7 +61,7 @@ int main(int argc, char *argv[])
             // if already found jpeg
                 // ...
     // close any remaining files
-
+    fclose(raw);
 }
 
 int check_signature(BYTE signature[4])
