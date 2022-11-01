@@ -27,24 +27,22 @@ int main(int argc, char *argv[])
     // {
         int counter = 0;
         // read 512 bytes into buffer
-        for (int i = 0; i < 4; i ++)
+        // read first 4 bytes of buffer for jpeg signature
+        fread(signature, 4, 1, raw);
+        if (check_signature(signature) == 1) // 1 if jpeg signature found
         {
-            fread(signature, 4, 1, raw);
-            if (check_signature(signature) == 1) // 1 if jpeg signature found
-            {
-                // create image
-                char filename[8];
-                sprintf(filename, "%03i.jpg", counter);
-                FILE *outptr = fopen(filename, "w");
-                fwrite(signature, 4, 1, outptr);
-                fclose(outptr)
+            // create image
+            char filename[8];
+            sprintf(filename, "%03i.jpg", counter);
+            FILE *outptr = fopen(filename, "w");
+            fwrite(signature, 4, 1, outptr);
+            fclose(outptr)
 
-            }
-            else
-            {
-                // read rest of block
-                fread(&jpeg_data, 512 - 4, 1, raw);
-            }
+        }
+        else
+        {
+            // read rest of block
+            fread(&jpeg_data, 512 - 4, 1, raw);
         }
     // }
         // if start of a new jpeg
