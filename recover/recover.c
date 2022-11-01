@@ -21,9 +21,12 @@ int main(int argc, char *argv[])
     // repeat until end of card:
     while (reading)
     {
-        fread(&signature, 1, 4, raw);
         // read 512 bytes into buffer
-        // for ()
+        for (int i = 0; i < 4; i ++)
+        {
+            fread(&signature, 1, 1, raw);
+            break;
+        }
     }
         // if start of a new jpeg
             // if first jpeg
