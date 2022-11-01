@@ -44,16 +44,21 @@ int main(int argc, char *argv[])
             fread(&jpeg_data, 512 - 4, 1, raw);
             fwrite(jpeg_data, 4, 1, outptr);
             int same_image = 1;
-            while (same_image)
+            while (same_image == 1)
             {
                 fread(signature, 4, 1, raw)
                 if (check_signature(signature) != 0)
                 {
+                fwrite(signature, 4, 1, outptr);
                 fread(&jpeg_data, 512 - 4, 1, raw);
                 fwrite(jpeg_data, 4, 1, outptr);
                 }
-                else fclose(outptr);
-                counter++;
+                else
+                {
+                    fclose(outptr);
+                    counter++;
+                    same_image = 0;
+                }
             }
         }
         else
