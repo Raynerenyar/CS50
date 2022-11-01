@@ -54,21 +54,25 @@ int check_signature(BYTE signature[4])
 {
     for (int j = 0; j < 4; j++)
     {
-        if (signature[i] == 0xff)
+        if (signature[j] == 0xff)
         {
             continue;
         }
-        if (signature[i] == 0xd8)
+        if (signature[j] == 0xd8)
         {
             continue;
         }
-        if (signature[i] == 0xff)
+        if (signature[j] == 0xff)
         {
             continue;
         }
-        if ( (signature[i] & 0xf0) == 0xe0 )
+        if ( (signature[j] & 0xf0) == 0xe0 )
         {
             return 1;
+        }
+        else
+        {
+            return 0;
         }
 
     }
