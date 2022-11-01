@@ -36,7 +36,7 @@ int main(int argc, char *argv[])
                 char filename[7];
                 sprintf(filename, "%03i.jpg", counter);
                 FILE *outptr = fopen(filename, "w");
-                fwrite(signature, 4, 1, )
+                fwrite(signature, 4, 1, outptr);
 
             }
             else
