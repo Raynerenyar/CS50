@@ -23,10 +23,10 @@ int main(int argc, char *argv[])
     BYTE signature[4];
     BYTE jpeg_data[512 - 4];
     // repeat until end of card:
-    // while (reading)
-    // {
-        int counter = 0;
-        // read 512 bytes into buffer
+    int counter = 0;
+    while (reading)
+    {
+        // read 1 block of buffer
         // read first 4 bytes of buffer for jpeg signature
         fread(signature, 4, 1, raw);
         if (check_signature(signature) == 1) // 1 if jpeg signature found
@@ -38,13 +38,14 @@ int main(int argc, char *argv[])
             fread(&jpeg_data, 512 - 4, 1, raw);
             fwrite(jpeg_data, 4, 1, outptr);
             fclose(outptr);
+            counter++;
         }
         else
         {
             // read rest of block
             fread(&jpeg_data, 512 - 4, 1, raw);
         }
-    // }
+    }
         // if start of a new jpeg
             // if first jpeg
                 // write to new file with ###.jpg
