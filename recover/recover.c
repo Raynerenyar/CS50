@@ -65,6 +65,7 @@ int main(int argc, char *argv[])
         {
             // read rest of block
             fread(&jpeg_data, 512 - 4, 1, raw);
+            reading = fread(signature, 4, 1, raw);
         }
     }
         // if start of a new jpeg
