@@ -1,7 +1,8 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <stdint.h>
 
-typedef uint8_t  BYTE;
+typedef uint8_t BYTE;
 
 int main(int argc, char *argv[])
 {
@@ -10,10 +11,10 @@ int main(int argc, char *argv[])
         printf("Only 1 command-line argument is allowed\n");
         return 1;
     }
-    char *forensicImage = argc[1];
+    char *forensicImage = argv[1];
 
     // open memory card
-    FILE *raw = fopen(forensicImage, 'r');
+    FILE *raw = fopen(forensicImage, "r");
     bool reading = true;
     // jpeg image header
     BYTE signature;
