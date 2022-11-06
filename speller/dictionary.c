@@ -75,6 +75,7 @@ bool load(const char *dictionary)
         int letter_count = 0;
         while (letter != 0) // != null
         {
+            char word[LENGTH];
             while (letter != 10)
             {
                 word[i] = letter;
