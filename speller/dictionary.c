@@ -41,7 +41,7 @@ int prime[] = {2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, 53, 59, 6
 typedef struct dict
 {
     int index;
-    char word
+    char word[LENGTH + 1];
 }
 
 // Loads dictionary into memory, returning true if successful, else false
@@ -53,7 +53,7 @@ bool load(const char *dictionary)
     FILE *txt_dict = fopen(filename, "r");
     if (txt_dict != NULL)
     {
-        char word[26];
+        char word[LENGTH + 1];
         char letter = fread(&letter, sizeof(char), 1, txt_dict);
         int i = 0;
         while (letter != 10)
@@ -64,10 +64,11 @@ bool load(const char *dictionary)
             // read next char
             fread(&letter, sizeof(char), 1, txt_dict);
         }
-        // for (int i = 0; i < 26, i++)
-        // {
-
-        // }
+        int len_of_word = LENGTH + 1;
+        for (int i = 0; i < len_of_word, i++)
+        {
+            
+        }
     }
     return false;
 }
