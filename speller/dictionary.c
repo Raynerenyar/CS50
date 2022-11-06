@@ -85,7 +85,7 @@ bool load(const char *dictionary)
                 node *word = create_word(one_word, letter_count);
                 // if (j == letter_count -1)
                 // {
-                //     table[letter_count - 1] = word; // -1 to get index 0
+                    table[letter_count - 1] = word; // -1 to get index 0
                 // }
             // }
         }
