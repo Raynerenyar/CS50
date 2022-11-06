@@ -82,8 +82,12 @@ bool load(const char *dictionary)
             letter_count = 0;
             fread(&letter, sizeof(char), 1, txt_dict);
         }
+        return true;
     }
-    return false;
+    else
+    {
+        return false;
+    }
 }
 
 // Returns number of words in dictionary if loaded, else 0 if not yet loaded
