@@ -82,13 +82,13 @@ bool load(const char *dictionary)
                         beginning_of_word = 0;
                         letter = fread(&letter, sizeof(char), 1, txt_dict);
                         *tmp_one = *w;
-                        count++;
+                        letter_count++;
                         continue;
                     }
                     tmp_one->next = tmp_two;
                     tmp_two->word[letter - 61] = letter;
                     *tmp_one = *tmp_two;
-                    count++;
+                    letter_count++;
 
                 }
                 else if (letter == 44)
@@ -102,58 +102,12 @@ bool load(const char *dictionary)
                 // read next letter
                 letter = fread(&letter, sizeof(char), 1, txt_dict);
             }
-            table[count] = w
-            count = 0;
+            table[letter_count] = w;
+            letter_count = 0;
             // read next word
             letter = fread(&letter, sizeof(char), 1, txt_dict);
         }
-        // // count num of words
-        // int word_count = 0;
-        // char letter = fread(&letter, sizeof(char), 1, txt_dict);
-        // while (letter != 0)
-        // {
-        //     if (letter != 10)
-        //     {
-        //         word_count++;
-        //     }
-        //     letter = fread(&letter, sizeof(char), 1, txt_dict);
-        // }
-        // fclose(txt_dict);
-        // hashedWord dictionary_of_words[word_count];
-        // // *dictionary_of_words = malloc(word_count * sizeof(hashedWord));
-        // // reopen txt file
-        // FILE *dict = fopen(filename, "r");
-        // letter = fread(&letter, sizeof(char), 1, dict);
-        // char word[LENGTH + 1];
-        // int i = 0;
-        // while (letter != 0) // != null
-        // {
-        //     while (letter != 10) // != \n
-        //     {
-        //         // append to string;
-        //         word[i] = letter;
-        //         i++;
-        //     }
-        //     int len_of_word = LENGTH + 1;
-        //     int hash = 0;
-        //     hashedWord *hashed_word = malloc(sizeof(int) + sizeof(word[LENGTH + 1]));
-        //     for (int j = 0; j < len_of_word; j++)
-        //     {
-        //         if (word[j] != 0)
-        //         {
-        //             // polynomial hashing
-        //             hash += word[j] * prime[j];
-        //             hashed_word->word[j] = word[j];
-        //         }
-        //         else
-        //         {
-        //             break;
-        //         }
-        //     }
-        //     hashed_word->index = hash;
-        //     // read next char
-        //     letter = fread(&letter, sizeof(char), 1, dict);
-        // }
+        return true;
     }
     return false;
 }
