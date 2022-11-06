@@ -75,7 +75,6 @@ bool load(const char *dictionary)
                     // table[letter-61] = l; // minus 61 to get index
                     beginning_of_word = 0;
                 }
-                letter = tolower(letter);
                 node *tmp = malloc(sizeof(node));
                 l->next = tmp;
                 *l = *tmp;
