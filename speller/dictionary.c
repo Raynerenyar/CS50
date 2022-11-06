@@ -40,7 +40,7 @@ unsigned int hash(const char *word)
 // int prime[] = {2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, 53, 59, 61, 67, 71, 73, 79, 83, 89, 97, 101};
 
 //
-char word[LENGTH];
+
 node create_word(char letter, int letter_count)
 {
     node *w = malloc(sizeof(node));
@@ -75,13 +75,16 @@ bool load(const char *dictionary)
         int letter_count = 0;
         while (letter != 0) // != null
         {
-            word[i] = letter;
-            letter_count = fread(&letter, sizeof(char), 1, txt_dict)
-            i++;
-        }
-        for (int i = 0; i < letter_count; i++)
-        {
-            create_word(word, letter_count);
+            while (letter != 10)
+            {
+                word[i] = letter;
+                letter_count = fread(&letter, sizeof(char), 1, txt_dict)
+                i++;
+            }
+            for (int i = 0; i < letter_count; i++)
+            {
+                create_word(word, letter_count);
+            }
         }
             // node *tmp_one = malloc(sizeof(node));
             // node *tmp_two = malloc(sizeof(node));
