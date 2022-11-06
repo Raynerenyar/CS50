@@ -54,11 +54,10 @@ bool load(const char *dictionary)
     char filename[strlen(dictionary) + 4];
     sprintf(filename, "%s.txt", dictionary);
     FILE *txt_dict = fopen(filename, "r");
-
     if (txt_dict != NULL)
     {
         // count num of words
-        int word_count++;
+        int word_count = 0;
         char letter = fread(&letter, sizeof(char), 1, txt_dict);
         while (letter != 0)
         {
@@ -66,7 +65,7 @@ bool load(const char *dictionary)
             {
                 word_count++;
             }
-            letter = fread(&letter, sizeof(char), 1, txt_dict)
+            letter = fread(&letter, sizeof(char), 1, txt_dict);
         }
         fclose(txt_dict);
         // reopen txt file
