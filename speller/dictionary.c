@@ -64,8 +64,13 @@ bool load(const char *dictionary)
         char letter = fread(&letter, sizeof(char), 1, txt_dict);
         while (letter != 0 && letter != 10) // != null and != \n
         {
+            int beginning_of_word = 1;
             if (letter != 44)
             {
+                if (beginning_of_word = 1)
+                {
+                    
+                }
                 for (int i = 0; i < 26; i++)
                 {
                     letter = tolower(letter);
