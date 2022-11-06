@@ -72,9 +72,14 @@ bool load(const char *dictionary)
         fread(&letter, sizeof(char), 1, txt_dict);
         int beginning_of_word = 1;
         // parse through txt until null
+        int i = 0;
         while (letter != 0) // != null
         {
-            
+            word[i] = letter;
+            fread(&letter, sizeof(char), 1, txt_dict)
+            i++;
+        }
+        create_word(word,)
             // node *tmp_one = malloc(sizeof(node));
             // node *tmp_two = malloc(sizeof(node));
             // node *w = malloc(sizeof(node));
@@ -121,8 +126,8 @@ bool load(const char *dictionary)
             // // read next word
             // fread(&letter, sizeof(char), 1, txt_dict);
             // beginning_of_word = 1;
-        }
-        return true;
+        // }
+        // return true;
     }
     return false;
 }
