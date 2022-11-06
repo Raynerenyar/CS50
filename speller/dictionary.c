@@ -46,14 +46,10 @@ bool load(const char *dictionary)
     FILE *txt_dict = fopen(filename, "r");
     if (txt_dict != NULL)
     {
-        char letter;
-        while (fread(&letter, sizeof(char), 1, txt_dict))
+        char letter = fread(&letter, sizeof(char), 1, txt_dict)
+        while (letter != 10)
         {
-            if (letter == 10)
-            {
-                return
-                // sprintf();
-            }
+            
         }
     }
     return false;
