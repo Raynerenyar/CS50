@@ -49,7 +49,7 @@ node create_word(char letter, int letter_count)
 
     if (letter_count > 1)
     {
-        create_word(word, letter_count - 1);
+        create_word(letter, letter_count - 1);
     }
     else
     {
@@ -76,16 +76,16 @@ bool load(const char *dictionary)
         int letter_count = 0;
         while (letter != 0) // != null
         {
-            char word[LENGTH];
+            char one_word[LENGTH];
             while (letter != 10)
             {
-                word[i] = letter;
+                one_word[i] = letter;
                 letter_count = fread(&letter, sizeof(char), 1, txt_dict);
                 i++;
             }
             for (int i = 0; i < letter_count; i++)
             {
-                create_word(word, letter_count);
+                create_word(one_word, letter_count);
             }
         }
             // node *tmp_one = malloc(sizeof(node));
