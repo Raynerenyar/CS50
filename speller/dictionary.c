@@ -85,54 +85,6 @@ bool load(const char *dictionary)
             letter_count = 0;
             fread(&letter, sizeof(char), 1, txt_dict);
         }
-            // node *tmp_one = malloc(sizeof(node));
-            // node *tmp_two = malloc(sizeof(node));
-            // node *w = malloc(sizeof(node));
-            // int letter_count = 0;
-            // // loop until end of word
-            // while (letter != 10) // != \n
-            // {
-            //     if (letter != 44) // not '
-            //     {
-            //         letter = tolower(letter);
-            //         if (beginning_of_word == 1)
-            //         {
-            //             w->word[letter - 97] = letter;
-            //             beginning_of_word = 0;
-            //             fread(&letter, sizeof(char), 1, txt_dict);
-            //             w->next = tmp_one;
-            //             letter_count++;
-            //             continue;
-            //         }
-            //         tmp_one->word[letter - 97] = letter;
-            //         // node *tmp_two = malloc(sizeof(node));
-            //         tmp_one->next = tmp_two;
-            //         tmp_one = tmp_two;
-            //         letter_count++;
-
-            //     }
-            //     else if (letter == 44)
-            //     {
-            //         tmp_one->word[27] = letter;
-            //         // node *tmp_two = malloc(sizeof(node));
-            //         tmp_one->next = tmp_two;
-            //         tmp_one = tmp_two;
-            //         letter_count++;
-            //     }
-            //     // read next letter
-            //     fread(&letter, sizeof(char), 1, txt_dict);
-            // }
-            // if (letter == 10)
-            // {
-            //     tmp_two->next = NULL;
-            // }
-            // table[letter_count - 1] = w; // 1 letter word at index 0
-            // letter_count = 0;
-            // // read next word
-            // fread(&letter, sizeof(char), 1, txt_dict);
-            // beginning_of_word = 1;
-        // }
-        // return true;
     }
     return false;
 }
