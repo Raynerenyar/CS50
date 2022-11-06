@@ -65,7 +65,7 @@ bool load(const char *dictionary)
         fread(&letter, sizeof(char), 1, txt_dict);
         node *w = malloc(sizeof(node));
         node *tmp_one = malloc(sizeof(node));
-        node *tmp_two = malloc(sizeof(node));
+        // node *tmp_two = malloc(sizeof(node));
         int beginning_of_word = 1;
         // parse through txt until null
         while (letter != 0) // != null
@@ -86,7 +86,7 @@ bool load(const char *dictionary)
                         letter_count++;
                         continue;
                     }
-                    tmp_two = malloc(sizeof(node));
+                    node *tmp_two = malloc(sizeof(node));
                     tmp_one->next = tmp_two;
                     tmp_two->word[letter - 61] = letter;
                     *tmp_one = *tmp_two;
