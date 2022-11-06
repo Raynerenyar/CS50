@@ -29,7 +29,7 @@ node *table[N];
 bool check(const char *word)
 {
     // TODO
-    
+
     return false;
 }
 
@@ -84,6 +84,10 @@ bool load(const char *dictionary)
             table[letter_count - 1] = word; // -1 to get index 0
             letter_count = 0;
             fread(&letter, sizeof(char), 1, txt_dict);
+            if (letter == 0)
+            {
+                break;
+            }
         }
         return true;
     }
