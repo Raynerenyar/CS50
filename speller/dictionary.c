@@ -62,7 +62,7 @@ bool load(const char *dictionary)
     if (txt_dict != NULL)
     {
         char letter = fread(&letter, sizeof(char), 1, txt_dict);
-        node *l = malloc(sizeof(node));
+        node *w = malloc(sizeof(node));
         node *tmp = malloc(sizeof(node));
         int beginning_of_word = 1;
         while (letter != 0 && letter != 10) // != null and != \n
@@ -72,20 +72,21 @@ bool load(const char *dictionary)
                 letter = tolower(letter);
                 if (beginning_of_word == 1)
                 {
-                    l->word[letter - 61] = letter;
-                    // table[letter-61] = l; // minus 61 to get index
+                    w->word[letter - 61] = letter;
+                    // table[letter-61] = w; // minus 61 to get index
                     beginning_of_word = 0;
                     letter = fread(&letter, sizeof(char), 1, txt_dict);
-                    *tmp = *l;
+                    *tmp = *w;
                     continue;
                 }
-                l->next = tmp;
+                w->next = tmp;
                 tmp->word[letter - 61] = letter;
+                *tmp = *w;
 
             }
             else if (letter == 44)
             {
-                l->word[27] = letter;
+                w->word[27] = letter;
             }
             letter = fread(&letter, sizeof(char), 1, txt_dict);
         }
