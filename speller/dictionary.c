@@ -44,14 +44,16 @@ bool load(const char *dictionary)
     char filename[strlen(dictionary) + 4];
     sprintf(filename, "%s.txt", dictionary);
     FILE *txt_dict = fopen(filename, "r");
-    // TODO
-    char letter;
-    while (fread(&letter, sizeof(char), 1, txt_dict))
+    if (txt_dict != NULL)
     {
-        if (letter == 10)
+        char letter;
+        while (fread(&letter, sizeof(char), 1, txt_dict))
         {
-            return
-            // sprintf();
+            if (letter == 10)
+            {
+                return
+                // sprintf();
+            }
         }
     }
     return false;
