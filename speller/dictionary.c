@@ -103,7 +103,7 @@ bool load(const char *dictionary)
                 // read next letter
                 fread(&letter, sizeof(char), 1, txt_dict);
             }
-            table[letter_count] = w;
+            table[letter_count - 1] = w; // 1 letter word at index 0
             letter_count = 0;
             // read next word
             fread(&letter, sizeof(char), 1, txt_dict);
