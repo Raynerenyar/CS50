@@ -57,6 +57,10 @@ bool load(const char *dictionary)
             // read next char
             fread(&letter, sizeof(char), 1, txt_dict);
         }
+        for (int i = 0; i < 26, i++)
+        {
+            
+        }
     }
     return false;
 }
