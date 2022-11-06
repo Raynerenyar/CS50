@@ -67,10 +67,12 @@ bool load(const char *dictionary)
             if (letter != 44)
             {
                 for (int i = 0; i < 26; i++)
-                letter = tolower(letter);
-                node *l = malloc(sizeof(node));
-                l->word[] = letter;
-                // minus 61 to get index
+                {
+                    letter = tolower(letter);
+                    node *l = malloc(sizeof(node));
+                    l->word[i] = letter;
+                    // minus 61 to get index
+                }
                 table[letter-61] = l;
             }
             else if (letter == 44)
