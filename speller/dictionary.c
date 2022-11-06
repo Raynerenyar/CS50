@@ -84,6 +84,7 @@ bool load(const char *dictionary)
             int start = 0;
             node *word = create_word(one_word, letter_count, start);
             table[letter_count - 1] = word; // -1 to get index 0
+            fread(&letter, sizeof(char), 1, txt_dict);
         }
             // node *tmp_one = malloc(sizeof(node));
             // node *tmp_two = malloc(sizeof(node));
