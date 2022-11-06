@@ -37,28 +37,23 @@ unsigned int hash(const char *word)
     return toupper(word[0]) - 'A';
 }
 
-// // 26 prime numbers in ascending order
-// int prime[] = {2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, 53, 59, 61, 67, 71, 73, 79, 83, 89, 97, 101};
+node create_word(char one_word, int letter_count)
+{
+    node *w = malloc(sizeof(node));
+    // int index = one_word[letter_count - 1] - 97;
+    // w->word[index] = one_word[letter_count - 1];
 
-//
-
-// node create_word(char one_word, int letter_count)
-// {
-//     node *w = malloc(sizeof(node));
-//     int index = one_word[letter_count - 1] - 97;
-//     w->word[index] = one_word[letter_count - 1];
-
-//     if (letter_count > 1)
-//     {
-//         create_word(letter, letter_count - 1);
-//     }
-//     else
-//     {
-//         w->next = NULL;
-//         return *w;
-//     }
-//     return *w;
-// }
+    // if (letter_count > 1)
+    // {
+    //     create_word(letter, letter_count - 1);
+    // }
+    // else
+    // {
+    //     w->next = NULL;
+    //     return *w;
+    // }
+    return *w;
+}
 
 // Loads dictionary into memory, returning true if successful, else false
 // hash table of some kind
@@ -86,10 +81,10 @@ bool load(const char *dictionary)
                 i++;
                 letter_count++;
             }
-            // for (int j = 0; j < letter_count; j++)
-            // {
-            //     create_word(one_word, letter_count);
-            // }
+            for (int j = 0; j < letter_count; j++)
+            {
+                create_word(one_word, letter_count);
+            }
         }
             // node *tmp_one = malloc(sizeof(node));
             // node *tmp_two = malloc(sizeof(node));
