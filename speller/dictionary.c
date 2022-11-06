@@ -43,7 +43,7 @@ typedef struct
     int index;
     char word[LENGTH + 1];
 }
-dict;
+hashed_word;
 
 // Loads dictionary into memory, returning true if successful, else false
 // hash table of some kind
@@ -79,7 +79,7 @@ bool load(const char *dictionary)
                 break;
             }
         }
-
+        hashedword
 
     }
     return false;
