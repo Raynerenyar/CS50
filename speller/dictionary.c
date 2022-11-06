@@ -56,9 +56,9 @@ hashedWord;
 bool load(const char *dictionary)
 {
     // open and read file
-    char filename[strlen(dictionary) + 4];
-    sprintf(filename, "%s.txt", dictionary);
-    FILE *txt_dict = fopen(filename, "r");
+    // char filename[strlen(dictionary) + 4];
+    // sprintf(filename, "%s.txt", dictionary);
+    FILE *txt_dict = fopen(dictionary, "r");
     if (txt_dict != NULL)
     {
         char letter = fread(&letter, sizeof(char), 1, txt_dict);
