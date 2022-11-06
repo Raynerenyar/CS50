@@ -49,7 +49,7 @@ node *create_word(char one_word[], int letter_count, int letter_index)
     }
     else
     {
-        w->word[index] = one_word[letter_count - 1];
+        w->word[index] = one_word[letter_index];
         w->next = NULL;
         return w;
     }
