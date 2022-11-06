@@ -67,10 +67,10 @@ bool load(const char *dictionary)
             int beginning_of_word = 1;
             if (letter != 44)
             {
+                letter = tolower(letter);
+                node *l = malloc(sizeof(node));
                 if (beginning_of_word == 1)
                 {
-                    letter = tolower(letter);
-                    node *l = malloc(sizeof(node));
                     l->word[letter - 61] = letter;
                     table[letter-61] = l; // minus 61 to get index
                     beginning_of_word = 0;
@@ -84,8 +84,7 @@ bool load(const char *dictionary)
             else if (letter == 44)
             {
                 node *l = malloc(sizeof(node));
-                l->word = letter;
-                table[27] = l;
+                l->word[27] = letter;
             }
         }
         // // count num of words
