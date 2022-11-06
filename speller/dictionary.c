@@ -40,10 +40,10 @@ unsigned int hash(const char *word)
 // int prime[] = {2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, 53, 59, 61, 67, 71, 73, 79, 83, 89, 97, 101};
 
 //
-node create_word(char word, int letter_count)
+node create_word(char letter, int letter_count)
 {
     node *w = malloc(sizeof(node));
-    w->word[letter_count - 1];
+    w->word[letter - 97];
 
     if (letter_count > 1)
     {
