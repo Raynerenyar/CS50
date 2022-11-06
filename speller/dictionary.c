@@ -40,19 +40,18 @@ unsigned int hash(const char *word)
 node create_word(char one_word[], int letter_count)
 {
     node *w = malloc(sizeof(node));
-    char a = one_word[1];
-    // int index = one_word[letter_count - 1] - 97;
-    // w->word[index] = one_word[letter_count - 1];
+    int index = one_word[letter_count - 1] - 97;
+    w->word[index] = one_word[letter_count - 1];
 
-    // if (letter_count > 1)
-    // {
-    //     create_word(letter, letter_count - 1);
-    // }
-    // else
-    // {
-    //     w->next = NULL;
-    //     return *w;
-    // }
+    if (letter_count > 1)
+    {
+        create_word(one_word, letter_count - 1);
+    }
+    else
+    {
+        w->next = NULL;
+        return *w;
+    }
     return *w;
 }
 
