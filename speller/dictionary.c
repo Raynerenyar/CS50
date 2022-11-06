@@ -40,7 +40,7 @@ unsigned int hash(const char *word)
 node *create_word(char one_word[], int letter_count, int letter_index)
 {
     node *w = malloc(sizeof(node));
-    int index = one_word[letter_count - 1] - 97;
+    int index = one_word[letter_index] - 97;
     if (letter_count > 1)
     {
         node *next_word = create_word(one_word, letter_count - 1, letter_index + 1);
