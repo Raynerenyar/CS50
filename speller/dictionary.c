@@ -65,10 +65,21 @@ bool load(const char *dictionary)
             fread(&letter, sizeof(char), 1, txt_dict);
         }
         int len_of_word = LENGTH + 1;
+        int hash;
         for (int i = 0; i < len_of_word, i++)
         {
-            
+            if (word[i] != NULL)
+            {
+                // polynomial hashing
+                hash += word[i] * prime[i];
+            }
+            else
+            {
+                break;
+            }
         }
+        
+
     }
     return false;
 }
