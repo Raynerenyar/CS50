@@ -16,7 +16,7 @@ typedef struct node
 node;
 
 // TODO: Choose number of buckets in hash table
-const unsigned int N = 26;
+const unsigned int N = LENGTH;
 
 // Hash table
 node *table[N];
@@ -35,8 +35,8 @@ unsigned int hash(const char *word)
     return toupper(word[0]) - 'A';
 }
 
-// 26 prime numbers in ascending order
-int prime[] = {2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, 53, 59, 61, 67, 71, 73, 79, 83, 89, 97, 101};
+// // 26 prime numbers in ascending order
+// int prime[] = {2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, 53, 59, 61, 67, 71, 73, 79, 83, 89, 97, 101};
 
 //
 typedef struct
