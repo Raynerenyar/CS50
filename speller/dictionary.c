@@ -68,7 +68,7 @@ bool load(const char *dictionary)
             }
             letter = fread(&letter, sizeof(char), 1, txt_dict)
         }
-
+        f
         char word[LENGTH + 1];
         int i = 0;
         while (letter != 0) // null
