@@ -46,7 +46,7 @@ typedef struct
 }
 hashedWord;
 
-
+hashedWord dictionary_of_words;
 
 // Loads dictionary into memory, returning true if successful, else false
 // hash table of some kind
@@ -70,6 +70,7 @@ bool load(const char *dictionary)
             letter = fread(&letter, sizeof(char), 1, txt_dict);
         }
         fclose(txt_dict);
+        *dictionary_of_words = malloc(word_count * sizeof(hashedWord));
         // reopen txt file
         FILE *dict = fopen(filename, "r");
         letter = fread(&letter, sizeof(char), 1, dict);
