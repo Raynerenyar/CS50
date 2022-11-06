@@ -58,6 +58,7 @@ bool load(const char *dictionary)
     // open and read file
     // char filename[strlen(dictionary) + 4];
     // sprintf(filename, "%s.txt", dictionary);
+    char letter;
     FILE *txt_dict = fopen(dictionary, "r");
     if (txt_dict != NULL)
     {
@@ -80,7 +81,7 @@ bool load(const char *dictionary)
                     {
                         w->word[letter - 61] = letter;
                         beginning_of_word = 0;
-                        letter = fread(&letter, sizeof(char), 1, txt_dict);
+                        fread(&letter, sizeof(char), 1, txt_dict);
                         sprintf()
                         *tmp_one = *w;
                         letter_count++;
@@ -101,12 +102,12 @@ bool load(const char *dictionary)
                     break;
                 }
                 // read next letter
-                letter = fread(&letter, sizeof(char), 1, txt_dict);
+                fread(&letter, sizeof(char), 1, txt_dict);
             }
             table[letter_count] = w;
             letter_count = 0;
             // read next word
-            letter = fread(&letter, sizeof(char), 1, txt_dict);
+            fread(&letter, sizeof(char), 1, txt_dict);
         }
         return true;
     }
