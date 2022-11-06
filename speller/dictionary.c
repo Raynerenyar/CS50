@@ -88,7 +88,14 @@ bool load(const char *dictionary)
             if (letter == 0)
             {
                 counter++;
-                counter == 2 ? break : continue;
+                if (counter == 2)
+                {
+                    break;
+                }
+                else
+                {
+                    continue;
+                }
             }
         }
         return true;
