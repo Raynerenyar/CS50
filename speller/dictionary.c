@@ -83,7 +83,6 @@ bool load(const char *dictionary)
                         beginning_of_word = 0;
                         fread(&letter, sizeof(char), 1, txt_dict);
                         w->next = tmp_one;
-
                         letter_count++;
                         continue;
                     }
@@ -114,6 +113,7 @@ bool load(const char *dictionary)
             letter_count = 0;
             // read next word
             fread(&letter, sizeof(char), 1, txt_dict);
+            beginning_of_word = 1;
         }
         return true;
     }
