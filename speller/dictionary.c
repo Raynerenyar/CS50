@@ -60,31 +60,34 @@ bool load(const char *dictionary)
         char word[LENGTH + 1];
         char letter = fread(&letter, sizeof(char), 1, txt_dict);
         int i = 0;
-        while (letter != 10)
+        while (letter != 0) // null
         {
-            // append to string;
-            word[i] = letter;
-            i++;
-            // read next char
-            fread(&letter, sizeof(char), 1, txt_dict);
-        }
-        int len_of_word = LENGTH + 1;
-        int hash = 0;
-        hashedWord *hashed_word = malloc(sizeof(int) + sizeof(word[LENGTH + 1]));
-        for (int j = 0; j < len_of_word; j++)
-        {
-            if (word[j] != 0)
+            while (letter != 10) // \n
             {
-                // polynomial hashing
-                hash += word[j] * prime[j];
-                hashed_word->word[j] = word[j];
+                // append to string;
+                word[i] = letter;
+                i++;
+                // read next char
+                fread(&letter, sizeof(char), 1, txt_dict);
             }
-            else
+            int len_of_word = LENGTH + 1;
+            int hash = 0;
+            hashedWord *hashed_word = malloc(sizeof(int) + sizeof(word[LENGTH + 1]));
+            for (int j = 0; j < len_of_word; j++)
             {
-                break;
+                if (word[j] != 0)
+                {
+                    // polynomial hashing
+                    hash += word[j] * prime[j];
+                    hashed_word->word[j] = word[j];
+                }
+                else
+                {
+                    break;
+                }
             }
+            hashed_word->index = hash;
         }
-        hashed_word->index = hash;
     }
     return false;
 }
