@@ -90,7 +90,7 @@ bool load(const char *dictionary)
                     tmp_one->word[letter - 97] = letter;
                     node *tmp_two = malloc(sizeof(node));
                     tmp_one->next = tmp_two;
-                    *tmp_one = *tmp_two;
+                    tmp_one = tmp_two;
                     letter_count++;
 
                 }
