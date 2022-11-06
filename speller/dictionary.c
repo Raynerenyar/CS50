@@ -107,7 +107,6 @@ bool load(const char *dictionary)
             if (letter == 10)
             {
                 tmp_one->next = NULL;
-                break;
             }
             table[letter_count - 1] = w; // 1 letter word at index 0
             letter_count = 0;
