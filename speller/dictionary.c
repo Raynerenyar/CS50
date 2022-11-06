@@ -30,15 +30,15 @@ bool check(const char *word)
     int letter_count = 0;
     char indices[LENGTH];
     unsigned int index = hash(word);
-    while (index != 0)
-    {
-        indices[i] = index;
-        letter_count++;
-    }
-    for (int j = 0; j < letter_count; j++)
-    {
-        node t = table[letter_count]->word[j];
-    }
+    // while (index != 0)
+    // {
+    //     indices[i] = index;
+    //     letter_count++;
+    // }
+    // for (int j = 0; j < letter_count; j++)
+    // {
+    //     node t = table[letter_count]->word[j];
+    // }
     return false;
 }
 
@@ -46,7 +46,14 @@ bool check(const char *word)
 unsigned int hash(const char *word)
 {
     // TODO: Improve this hash function
-    return toupper(word[0]) - 'A';
+    int len = strlen(word);
+    unsigned int arrIndices[len];
+    for (int i = 0; i < len; i++)
+    {
+        arrIndices[i] = tolower(word[i]) - 97;
+    }
+    return arrIndices;
+    // return toupper(word[0]) - 'A';
 }
 
 node *create_word(char one_word[], int letter_count, int letter_index)
