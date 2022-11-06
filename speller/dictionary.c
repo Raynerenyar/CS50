@@ -7,6 +7,8 @@
 #include <stdlib.h>
 #include <string.h>
 
+// declare some functions
+unsigned int hash(const char *word);
 
 // Represents a node in a hash table
 typedef struct node
@@ -27,6 +29,7 @@ node *table[N];
 bool check(const char *word)
 {
     // TODO
+    
     return false;
 }
 
