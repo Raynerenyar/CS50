@@ -64,11 +64,11 @@ bool load(const char *dictionary)
         char letter = fread(&letter, sizeof(char), 1, txt_dict);
         while (letter != 0 && letter != 10) // != null and != \n
         {
+            node *l = malloc(sizeof(node));
             int beginning_of_word = 1;
-            if (letter != 44)
+            if (letter != 44) // not '
             {
                 letter = tolower(letter);
-                node *l = malloc(sizeof(node));
                 if (beginning_of_word == 1)
                 {
                     l->word[letter - 61] = letter;
@@ -83,7 +83,6 @@ bool load(const char *dictionary)
             }
             else if (letter == 44)
             {
-                node *l = malloc(sizeof(node));
                 l->word[27] = letter;
             }
             letter = fread(&letter, sizeof(char), 1, txt_dict);
