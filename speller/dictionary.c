@@ -43,14 +43,13 @@ node *create_word(char one_word[], int letter_count, int start)
     int index = one_word[letter_count - 1] - 97;
     if (letter_count > 1)
     {
-        start++;
-        node *next_word = create_word(one_word, letter_count - 1, start);
-        w->word[index] = one_word[start - 1];
+        node *next_word = create_word(one_word, letter_count - 1);
+        w->word[index] = one_word[letter_count - 1];
         w->next = next_word;
     }
     else
     {
-        w->word[index] = one_word[start - 1];
+        w->word[index] = one_word[letter_count - 1];
         w->next = NULL;
         return w;
     }
