@@ -84,11 +84,12 @@ bool load(const char *dictionary)
                 one_word[i] = letter;
                 letter_count = fread(&letter, sizeof(char), 1, txt_dict);
                 i++;
+                letter_count++;
             }
-            for (int j = 0; j < letter_count; j++)
-            {
-                create_word(one_word, letter_count);
-            }
+            // for (int j = 0; j < letter_count; j++)
+            // {
+            //     create_word(one_word, letter_count);
+            // }
         }
             // node *tmp_one = malloc(sizeof(node));
             // node *tmp_two = malloc(sizeof(node));
