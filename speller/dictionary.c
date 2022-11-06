@@ -75,6 +75,7 @@ bool load(const char *dictionary)
             {
                 // polynomial hashing
                 hash += word[j] * prime[j];
+                hashed_word->word[j] = word[j];
             }
             else
             {
@@ -82,8 +83,6 @@ bool load(const char *dictionary)
             }
         }
         hashed_word->index = hash;
-        hashed_word->word = word;
-
     }
     return false;
 }
