@@ -43,7 +43,7 @@ typedef struct
     int index;
     char word[LENGTH + 1];
 }
-hashed_word;
+hashedWord;
 
 // Loads dictionary into memory, returning true if successful, else false
 // hash table of some kind
@@ -67,6 +67,7 @@ bool load(const char *dictionary)
         }
         int len_of_word = LENGTH + 1;
         int hash;
+        hashedWord hashed_word = malloc()
         for (int i = 0; i < len_of_word, i++)
         {
             if (word[i] != NULL)
