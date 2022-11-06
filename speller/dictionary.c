@@ -37,11 +37,9 @@ unsigned int hash(const char *word)
     return toupper(word[0]) - 'A';
 }
 
-node create_word(char one_word[], int letter_count)
+node *create_word(char one_word[], int letter_count)
 {
     node *w = malloc(sizeof(node));
-    int index = one_word[letter_count - 1] - 97;
-    w->word[index] = one_word[letter_count - 1];
 
     if (letter_count > 1)
     {
@@ -49,8 +47,10 @@ node create_word(char one_word[], int letter_count)
     }
     else
     {
+        int index = one_word[letter_count - 1] - 97;
+        w->word[index] = one_word[letter_count - 1];
         w->next = NULL;
-        return *w;
+        return w;
     }
     return w;
 }
@@ -83,7 +83,7 @@ bool load(const char *dictionary)
             }
             for (int j = 0; j < letter_count; j++)
             {
-                node word = create_word(one_word, letter_count);
+                node *word = create_word(one_word, letter_count);
                 // if (j == letter_count -1)
                 // {
                 //     table[letter_count - 1] = word; // -1 to get index 0
