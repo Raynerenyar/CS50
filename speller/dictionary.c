@@ -57,8 +57,19 @@ bool load(const char *dictionary)
 
     if (txt_dict != NULL)
     {
-        char word[LENGTH + 1];
+        // count num of words
+        int word_count++;
         char letter = fread(&letter, sizeof(char), 1, txt_dict);
+        while (letter != 0)
+        {
+            if (letter != 10)
+            {
+                word_count++;
+            }
+            letter = fread(&letter, sizeof(char), 1, txt_dict)
+        }
+
+        char word[LENGTH + 1];
         int i = 0;
         while (letter != 0) // null
         {
