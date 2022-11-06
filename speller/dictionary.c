@@ -44,7 +44,10 @@ bool load(const char *dictionary)
     char letter;
     while (fread(&letter, sizeof(char), 1, dictionary))
     {
-        if (letter == )
+        if (letter == 10)
+        {
+            sprintf()
+        }
     }
     return false;
 }
