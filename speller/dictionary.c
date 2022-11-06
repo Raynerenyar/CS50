@@ -42,10 +42,10 @@ unsigned int hash(const char *word)
 
 //
 
-node create_word(char letter, int letter_count)
+node create_word(char one_word, int letter_count)
 {
     node *w = malloc(sizeof(node));
-    w->word[letter - 97];
+    w->word[one_word[letter_count - 1] - 97] = one_word[letter_count - 1];
 
     if (letter_count > 1)
     {
@@ -56,6 +56,7 @@ node create_word(char letter, int letter_count)
         w->next = NULL;
         return *w;
     }
+    return *w;
 }
 
 // Loads dictionary into memory, returning true if successful, else false
@@ -83,7 +84,7 @@ bool load(const char *dictionary)
                 letter_count = fread(&letter, sizeof(char), 1, txt_dict);
                 i++;
             }
-            for (int i = 0; i < letter_count; i++)
+            for (int j = 0; j < letter_count; j++)
             {
                 create_word(one_word, letter_count);
             }
