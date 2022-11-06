@@ -29,7 +29,7 @@ bool check(const char *word)
     int i = 0;
     int letter_count = 0;
     char indices[LENGTH];
-    unsigned int index = hash(*word(i));
+    unsigned int index = hash(word);
     while (index != 0)
     {
         indices[i] = index;
@@ -37,7 +37,7 @@ bool check(const char *word)
     }
     for (int j = 0; j < letter_count; j++)
     {
-        node t = table[letter_count].word[j];
+        node t = table[letter_count]->word[j];
     }
     return false;
 }
