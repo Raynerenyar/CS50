@@ -52,7 +52,7 @@ node create_word(char one_word[], int letter_count)
         w->next = NULL;
         return *w;
     }
-    return *w;
+    return w;
 }
 
 // Loads dictionary into memory, returning true if successful, else false
