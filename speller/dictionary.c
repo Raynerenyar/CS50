@@ -43,11 +43,14 @@ unsigned int hash(const char *word)
 // int prime[] = {2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, 53, 59, 61, 67, 71, 73, 79, 83, 89, 97, 101};
 
 //
-node create_word(letter)
+node create_word(char letter, int beginning_of_word)
 {
     node *w = malloc(sizeof(node));
 
-    if (letter == 0)
+    if (beginning_of_word == 0)
+    {
+        
+    }
 }
 
 
