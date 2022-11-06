@@ -50,7 +50,7 @@ node *create_word(char one_word[], int letter_count, int start)
     }
     else
     {
-        w->word[index] = one_word[letter_count - 1];
+        w->word[index] = one_word[start - 1];
         w->next = NULL;
         return w;
     }
