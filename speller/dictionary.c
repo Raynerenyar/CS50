@@ -41,10 +41,10 @@ node *create_word(char one_word[], int letter_count, int start)
 {
     node *w = malloc(sizeof(node));
     int index = one_word[letter_count - 1] - 97;
-    start ? 0
     if (letter_count > 1)
     {
         node *next_word = create_word(one_word, letter_count - 1, start);
+        start == 0 ? 0 : start + 1;
         w->word[index] = one_word[start];
         w->next = next_word;
     }
