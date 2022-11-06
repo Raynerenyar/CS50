@@ -67,8 +67,6 @@ bool load(const char *dictionary)
                 // append to string;
                 word[i] = letter;
                 i++;
-                // read next char
-                fread(&letter, sizeof(char), 1, txt_dict);
             }
             int len_of_word = LENGTH + 1;
             int hash = 0;
@@ -87,6 +85,8 @@ bool load(const char *dictionary)
                 }
             }
             hashed_word->index = hash;
+            // read next char
+            letter = fread(&letter, sizeof(char), 1, txt_dict);
         }
     }
     return false;
