@@ -16,12 +16,14 @@ typedef struct node
 node;
 
 // TODO: Choose number of buckets in hash table
+// 1 to 45 in length
 const unsigned int N = LENGTH;
 
 // base hash table
 node *table[N];
 
-// hash table for 26 letters
+// hash table for 26 letters + 1 apostrope
+node *alpha_apost[27];
 
 // Returns true if word is in dictionary, else false
 bool check(const char *word)
