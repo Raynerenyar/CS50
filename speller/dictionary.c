@@ -18,8 +18,10 @@ node;
 // TODO: Choose number of buckets in hash table
 const unsigned int N = LENGTH;
 
-// Hash table
+// base hash table
 node *table[N];
+
+// hash table for 26 letters
 
 // Returns true if word is in dictionary, else false
 bool check(const char *word)
