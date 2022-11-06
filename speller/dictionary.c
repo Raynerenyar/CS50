@@ -79,7 +79,7 @@ bool load(const char *dictionary)
                     letter = tolower(letter);
                     if (beginning_of_word == 1)
                     {
-                        w->word[letter - 61] = letter;
+                        w->word[letter - 97] = letter;
                         beginning_of_word = 0;
                         fread(&letter, sizeof(char), 1, txt_dict);
                         *tmp_one = *w;
