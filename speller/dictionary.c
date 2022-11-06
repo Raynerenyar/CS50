@@ -69,8 +69,8 @@ bool load(const char *dictionary)
         }
         fclose(txt_dict);
         // reopen txt file
-        FILE *txt_dict = fopen(filename, "r");
-        letter = fread(&letter, sizeof(char), 1, txt_dict)
+        FILE *dict = fopen(filename, "r");
+        letter = fread(&letter, sizeof(char), 1, dict);
         char word[LENGTH + 1];
         int i = 0;
         while (letter != 0) // != null
@@ -99,7 +99,7 @@ bool load(const char *dictionary)
             }
             hashed_word->index = hash;
             // read next char
-            letter = fread(&letter, sizeof(char), 1, txt_dict);
+            letter = fread(&letter, sizeof(char), 1, dict);
         }
     }
     return false;
