@@ -69,7 +69,7 @@ bool load(const char *dictionary)
         int len_of_word = LENGTH + 1;
         int hash;
         hashedWord *hashed_word = malloc(sizeof(int) + sizeof(word[LENGTH + 1]));
-        for (int j = 0; j < len_of_word, j++)
+        for (int j = 0; j < len_of_word; j++)
         {
             if (word[j] != NULL)
             {
