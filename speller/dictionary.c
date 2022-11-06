@@ -89,6 +89,7 @@ bool load(const char *dictionary)
                     node *tmp_two = malloc(sizeof(node));
                     tmp_one->next = tmp_two;
                     tmp_two->word[letter - 97] = letter;
+                    *w = *tmp_one;
                     *tmp_one = *tmp_two;
                     letter_count++;
 
@@ -104,7 +105,7 @@ bool load(const char *dictionary)
                 // read next letter
                 fread(&letter, sizeof(char), 1, txt_dict);
             }
-            
+
             table[letter_count - 1] = w; // 1 letter word at index 0
             letter_count = 0;
             // read next word
