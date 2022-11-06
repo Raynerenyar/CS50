@@ -84,9 +84,11 @@ bool load(const char *dictionary)
             table[letter_count - 1] = word; // -1 to get index 0
             letter_count = 0;
             fread(&letter, sizeof(char), 1, txt_dict);
+            int counter = 1;
             if (letter == 0)
             {
-                break;
+                counter++;
+                counter == 2 ? break : continue;
             }
         }
         return true;
