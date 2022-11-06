@@ -73,13 +73,17 @@ bool load(const char *dictionary)
         int beginning_of_word = 1;
         // parse through txt until null
         int i = 0;
+        int letter_count = 0;
         while (letter != 0) // != null
         {
             word[i] = letter;
-            fread(&letter, sizeof(char), 1, txt_dict)
+            letter_count = fread(&letter, sizeof(char), 1, txt_dict)
             i++;
         }
-        create_word(word,)
+        for (int i = 0; i < letter_count; i++)
+        {
+            create_word(word, letter_count);
+        }
             // node *tmp_one = malloc(sizeof(node));
             // node *tmp_two = malloc(sizeof(node));
             // node *w = malloc(sizeof(node));
