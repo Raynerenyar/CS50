@@ -81,6 +81,7 @@ bool load(const char *dictionary)
                         w->word[letter - 61] = letter;
                         beginning_of_word = 0;
                         letter = fread(&letter, sizeof(char), 1, txt_dict);
+                        sprintf()
                         *tmp_one = *w;
                         letter_count++;
                         continue;
