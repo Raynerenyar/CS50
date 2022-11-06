@@ -54,7 +54,7 @@ bool load(const char *dictionary)
     char filename[strlen(dictionary) + 4];
     sprintf(filename, "%s.txt", dictionary);
     FILE *txt_dict = fopen(filename, "r");
-    
+
     if (txt_dict != NULL)
     {
         char word[LENGTH + 1];
@@ -73,7 +73,7 @@ bool load(const char *dictionary)
         hashedWord *hashed_word = malloc(sizeof(int) + sizeof(word[LENGTH + 1]));
         for (int j = 0; j < len_of_word; j++)
         {
-            if (word[j] != NULL)
+            if (word[j] != 0)
             {
                 // polynomial hashing
                 hash += word[j] * prime[j];
