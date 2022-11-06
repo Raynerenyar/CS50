@@ -70,21 +70,19 @@ bool load(const char *dictionary)
         fread(&letter, sizeof(char), 1, txt_dict);
         int beginning_of_word = 1;
         // parse through txt until null
-        int i = 0;
         int letter_count = 0;
         while (letter != 0) // != null
         {
             char one_word[LENGTH];
             while (letter != 10) // != \n
             {
-                one_word[i] = letter;
+                one_word[letter_count] = letter;
                 letter_count += fread(&letter, sizeof(char), 1, txt_dict);
-                i++;
             }
             int start = 0;
-            i = 0;
             node *word = create_word(one_word, letter_count, start);
             table[letter_count - 1] = word; // -1 to get index 0
+            letter_count = 0;
             fread(&letter, sizeof(char), 1, txt_dict);
         }
             // node *tmp_one = malloc(sizeof(node));
