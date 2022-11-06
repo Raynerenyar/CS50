@@ -44,7 +44,7 @@ node *create_word(char one_word[], int letter_count, int letter_index)
     if (letter_count > 1)
     {
         node *next_word = create_word(one_word, letter_count, letter_index + 1);
-        w->word[index] = one_word[letter_index];
+        w->word[index] = one_word[letter_index - 1];
         w->next = next_word;
     }
     else
