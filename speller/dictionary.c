@@ -69,7 +69,10 @@ bool load(const char *dictionary)
             {
                 if (beginning_of_word = 1)
                 {
-                    
+                    letter = tolower(letter);
+                    node *l = malloc(sizeof(node));
+                    l->word[letter - 61] = letter;
+                    table[letter-61] = l;
                 }
                 for (int i = 0; i < 26; i++)
                 {
