@@ -20,6 +20,7 @@ const unsigned int N = 26;
 node *table[N];
 
 // 26 prime numbers in ascending order
+int prime[] = {2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, 53, 59, 61, 67, 71, 73, 79, 83, 89, 97, 101};
 
 // Returns true if word is in dictionary, else false
 bool check(const char *word)
