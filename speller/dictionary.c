@@ -85,7 +85,7 @@ bool load(const char *dictionary)
             letter_count = 0;
             fread(&letter, sizeof(char), 1, txt_dict);
             int counter = 1;
-            if (letter == 0)
+            if (letter == 10)
             {
                 counter++;
                 if (counter == 2)
@@ -94,6 +94,7 @@ bool load(const char *dictionary)
                 }
                 else
                 {
+                    counter = 0;
                     continue;
                 }
             }
