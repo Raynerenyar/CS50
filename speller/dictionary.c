@@ -101,15 +101,14 @@ bool load(const char *dictionary)
                     tmp_one = tmp_two;
                     letter_count++;
                 }
-                else if (letter == 10)
-                {
-                    tmp_one->next = NULL;
-                    break;
-                }
                 // read next letter
                 fread(&letter, sizeof(char), 1, txt_dict);
             }
-
+            else if (letter == 10)
+            {
+                tmp_one->next = NULL;
+                break;
+            }
             table[letter_count - 1] = w; // 1 letter word at index 0
             letter_count = 0;
             // read next word
