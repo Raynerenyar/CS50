@@ -29,7 +29,7 @@ bool check(const char *word)
     int i = 0;
     int letter_count = 0;
     char indices[LENGTH];
-    unsigned int index = hash(word[i]);
+    unsigned int index = hash(*word(i));
     while (index != 0)
     {
         indices[i] = index;
