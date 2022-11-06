@@ -88,7 +88,7 @@ bool load(const char *dictionary)
                         continue;
                     }
                     tmp_one->word[letter - 97] = letter;
-                    // node *tmp_two = malloc(sizeof(node));
+                    node *tmp_two = malloc(sizeof(node));
                     tmp_one->next = tmp_two;
                     tmp_one = tmp_two;
                     letter_count++;
@@ -97,7 +97,7 @@ bool load(const char *dictionary)
                 else if (letter == 44)
                 {
                     tmp_one->word[27] = letter;
-                    // node *tmp_two = malloc(sizeof(node));
+                    node *tmp_two = malloc(sizeof(node));
                     tmp_one->next = tmp_two;
                     tmp_one = tmp_two;
                     letter_count++;
