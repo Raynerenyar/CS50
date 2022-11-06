@@ -63,14 +63,13 @@ bool load(const char *dictionary)
     if (txt_dict != NULL)
     {
         fread(&letter, sizeof(char), 1, txt_dict);
-        node *tmp_one = malloc(sizeof(node));
-        // node *tmp_two = malloc(sizeof(node));
         int beginning_of_word = 1;
         // parse through txt until null
         while (letter != 0) // != null
         {
-            node *w = malloc(sizeof(node));
+            node *tmp_one = malloc(sizeof(node));
             node *tmp_two = malloc(sizeof(node));
+            node *w = malloc(sizeof(node));
             int letter_count = 0;
             // loop until end of word
             while (letter != 10) // != \n
@@ -88,7 +87,7 @@ bool load(const char *dictionary)
                         continue;
                     }
                     tmp_one->word[letter - 97] = letter;
-                    node *tmp_two = malloc(sizeof(node));
+                    // node *tmp_two = malloc(sizeof(node));
                     tmp_one->next = tmp_two;
                     tmp_one = tmp_two;
                     letter_count++;
@@ -97,7 +96,7 @@ bool load(const char *dictionary)
                 else if (letter == 44)
                 {
                     tmp_one->word[27] = letter;
-                    node *tmp_two = malloc(sizeof(node));
+                    // node *tmp_two = malloc(sizeof(node));
                     tmp_one->next = tmp_two;
                     tmp_one = tmp_two;
                     letter_count++;
@@ -111,6 +110,7 @@ bool load(const char *dictionary)
             }
             table[letter_count - 1] = w; // 1 letter word at index 0
             letter_count = 0;
+            free(w);
             // read next word
             fread(&letter, sizeof(char), 1, txt_dict);
             beginning_of_word = 1;
