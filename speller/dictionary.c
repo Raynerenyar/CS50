@@ -104,7 +104,7 @@ bool load(const char *dictionary)
                 // read next letter
                 fread(&letter, sizeof(char), 1, txt_dict);
             }
-            else if (letter == 10)
+            if (letter == 10)
             {
                 tmp_one->next = NULL;
                 break;
