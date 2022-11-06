@@ -69,33 +69,42 @@ bool load(const char *dictionary)
         // parse through txt until null
         while (letter != 0) // != null
         {
-            // loop until end of work
+            int letter_count = 0;
+            // loop until end of word
             while (letter != 10) // != \n
-            if (letter != 44) // not '
             {
-                letter = tolower(letter);
-                if (beginning_of_word == 1)
+                if (letter != 44) // not '
                 {
-                    w->word[letter - 61] = letter;
-                    // table[letter-61] = w; // minus 61 to get index
-                    beginning_of_word = 0;
-                    letter = fread(&letter, sizeof(char), 1, txt_dict);
-                    *tmp_one = *w;
-                    continue;
-                }
-                tmp_one->next = tmp_two;
-                tmp_two->word[letter - 61] = letter;
-                *tmp_one = *tmp_two;
+                    letter = tolower(letter);
+                    if (beginning_of_word == 1)
+                    {
+                        w->word[letter - 61] = letter;
+                        beginning_of_word = 0;
+                        letter = fread(&letter, sizeof(char), 1, txt_dict);
+                        *tmp_one = *w;
+                        count++;
+                        continue;
+                    }
+                    tmp_one->next = tmp_two;
+                    tmp_two->word[letter - 61] = letter;
+                    *tmp_one = *tmp_two;
+                    count++;
 
+                }
+                else if (letter == 44)
+                {
+                    w->word[27] = letter;
+                }
+                else if (letter == 10)
+                {
+                    break;
+                }
+                // read next letter
+                letter = fread(&letter, sizeof(char), 1, txt_dict);
             }
-            else if (letter == 44)
-            {
-                w->word[27] = letter;
-            }
-            else if (letter == 10)
-            {
-                break;
-            }
+            table[count] = w
+            count = 0;
+            // read next word
             letter = fread(&letter, sizeof(char), 1, txt_dict);
         }
         // // count num of words
