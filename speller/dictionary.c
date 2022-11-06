@@ -72,7 +72,7 @@ bool load(const char *dictionary)
                 if (beginning_of_word == 1)
                 {
                     l->word[letter - 61] = letter;
-                    table[letter-61] = l; // minus 61 to get index
+                    // table[letter-61] = l; // minus 61 to get index
                     beginning_of_word = 0;
                 }
                 letter = tolower(letter);
