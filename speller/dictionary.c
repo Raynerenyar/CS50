@@ -111,7 +111,7 @@ bool load(const char *dictionary)
             table[letter_count - 1] = w; // 1 letter word at index 0
             letter_count = 0;
             free(w);
-            free(tmp_one);
+            free(tmp_two);
             // read next word
             fread(&letter, sizeof(char), 1, txt_dict);
             beginning_of_word = 1;
