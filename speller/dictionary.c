@@ -64,7 +64,8 @@ bool load(const char *dictionary)
         char letter = fread(&letter, sizeof(char), 1, txt_dict);
         while (letter != 0 && letter != 10) // != null and != \n
         {
-            
+            int tol
+            table[letter-26]
         }
         // // count num of words
         // int word_count = 0;
