@@ -37,15 +37,15 @@ unsigned int hash(const char *word)
     return toupper(word[0]) - 'A';
 }
 
-node *create_word(char one_word[], int letter_count, int start)
+node *create_word(char one_word[], int letter_count)
 {
     node *w = malloc(sizeof(node));
     int index = one_word[letter_count - 1] - 97;
     if (letter_count > 1)
     {
-        node *next_word = create_word(one_word, letter_count - 1, start);
-        start == 0 ? 0 : start + 1;
-        w->word[index] = one_word[start];
+        node *next_word = create_word(one_word, letter_count - 1);
+        int letter_index = letter_count - letter_count
+        w->word[index] = one_word[letter_count];
         w->next = next_word;
     }
     else
