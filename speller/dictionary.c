@@ -60,9 +60,6 @@ node *create_word(char one_word[], int letter_count, int letter_index)
 // hash table of some kind
 bool load(const char *dictionary)
 {
-    // open and read file
-    // char filename[strlen(dictionary) + 4];
-    // sprintf(filename, "%s.txt", dictionary);
     char letter;
     FILE *txt_dict = fopen(dictionary, "r");
     if (txt_dict != NULL)
