@@ -64,8 +64,21 @@ bool load(const char *dictionary)
         char letter = fread(&letter, sizeof(char), 1, txt_dict);
         while (letter != 0 && letter != 10) // != null and != \n
         {
-            int tol
-            table[letter-26]
+            if (letter != 44)
+            {
+                for (int i = 0; i < 26; i++)
+                letter = tolower(letter);
+                node *l = malloc(sizeof(node));
+                l->word[] = letter;
+                // minus 61 to get index
+                table[letter-61] = l;
+            }
+            else if (letter == 44)
+            {
+                node *l = malloc(sizeof(node));
+                l->word = letter;
+                table[27] = l;
+            }
         }
         // // count num of words
         // int word_count = 0;
