@@ -83,7 +83,7 @@ bool load(const char *dictionary)
             }
             for (int j = 0; j < letter_count; j++)
             {
-                create_word(one_word, letter_count);
+                create_word(*one_word, letter_count);
             }
         }
             // node *tmp_one = malloc(sizeof(node));
