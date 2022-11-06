@@ -33,7 +33,7 @@ bool check(const char *word)
     int letter_count = 0;
     char indices[LENGTH];
     unsigned int index = hash(word);
-    while (index != NULL)
+    while (index != 0)
     {
         indices[i] = index;
         letter_count++;
