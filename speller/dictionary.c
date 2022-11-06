@@ -77,7 +77,7 @@ bool load(const char *dictionary)
             while (letter != 10)
             {
                 one_word[i] = letter;
-                letter_count = fread(&letter, sizeof(char), 1, txt_dict);
+                letter_count += fread(&letter, sizeof(char), 1, txt_dict);
                 i++;
             }
             for (int j = 0; j < letter_count; j++)
