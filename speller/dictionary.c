@@ -4,6 +4,7 @@
 #include <stdbool.h>
 #include <stdio.h>
 #include "dictionary.h"
+#include <stdlib.h>
 #include <string.h>
 
 // Represents a node in a hash table
@@ -67,20 +68,21 @@ bool load(const char *dictionary)
         }
         int len_of_word = LENGTH + 1;
         int hash;
-        hashedWord hashed_word = malloc()
-        for (int i = 0; i < len_of_word, i++)
+        hashedWord *hashed_word = malloc(sizeof(int) + sizeof(word[LENGTH + 1]));
+        for (int j = 0; j < len_of_word, j++)
         {
-            if (word[i] != NULL)
+            if (word[j] != NULL)
             {
                 // polynomial hashing
-                hash += word[i] * prime[i];
+                hash += word[j] * prime[j];
             }
             else
             {
                 break;
             }
         }
-        hashedword
+        hashed_word->index = hash;
+        hashed_word->word = word;
 
     }
     return false;
