@@ -29,7 +29,19 @@ node *table[N];
 bool check(const char *word)
 {
     // TODO
-
+    int i = 0;
+    int letter_count = 0;
+    char indices[LENGTH];
+    while (hash(word[i]) != NULL)
+    {
+        int index = hash(word);
+        indices[i] = index;
+        letter_count++;
+    }
+    for (int j = 0; j < letter_count; j++)
+    {
+        node t = table[letter_count].word[j];
+    }
     return false;
 }
 
