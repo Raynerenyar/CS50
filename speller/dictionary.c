@@ -103,6 +103,7 @@ bool load(const char *dictionary)
                 }
                 else if (letter == 10)
                 {
+                    tmp_one->next = NULL;
                     break;
                 }
                 // read next letter
