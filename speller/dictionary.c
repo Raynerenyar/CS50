@@ -37,7 +37,7 @@ unsigned int hash(const char *word)
     return toupper(word[0]) - 'A';
 }
 
-node create_word(char one_word, int letter_count)
+node create_word(char one_word[], int letter_count)
 {
     node *w = malloc(sizeof(node));
     char a = one_word[1];
