@@ -82,7 +82,6 @@ bool load(const char *dictionary)
                         w->word[letter - 97] = letter;
                         beginning_of_word = 0;
                         fread(&letter, sizeof(char), 1, txt_dict);
-                        node *tmp_one = malloc(sizeof(node));
                         w->next = tmp_one;
 
                         letter_count++;
