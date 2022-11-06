@@ -86,6 +86,7 @@ bool load(const char *dictionary)
                         letter_count++;
                         continue;
                     }
+                    tmp_two = malloc(sizeof(node));
                     tmp_one->next = tmp_two;
                     tmp_two->word[letter - 61] = letter;
                     *tmp_one = *tmp_two;
