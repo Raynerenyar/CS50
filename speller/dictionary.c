@@ -77,7 +77,6 @@ bool load(const char *dictionary)
                     // table[letter-61] = w; // minus 61 to get index
                     beginning_of_word = 0;
                     letter = fread(&letter, sizeof(char), 1, txt_dict);
-                    *tmp_one = *w;
                     continue;
                 }
                 w->next = tmp_one;
