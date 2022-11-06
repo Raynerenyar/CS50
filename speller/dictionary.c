@@ -7,9 +7,6 @@
 #include <stdlib.h>
 #include <string.h>
 
-// declare some functions
-unsigned int hash(const char *word);
-
 // Represents a node in a hash table
 typedef struct node
 {
