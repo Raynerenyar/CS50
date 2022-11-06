@@ -46,6 +46,8 @@ typedef struct
 }
 hashedWord;
 
+
+
 // Loads dictionary into memory, returning true if successful, else false
 // hash table of some kind
 bool load(const char *dictionary)
