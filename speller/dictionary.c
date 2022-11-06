@@ -68,12 +68,15 @@ bool load(const char *dictionary)
             }
             letter = fread(&letter, sizeof(char), 1, txt_dict)
         }
-        f
+        fclose(txt_dict);
+        // reopen txt file
+        FILE *txt_dict = fopen(filename, "r");
+        letter = fread(&letter, sizeof(char), 1, txt_dict)
         char word[LENGTH + 1];
         int i = 0;
-        while (letter != 0) // null
+        while (letter != 0) // != null
         {
-            while (letter != 10) // \n
+            while (letter != 10) // != \n
             {
                 // append to string;
                 word[i] = letter;
