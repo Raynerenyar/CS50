@@ -61,7 +61,11 @@ bool load(const char *dictionary)
     FILE *txt_dict = fopen(filename, "r");
     if (txt_dict != NULL)
     {
-        
+        char letter = fread(&letter, sizeof(char), 1, txt_dict);
+        while (letter != 0 && letter != 10) // != null and != \n
+        {
+            
+        }
         // // count num of words
         // int word_count = 0;
         // char letter = fread(&letter, sizeof(char), 1, txt_dict);
