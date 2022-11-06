@@ -37,6 +37,8 @@ unsigned int hash(const char *word)
 // 26 prime numbers in ascending order
 int prime[] = {2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, 53, 59, 61, 67, 71, 73, 79, 83, 89, 97, 101};
 
+//
+
 // Loads dictionary into memory, returning true if successful, else false
 // hash table of some kind
 bool load(const char *dictionary)
@@ -57,10 +59,10 @@ bool load(const char *dictionary)
             // read next char
             fread(&letter, sizeof(char), 1, txt_dict);
         }
-        for (int i = 0; i < 26, i++)
-        {
-            
-        }
+        // for (int i = 0; i < 26, i++)
+        // {
+
+        // }
     }
     return false;
 }
