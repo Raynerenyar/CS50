@@ -22,9 +22,6 @@ const unsigned int N = LENGTH;
 // base hash table
 node *table[N];
 
-// hash table for 26 letters + 1 apostrope
-node *alpha_apost[27];
-
 // Returns true if word is in dictionary, else false
 bool check(const char *word)
 {
@@ -47,12 +44,13 @@ node create_word(char letter, int beginning_of_word)
 {
     node *w = malloc(sizeof(node));
 
-    if (beginning_of_word == 0)
+    if (beginning_of_word > 1)
     {
         
     }
 }
 
+char word[LENGTH];
 
 // Loads dictionary into memory, returning true if successful, else false
 // hash table of some kind
