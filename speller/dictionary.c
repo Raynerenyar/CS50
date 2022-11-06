@@ -67,7 +67,7 @@ bool load(const char *dictionary)
             fread(&letter, sizeof(char), 1, txt_dict);
         }
         int len_of_word = LENGTH + 1;
-        int hash;
+        int hash = 0;
         hashedWord *hashed_word = malloc(sizeof(int) + sizeof(word[LENGTH + 1]));
         for (int j = 0; j < len_of_word; j++)
         {
