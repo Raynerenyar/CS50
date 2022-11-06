@@ -86,6 +86,7 @@ bool load(const char *dictionary)
                 node *l = malloc(sizeof(node));
                 l->word[27] = letter;
             }
+            letter = fread(&letter, sizeof(char), 1, txt_dict);
         }
         // // count num of words
         // int word_count = 0;
