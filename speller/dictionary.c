@@ -61,7 +61,7 @@ bool load(const char *dictionary)
     FILE *txt_dict = fopen(dictionary, "r");
     if (txt_dict != NULL)
     {
-        char letter = fread(&letter, sizeof(char), 1, txt_dict);
+        fread(&letter, sizeof(char), 1, txt_dict);
         node *w = malloc(sizeof(node));
         node *tmp_one = malloc(sizeof(node));
         node *tmp_two = malloc(sizeof(node));
