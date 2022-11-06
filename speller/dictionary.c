@@ -2,8 +2,9 @@
 
 #include <ctype.h>
 #include <stdbool.h>
-#include 
+#include <stdio.h>
 #include "dictionary.h"
+#include <string.h>
 
 // Represents a node in a hash table
 typedef struct node
