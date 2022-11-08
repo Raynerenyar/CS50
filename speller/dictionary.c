@@ -56,6 +56,7 @@ unsigned int hash(const char *word)
         if (isalpha(word[i]) || word[i] == 44)
         {
             int ascii_value = tolower(word[i]);
+            // sum of ascii value * base value raise  to power of index
             // e.g. 'c' * 7^0 + 'a' * 7^1 + 't' * 7^2
             hash_value += ascii_value * (pow(7, i)); // polynomial hash, using base value of 7.
         }
