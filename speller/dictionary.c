@@ -18,7 +18,7 @@ typedef struct node
 node;
 
 // 200 number of buckets in hash table
-const unsigned int N = 100;
+const unsigned int N = 100000;
 
 // tracks dictionary size
 int dict_size = 0;
@@ -95,7 +95,7 @@ bool load(const char *dictionary)
             w->next = table[hash_value]; // point node to head of bucket
             table[hash_value] = w; // insert new node
             fread(&letter, sizeof(char), 1, txt_dict);
-            memset ( one_word, 0, LENGTH*sizeof(char) ) ; // resets all items in one_word array to NULL
+            memset(one_word, 0, LENGTH * sizeof(char)); // resets all items in one_word array to NULL
             letter_count = 0;
             dict_size++;
 
@@ -139,7 +139,7 @@ bool unload(void)
             hash_row = hash_row->next;
             free(tmp);
         }
-        if ( hash_row == NULL && i == N - 1)
+        if (hash_row == NULL && i == N - 1)
         {
             return true;
         }
