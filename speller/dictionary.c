@@ -49,9 +49,9 @@ __uint128_t number;
 // Hashes word to a number
 unsigned int hash(const char *word)
 {
-    int len = strlen(word);
+    // int len = strlen(word);
     __uint128_t hash_value = 0;
-    for (int i = 0; i < len; i++)
+    for (int i = 0; i < strlen(word); i++)
     {
         if (isalpha(word[i]) || word[i] == 44)
         {
