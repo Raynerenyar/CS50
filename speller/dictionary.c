@@ -18,7 +18,7 @@ typedef struct node
 node;
 
 // 200 number of buckets in hash table
-const unsigned int N = 200000;
+const unsigned int N = 145000;
 
 // tracks dictionary size
 int dict_size = 0;
@@ -56,7 +56,8 @@ unsigned int hash(const char *word)
         if (isalpha(word[i]) || word[i] == 44)
         {
             int ascii_value = tolower(word[i]);
-            hash_value += ascii_value * (pow(3, i)); // polynomial hash, using base value of 3.
+            // e.g. 'c' * 7^0 + 'a' * 7^1 + 't' * 7^2
+            hash_value += ascii_value * (pow(7, i)); // polynomial hash, using base value of 7.
         }
     }
     return hash_value % N;
