@@ -5,6 +5,7 @@
 #include <stdio.h>
 #include "dictionary.h"
 #include <stdlib.h>
+#include <strings.h>
 #include <string.h>
 
 // Represents a node in a hash table
@@ -15,9 +16,11 @@ typedef struct node
 }
 node;
 
-// TODO: Choose number of buckets in hash table
-// 1 to 45 in length
-const unsigned int N = LENGTH;
+// 26 number of buckets in hash table
+const unsigned int N = 26;
+
+// tracks dictionary size
+int dict_size = 0;
 
 // base hash table
 node *table[N];
@@ -25,54 +28,37 @@ node *table[N];
 // Returns true if word is in dictionary, else false
 bool check(const char *word)
 {
-    // TODO
-    int i = 0;
-    int letter_count = 0;
-    char indices[LENGTH];
-    unsigned int index = hash(word);
-    // while (index != 0)
-    // {
-    //     indices[i] = index;
-    //     letter_count++;
-    // }
-    // for (int j = 0; j < letter_count; j++)
-    // {
-    //     node t = table[letter_count]->word[j];
-    // }
+    int hash_value = hash(word);
+    node *p = table[hash_value];
+    while (p != NULL)
+    {
+        if (strcasecmp(p->word, word) == 0)
+        {
+            return true;
+        }
+        // reassign p to the next word
+        p = p->next;
+
+    }
     return false;
 }
+
+__uint128_t number;
 
 // Hashes word to a number
 unsigned int hash(const char *word)
 {
-    // TODO: Improve this hash function
     int len = strlen(word);
-    unsigned int arrIndices[len];
+    __uint128_t hash_value = 0;
     for (int i = 0; i < len; i++)
     {
-        arrIndices[i] = tolower(word[i]) - 97;
+        if (isalpha(word[i]) || word[i] == 44)
+        {
+            int ascii_value = tolower(word[i]);
+            hash_value += ascii_value * 3 ^ i; // polynomial hash, using base value of 3.
+        }
     }
-    return arrIndices;
-    // return toupper(word[0]) - 'A';
-}
-
-node *create_word(char one_word[], int letter_count, int letter_index)
-{
-    node *w = malloc(sizeof(node));
-    int index = one_word[letter_index] - 97;
-    if (letter_count > 1)
-    {
-        node *next_word = create_word(one_word, letter_count - 1, letter_index + 1);
-        w->word[index] = one_word[letter_index];
-        w->next = next_word;
-    }
-    else
-    {
-        w->word[index] = one_word[letter_index];
-        w->next = NULL;
-        return w;
-    }
-    return w;
+    return hash_value % N;
 }
 
 // Loads dictionary into memory, returning true if successful, else false
@@ -81,11 +67,14 @@ bool load(const char *dictionary)
 {
     char letter;
     FILE *txt_dict = fopen(dictionary, "r");
-    if (txt_dict != NULL)
+    if (txt_dict == NULL)
     {
+        return false;
+    }
+    else
+    {
+        // parse through entire txt char by char until null
         fread(&letter, sizeof(char), 1, txt_dict);
-        int beginning_of_word = 1;
-        // parse through txt until null
         int letter_count = 0;
         while (letter != 0) // != null
         {
@@ -95,13 +84,23 @@ bool load(const char *dictionary)
                 one_word[letter_count] = letter;
                 letter_count += fread(&letter, sizeof(char), 1, txt_dict);
             }
-            int start = 0;
-            node *word = create_word(one_word, letter_count, start);
-            table[letter_count - 1] = word; // -1 to get index 0
-            letter_count = 0;
+            node *w = malloc(sizeof(node));
+            if (w == NULL)
+            {
+                return false;
+            }
+            strcpy(w->word, one_word);
+            int hash_value = hash(one_word);
+            w->next = table[hash_value]; // point node to head of bucket
+            table[hash_value] = w; // insert new node
             fread(&letter, sizeof(char), 1, txt_dict);
+            letter_count = 0;
+            dict_size++;
+
+            // check if EOF
+            // two \n is EOF
             int counter = 1;
-            if (letter == 10)
+            if (letter == 10) // == \n
             {
                 counter++;
                 if (counter == 2)
@@ -115,24 +114,33 @@ bool load(const char *dictionary)
                 }
             }
         }
+        fclose(txt_dict);
         return true;
-    }
-    else
-    {
-        return false;
     }
 }
 
 // Returns number of words in dictionary if loaded, else 0 if not yet loaded
 unsigned int size(void)
 {
-    // TODO
-    return 0;
+    return dict_size;
 }
 
 // Unloads dictionary from memory, returning true if successful, else false
 bool unload(void)
 {
-    // TODO
+    for (int i = 0; i < N; i++)
+    {
+        node *hash_row = table[i];
+        while (hash_row != NULL)
+        {
+            node *tmp = hash_row;
+            hash_row = hash_row->next;
+            free(tmp);
+        }
+        if ( hash_row == NULL && i == N)
+        {
+            return true;
+        }
+    }
     return false;
 }
