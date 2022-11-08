@@ -55,7 +55,7 @@ unsigned int hash(const char *word)
         if (isalpha(word[i]) || word[i] == 44)
         {
             int ascii_value = tolower(word[i]);
-            hash_value += ascii_value * 3 ^ i; // polynomial hash, using base value of 3.
+            hash_value += ascii_value * (3 ^ i); // polynomial hash, using base value of 3.
         }
     }
     return hash_value % N;
