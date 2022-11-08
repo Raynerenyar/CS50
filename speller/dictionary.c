@@ -139,7 +139,7 @@ bool unload(void)
             hash_row = hash_row->next;
             free(tmp);
         }
-        if ( hash_row == NULL && i == N)
+        if ( hash_row == NULL && i == N - 1)
         {
             return true;
         }
