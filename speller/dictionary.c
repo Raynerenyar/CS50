@@ -18,7 +18,7 @@ typedef struct node
 node;
 
 // 200 number of buckets in hash table
-const unsigned int N = 1000;
+const unsigned int N = 100;
 
 // tracks dictionary size
 int dict_size = 0;
@@ -49,9 +49,9 @@ __uint128_t number;
 // Hashes word to a number
 unsigned int hash(const char *word)
 {
-    // int len = strlen(word);
+    int len = strlen(word);
     __uint128_t hash_value = 0;
-    for (int i = 0; i < strlen(word); i++)
+    for (int i = 0; i < len; i++)
     {
         if (isalpha(word[i]) || word[i] == 44)
         {
