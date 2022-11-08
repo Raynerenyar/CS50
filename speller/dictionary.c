@@ -95,7 +95,7 @@ bool load(const char *dictionary)
             w->next = table[hash_value]; // point node to head of bucket
             table[hash_value] = w; // insert new node
             fread(&letter, sizeof(char), 1, txt_dict);
-            memset ( one_word, 0, N*sizeof(char) ) ;
+            memset ( one_word, 0, N*sizeof(char) ) ; // resets all items in one_word array to NULL
             letter_count = 0;
             dict_size++;
 
