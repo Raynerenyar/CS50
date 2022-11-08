@@ -961,8 +961,8 @@ WORDS MISSPELLED:     955
 WORDS IN DICTIONARY:  143091
 WORDS IN TEXT:        17756
 TIME IN load:         0.09
-TIME IN check:        0.83
+TIME IN check:        0.38
 TIME IN size:         0.00
-TIME IN unload:       0.01
-TIME IN TOTAL:        0.92
+TIME IN unload:       0.02
+TIME IN TOTAL:        0.48
 
