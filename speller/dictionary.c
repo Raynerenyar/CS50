@@ -44,8 +44,6 @@ bool check(const char *word)
     return false;
 }
 
-__uint128_t number;
-
 // Hashes word to a number
 unsigned int hash(const char *word)
 {
