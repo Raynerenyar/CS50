@@ -10,9 +10,11 @@ sumOfProducts = 0
 sumofNonProducts = 0
 for i in range(len-1,0,-2):
     digit = digitArr[i - 1] * 2
+    # print(i)
     if (digit >= 10): # max digit = 9. max product is 19. Therefore first digit is always 1 if product >= 10
         sumOfProducts += (1 + digit % 10)
     else:
-        sumOfProducts += digit * 2
+        sumOfProducts += digit
 print(sumOfProducts)
-# for i in range(len,0,-2):
+for i in range(len,0,-2):
+    print(i)
