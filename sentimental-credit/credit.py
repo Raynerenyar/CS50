@@ -5,6 +5,7 @@ def main():
     digits = get_int("Number: ")
     digitArr = [int(digit) for digit in str(digits)]
     print(checksum(digitArr))
+    cardIssuer(digitArr)
 
 # checksum
 def checksum(digitArr):
@@ -28,22 +29,30 @@ def checksum(digitArr):
 
 def cardIssuer(digitArr):
     length = len(digitArr)
+
     # is mastercard? len = 16, 1st digit = 5
     # 2nd digit 1,2,3,4, or 5
     if (length == 16 and digitArr[0] == 5):
         MastercardApproved2ndDigits = [1, 2, 3, 4, 5]
         if (digitArr[1] in MastercardApproved2ndDigits):
             print("MASTERCARD")
-        else:
-            print("INVALID")
+
     # is AMEX? len = 15, 1st digit = 3
     # 2nd digit = 7 or 4
-    else if (length == 15 and digitArr[0] == 3):
+    elif (length == 15 and digitArr[0] == 3):
         AmexApproved2ndDigits = [7, 4]
         if (digitArr[1] in AmexApproved2ndDigits):
             print("AMEX")
-        else:
-            print("INVALID")
+
+    # is VISA? len = 16, 1st digit = 4
+    elif (length == 16 and digitArr[0] == 4):
+        print("VISA")
+        
+    # is VISA? len = 13, 1st digit = 4
+    elif (length == 13 and digitArr[0] == 4):
+        print("VISA")
+    else:
+        print("INVALID")
 
 
 if __name__ == "__main__":
