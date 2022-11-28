@@ -13,4 +13,3 @@ for i in range(1,getHeight+1):
     print((" " * whitespace)+("#" * i), end = '')
     print("  ", end = '')
     print("#" * i)
-print("\n")
