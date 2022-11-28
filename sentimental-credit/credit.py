@@ -4,8 +4,10 @@ from cs50 import get_int
 def main():
     digits = get_int("Number: ")
     digitArr = [int(digit) for digit in str(digits)]
-    print(checksum(digitArr))
-    cardIssuer(digitArr)
+    if (checksum(digitArr) == False):
+        print("INVALID")
+    else:
+        cardIssuer(digitArr)
 
 # checksum
 def checksum(digitArr):
@@ -27,6 +29,7 @@ def checksum(digitArr):
     sumOfSums = sumOfNonProducts + sumOfProducts
     return (sumOfSums % 10) == 0
 
+# check issuer of card
 def cardIssuer(digitArr):
     length = len(digitArr)
 
@@ -47,7 +50,7 @@ def cardIssuer(digitArr):
     # is VISA? len = 16, 1st digit = 4
     elif (length == 16 and digitArr[0] == 4):
         print("VISA")
-        
+
     # is VISA? len = 13, 1st digit = 4
     elif (length == 13 and digitArr[0] == 4):
         print("VISA")
