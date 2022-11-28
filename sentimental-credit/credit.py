@@ -39,6 +39,8 @@ def cardIssuer(digitArr):
         MastercardApproved2ndDigits = [1, 2, 3, 4, 5]
         if (digitArr[1] in MastercardApproved2ndDigits):
             print("MASTERCARD")
+        else:
+            print("INVALID")
 
     # is AMEX? len = 15, 1st digit = 3
     # 2nd digit = 7 or 4
@@ -46,6 +48,8 @@ def cardIssuer(digitArr):
         AmexApproved2ndDigits = [7, 4]
         if (digitArr[1] in AmexApproved2ndDigits):
             print("AMEX")
+        else:
+            print("INVALID")
 
     # is VISA? len = 16, 1st digit = 4
     elif (length == 16 and digitArr[0] == 4):
