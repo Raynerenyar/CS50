@@ -12,5 +12,5 @@ for i in range(1,getHeight+1):
     whitespace = getHeight - i
     print((" " * whitespace)+("#" * i), end = '')
     print("  ", end = '')
-    print((("#" * i) + " " * whitespace))
+    print("#" * i)
 print("\n")
