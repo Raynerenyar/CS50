@@ -7,6 +7,6 @@ while (True):
     else:
         break
 
-for i in range(getHeight):
-    print("#" * i)
+for i in range(1,getHeight+1):
+    print(("#" * i))
 print("\n")
