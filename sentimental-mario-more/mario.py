@@ -1,8 +1,8 @@
 from cs50 import get_int
 
-while (true):
+while (True):
     getHeight = get_int("Height: ")
-    if (!(getHeight >= 1) and !(getHeight <=8)):
+    if (not (getHeight >= 1) and not (getHeight <=8)):
         continue
     else:
         break
