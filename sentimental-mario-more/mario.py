@@ -8,7 +8,8 @@ from cs50 import get_int
 #         break
 
 getHeight = get_int("Height: ")
-print(not getHeight >= 1 and not getHeight<= 8)
+print(not getHeight >= 1)
+print(not getHeight <= 8)
 
 for i in range(getHeight):
     print("#")
