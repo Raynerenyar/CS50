@@ -9,27 +9,33 @@ def main():
     else:
         cardIssuer(digitArr)
 
+
 # checksum
+
+
 def checksum(digitArr):
 
     length = len(digitArr)
     # print("length of card num is " + str(length))
     sumOfProducts = 0
-    for i in range(length-1,0,-2):
+    for i in range(length-1, 0, -2):
         digit = digitArr[i - 1] * 2
-        # print(i)
-        if (digit >= 10): # max digit = 9. max product is 19. Therefore first digit is always 1 if product >= 10
+        # max digit = 9. max product is 19. Therefore first digit is always 1 if product >= 10
+        if (digit >= 10):
             sumOfProducts += (1 + digit % 10)
         else:
             sumOfProducts += digit
     # print(sumOfProducts)
     sumOfNonProducts = 0
-    for i in range(length,0,-2):
+    for i in range(length, 0, -2):
         sumOfNonProducts += digitArr[i - 1]
     sumOfSums = sumOfNonProducts + sumOfProducts
     return (sumOfSums % 10) == 0
 
+
 # check issuer of card
+
+
 def cardIssuer(digitArr):
     length = len(digitArr)
 
