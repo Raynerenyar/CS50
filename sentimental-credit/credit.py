@@ -6,5 +6,8 @@ digits = get_int("Number: ")
 digitArr = [int(digit) for digit in str(digits)]
 len = len(digitArr)
 print("length of card num is " + str(len))
+sumOfProducts = 0
+sumofNonProducts = 0
 for i in range(len-1,0,-2):
-    print(digitArr[i - 1])
+    sumOfProducts += digitArr[i - 1]) * 2
+for i in range(len,0,-2):
