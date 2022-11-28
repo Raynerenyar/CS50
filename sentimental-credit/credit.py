@@ -3,7 +3,6 @@ from cs50 import get_int
 digits = get_int("Number: ")
 
 # checksum
-
 def checksum():
     digitArr = [int(digit) for digit in str(digits)]
     length = len(digitArr)
@@ -23,4 +22,8 @@ def checksum():
     sumOfSums = sumOfNonProducts + sumOfProducts
     return (sumOfSums % 10) == 0
 
-print(checksum())
+def main():
+    print(checksum())
+
+if __name__ == "__main__":
+    main()
