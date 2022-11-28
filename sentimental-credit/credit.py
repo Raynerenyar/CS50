@@ -1,4 +1,4 @@
-from cs50 import get_long
+import cs50
 
 digits = get_long("Number ")
 print(digits)
