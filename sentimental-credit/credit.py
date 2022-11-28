@@ -1,12 +1,15 @@
 from cs50 import get_int
 
-digits = get_int("Number: ")
+
+def main():
+    digits = get_int("Number: ")
+    print(checksum(digits))
 
 # checksum
-def checksum():
+def checksum(digits):
     digitArr = [int(digit) for digit in str(digits)]
     length = len(digitArr)
-    print("length of card num is " + str(length))
+    # print("length of card num is " + str(length))
     sumOfProducts = 0
     for i in range(length-1,0,-2):
         digit = digitArr[i - 1] * 2
@@ -22,8 +25,6 @@ def checksum():
     sumOfSums = sumOfNonProducts + sumOfProducts
     return (sumOfSums % 10) == 0
 
-def main():
-    print(checksum())
 
 if __name__ == "__main__":
     main()
