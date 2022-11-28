@@ -30,7 +30,8 @@ def cardIssuer(digitArr):
     length = len(digitArr)
     # is mastercard? len = 16, 1st digit = 5
     # 2nd digit 1,2,3,4, or 5
-    if (length == 16 and )
+    if (length == 16 and digitArr[0] == 5):
+        
 
 
 
