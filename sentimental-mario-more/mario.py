@@ -8,4 +8,5 @@ while (True):
         break
 
 for i in range(getHeight):
-    print(("#" * i) + "  " + "*")
+    print("#" * i)
+print("\n")
