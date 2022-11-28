@@ -7,6 +7,10 @@ while (True):
     else:
         break
 
+Spacing = 0
 for i in range(1,getHeight+1):
-    print(("#" * i))
+    Spacing = getHeight - i
+    print((" " * Spacing)+("#" * i), end = '')
+    print("  ", end = '')
+    print((("#" * i) + " " * Spacing))
 print("\n")
