@@ -9,7 +9,7 @@ print("length of card num is " + str(len))
 sumOfProducts = 0
 for i in range(len-1,0,-2):
     digit = digitArr[i - 1] * 2
-    print(i)
+    # print(i)
     if (digit >= 10): # max digit = 9. max product is 19. Therefore first digit is always 1 if product >= 10
         sumOfProducts += (1 + digit % 10)
     else:
@@ -18,4 +18,6 @@ for i in range(len-1,0,-2):
 sumOfNonProducts = 0
 for i in range(len,0,-2):
     sumOfNonProducts += digitArr[i - 1]
+sumOfSums = sumOfNonProducts + sumOfProducts
+
 
