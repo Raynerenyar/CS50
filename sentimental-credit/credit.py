@@ -3,11 +3,12 @@ from cs50 import get_int
 
 def main():
     digits = get_int("Number: ")
-    print(checksum(digits))
+    digitArr = [int(digit) for digit in str(digits)]
+    print(checksum(digitArr))
 
 # checksum
-def checksum(digits):
-    digitArr = [int(digit) for digit in str(digits)]
+def checksum(digitArr):
+
     length = len(digitArr)
     # print("length of card num is " + str(length))
     sumOfProducts = 0
@@ -24,6 +25,13 @@ def checksum(digits):
         sumOfNonProducts += digitArr[i - 1]
     sumOfSums = sumOfNonProducts + sumOfProducts
     return (sumOfSums % 10) == 0
+
+def cardIssuer(digitArr):
+    length = len(digitArr)
+    # is mastercard? len = 16, 1st digit = 5
+    # 2nd digit 1,2,3,4, or 5
+    if (length == 16 and )
+
 
 
 if __name__ == "__main__":
