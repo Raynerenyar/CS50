@@ -43,6 +43,7 @@ def main():
         count = 0
         for seq in sequenceList:
             num = longest_match(row[0], seq)
+            DNA_Database[i][seq]
             if (DNA_Database[i][seq] == num):
                 count += 1
         if (count == len(sequenceList)):
