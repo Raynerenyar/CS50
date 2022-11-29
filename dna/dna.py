@@ -25,10 +25,6 @@ def main():
             # name = f'{row["name"]}'
             # DNA_database[name] = personDNA_Count
 
-
-
-
-
     # TODO: Read DNA sequence file into a variable
     sequenceFilePath = sys.argv[2]
     with open(sequenceFilePath, 'r') as sequenceFile:
@@ -57,7 +53,6 @@ def main():
             print(DNA_Database[i]['name'])
         elif i + 1 == len(DNA_Database):
             print("No match")
-
 
     return
 
