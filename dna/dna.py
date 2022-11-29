@@ -44,7 +44,7 @@ def main():
         for seq in sequenceList:
             num = longest_match(row[0], seq)
             DNA_Database[i][seq]
-            if (DNA_Database[i][seq] == num):
+            if (int(DNA_Database[i][seq]) == num):
                 count += 1
         if (count == len(sequenceList)):
             print(DNA_Database[i][name])
