@@ -48,7 +48,7 @@ def main():
                 count += 1
         if (count == len(sequenceList)):
             print(DNA_Database[i]['name'])
-        elif i == len(DNA_Database):
+        elif i + 1 == len(DNA_Database):
             print("No match")
 
     # TODO: Check database for matching profiles
