@@ -34,17 +34,17 @@ def main():
     with open(sequenceFilePath, 'r') as sequenceFile:
         sequenceReader = csv.reader(sequenceFile)
         for row in sequenceReader:
-            print(row[0])
+            DNA_sequence = row[0]
 
     # TODO: Find longest match of each STR in DNA sequence
     # for person in DNA_database:
     STR_count = []
     for i in range(len(DNA_Database)):
         count = 0
-        for seq in sequenceList:
-            num = longest_match(row[0], seq)
-            DNA_Database[i][seq]
-            if (int(DNA_Database[i][seq]) == num):
+        for subSeq in sequenceList:
+            num = longest_match(DNA_sequence, subSeq)
+            DNA_Database[i][subSeq]
+            if (int(DNA_Database[i][subSeq]) == num):
                 count += 1
         if (count == len(sequenceList)):
             print(DNA_Database[i]['name'])
