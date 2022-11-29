@@ -36,22 +36,28 @@ def main():
         for row in sequenceReader:
             DNA_sequence = row[0]
 
-    # TODO: Find longest match of each STR in DNA sequence
-    # for person in DNA_database:
-    STR_count = []
+    ''' iter over the length of database
+        check STR count against each person in database
+        if count of matches is the same as the length of the sequence list,
+        a match is found
+    '''
     for i in range(len(DNA_Database)):
         count = 0
         for subSeq in sequenceList:
+
+            # Find longest match of each STR in DNA sequence
             num = longest_match(DNA_sequence, subSeq)
-            DNA_Database[i][subSeq]
+
+            # Check database for matching profiles
+            # if match increase count by 1
             if (int(DNA_Database[i][subSeq]) == num):
                 count += 1
+        # check num of matches against num of sequence in list
         if (count == len(sequenceList)):
             print(DNA_Database[i]['name'])
         elif i + 1 == len(DNA_Database):
             print("No match")
 
-    # TODO: Check database for matching profiles
 
     return
 
