@@ -38,10 +38,11 @@ def main():
 
     # TODO: Find longest match of each STR in DNA sequence
     # for person in DNA_database:
+    STR_count = []
     for seq in sequenceList:
         num = longest_match(row[0], seq)
-        print(num)
-
+        STR_count.append(num)
+    if (DNA_Database.)
 
     # TODO: Check database for matching profiles
 
