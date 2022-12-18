@@ -1,0 +1,1 @@
+SELECT title,rating FROM ratings WHERE movie_id IN (SELECT id,title FROM movies WHERE year = 2010);
