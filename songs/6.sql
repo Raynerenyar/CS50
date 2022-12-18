@@ -1,1 +1,1 @@
-SELECT name FROM songs WHERE id LIKE (SELECT id FROM artists WHERE name LIKE "Post Malone");
+SELECT name FROM songs WHERE artist_id LIKE (SELECT id FROM artists WHERE name LIKE "Post Malone");
