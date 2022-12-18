@@ -1,5 +1,5 @@
 SELECT name FROM people
-INNER JOIN stars ON stars.movie_id = movies.id
+INNER JOIN stars ON stars.movie_id = people.id
 INNER JOIN movies ON movies.id = stars.movie_id
 WHERE movies.id IN
 (SELECT movies.id from movies
