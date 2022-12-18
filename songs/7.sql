@@ -1,1 +1,1 @@
-SELECT id FROM artists WHERE name LIKE "Drake"
+SELECT AVG(energy) FROM songs WHERE artist_id LIKE (SELECT id FROM artists WHERE name LIKE "Drake");
