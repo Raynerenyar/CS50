@@ -6,4 +6,5 @@ WHERE movies.id IN
 INNER JOIN stars ON stars.movie_id = movies.id
 INNER JOIN people ON people.id = stars.person_id
 WHERE people.name = "Kevin Bacon"
-AND people.birth = 1958);
+AND people.birth = 1958)
+AND people.name != "Kevin Bacon";
