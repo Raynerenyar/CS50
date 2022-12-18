@@ -1,7 +1,5 @@
-SELECT rating FROM ratings WHERE movie_id IN (SELECT id FROM movies WHERE year = 2010);
-SELECT title,id FROM movies WHERE year = 2010;
-
-SELECT ratings.rating, movies.title
-from movies
-inner join ratings on movies.id = ratings.movie_id
-where movies.year = 2010;
+SELECT movies.title, ratings.rating
+FROM movies
+INNER JOIN ratings ON movies.id = ratings.movie_id
+WHERE movies.year = 2010
+ORDER BY rating DESC;
