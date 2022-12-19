@@ -81,3 +81,7 @@ select * from flights
     where day = 29
     order by hour asc, minute asc;
 
+-- passengers on flight_id = 36
+select * from passengers
+   ...> where flight_id = 36;
+
