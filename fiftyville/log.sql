@@ -73,7 +73,11 @@ select * from people
     and phone_calls.duration < 60
     and phone_calls.day = 28;
 
+-- fiftyville airport id = 8
+select * from airports where id = 8;
+
 -- flights
 select * from flights
     where day = 29
     order by hour asc, minute asc;
+
