@@ -58,6 +58,7 @@ select * from people
 -- call logs on 28/8/2021 duration less than 60 seconds
 select * from phone_calls where year = 2021 and day = 28 and month = 7 and duration < 60;
 
+-- narrow down to 3 people
 select * from people
     inner join bank_accounts on bank_accounts.person_id = people.id
     inner join atm_transactions on bank_accounts.account_number = atm_transactions.account_number
