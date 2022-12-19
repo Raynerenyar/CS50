@@ -82,6 +82,7 @@ select * from flights
     order by hour asc, minute asc;
 
 -- passengers on flight_id = 36
+-- could be bruce or taylor
 select * from passengers
    ...> where flight_id = 36;
 
