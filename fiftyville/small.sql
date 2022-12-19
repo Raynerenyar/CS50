@@ -5,6 +5,6 @@ select * from people
     where atm_transactions.year = 2021
     and atm_transactions.month = 7
     and atm_transactions.day = 28
-    and atm_transactions.hour = 10
+    and bakery_security_logs.hour = 10
     and atm_transactions.transaction_type = "withdraw"
     and atm_transactions.atm_location = "Leggett Street";
