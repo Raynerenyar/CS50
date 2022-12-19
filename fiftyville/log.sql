@@ -69,4 +69,5 @@ select * from people
     and bakery_security_logs.hour = 10
     and atm_transactions.transaction_type = "withdraw"
     and atm_transactions.atm_location = "Leggett Street"
-    and phone_calls.duration < 60;
+    and phone_calls.duration < 60
+    and phone_calls.day = 28;
