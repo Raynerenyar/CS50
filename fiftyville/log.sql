@@ -6,6 +6,7 @@ select *
     where transcript like "%thief%";
 
 -- shows license plate of cars on the date. not filtered by activity yet. Thief exited
+-- can get name from license plate number
 select *
     from bakery_security_logs
     where day = 28
