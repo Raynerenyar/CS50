@@ -32,3 +32,11 @@ select *
     and month = 7
     and day =28
     and description like "%cs50%";
+
+-- find security logs at hour 10
+select *
+    from bakery_security_logs
+    where day = 28
+    and month = 7
+    and year = 2021
+    and hour = 10;
