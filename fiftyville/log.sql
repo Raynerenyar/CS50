@@ -86,3 +86,7 @@ select * from flights
 select * from passengers
    ...> where flight_id = 36;
 
+-- checking who bruce called, robin has no passport number
+select * from people where phone_number = "(375) 555-8161";
+-- checking who taylor called, james passport number is not on flight 36
+select * from people where phone_number = "(676) 555-6554";
