@@ -18,7 +18,7 @@ select *
     where day = 28
     and month = 7
     and year = 2021
-    and atm_location = "Leggett Street"
+    and atm_location = "Leggett Street";
 
 -- crime report on the date at Humphrey Street Bakery
 select *
@@ -26,4 +26,4 @@ select *
     where year = 2021
     and month = 7
     and day =28
-    and description like "%cs50%"
+    and description like "%cs50%";
