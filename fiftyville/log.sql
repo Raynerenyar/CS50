@@ -90,3 +90,6 @@ select * from passengers
 select * from people where phone_number = "(375) 555-8161";
 -- checking who taylor called, james passport number is not on flight 36
 select * from people where phone_number = "(676) 555-6554";
+
+-- assume bruce because he left bakery carpark within 10 mins from 10:15
+-- not taylor because he/she left at 10:35
