@@ -1,3 +1,3 @@
-select * from bank_accounts
+select * from people
     inner join bank_accounts.person_id = people.id
-    
+    inner join 
