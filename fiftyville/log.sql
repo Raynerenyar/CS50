@@ -84,7 +84,7 @@ select * from flights
 -- passengers on flight_id = 36
 -- could be bruce or taylor
 select * from passengers
-   ...> where flight_id = 36;
+    where flight_id = 36;
 
 -- checking who bruce called, robin has no passport number
 select * from people where phone_number = "(375) 555-8161";
