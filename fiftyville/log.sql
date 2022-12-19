@@ -12,15 +12,19 @@ select *
     and month = 7
     and year = 2021;
 
--- shows account numbers that transacted on atm at Leggett Street on the date. Thief withdrew
+-- shows account numbers that transacted on atm at Leggett Street on the date. Thief withdrew.
+-- transactions have no timestamp
+-- could get name from account number
 select *
     from atm_transactions
     where day = 28
     and month = 7
     and year = 2021
-    and atm_location = "Leggett Street";
+    and atm_location = "Leggett Street"
+    and transaction_type = "withdraw";
 
 -- crime report on the date at Humphrey Street Bakery
+-- crime is roughly at 10:15 am
 select *
     from crime_scene_reports
     where year = 2021
