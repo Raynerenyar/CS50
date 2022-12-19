@@ -72,3 +72,8 @@ select * from people
     and atm_transactions.atm_location = "Leggett Street"
     and phone_calls.duration < 60
     and phone_calls.day = 28;
+
+-- flights
+select * from flights
+    where day = 29
+    order by hour asc, minute asc;
