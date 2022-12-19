@@ -4,4 +4,5 @@ select * from people
     where year = 2021
     and month = 7
     and day = 28
-    and atm_transactions.transaction_type = "withdraw";
+    and atm_transactions.transaction_type = "withdraw"
+    and atm_transactions.atm_location = "Leggett Street";
