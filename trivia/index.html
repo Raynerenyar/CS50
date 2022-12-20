@@ -7,8 +7,16 @@
         <title>Trivia!</title>
         <script>
             // TODO: Add code to check answers to questions
-            const allButtons = Document.getElementsByTagName("button");
-            allButtons.addEventListener('click' )
+            const wrongButtons = Document.querySelector("#wrong");
+            allButtons.addEventListener('click' function() {
+                allButtons.style.backgroundColor = 'red';
+                allButton.value = "Incorrect";
+            })
+            const correctButton = Document.querySelector("#correct");
+            correctButton.addEventListener('click' function() {
+                correctButton.style.backgroundColor = 'green';
+                correctButton.value = "Correct";
+            })
         </script>
     </head>
     <body>
@@ -22,10 +30,10 @@
                 <hr>
                 <h3>Which of the following is NOT a fruit?</h3>
                 <!-- TODO: Add multiple choice question here -->
-                    <button class = "button" type = "submit"> Rhubarb</button>
-                    <button class = "button "type = "submit"> Tomatoes</button>
-                    <button class = "button" type = "submit"> Avocado</button>
-                    <button class = "button" type = "submit"> Brinjal</button>
+                    <button id = "correct" class = "button" type = "submit"> Rhubarb</button>
+                    <button id = "wrong" class = "button "type = "submit"> Tomatoes</button>
+                    <button id = "wrong" class = "button" type = "submit"> Avocado</button>
+                    <button id = "wrong" class = "button" type = "submit"> Orange</button>
             </div>
 
             <div class="section">
