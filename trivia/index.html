@@ -7,12 +7,12 @@
         <title>Trivia!</title>
         <script>
             // TODO: Add code to check answers to questions
-            const wrongButtons = document.querySelector("#wrong");
+            let wrongButtons = document.querySelector("#wrong");
             allButtons.addEventListener('click', function() {
                 allButtons.style.backgroundColor = 'red';
                 allButton.value = "Incorrect";
             })
-            const correctButton = document.querySelector("#correct");
+            let correctButton = document.querySelector("#correct");
             correctButton.addEventListener('click', function() {
                 correctButton.style.backgroundColor = 'green';
                 correctButton.value = "Correct";
