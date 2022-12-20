@@ -1,1 +1,1 @@
-Document.query
+const allButtons = Document.getElementsByTagName("button");
